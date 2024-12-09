@@ -29,9 +29,6 @@
   font-weight: bold;
 }
 
-
-
-
 *, *::before, *::after {
   box-sizing  : border-box;
 }
@@ -71,6 +68,7 @@
   font-family     : "Crimson Pro", serif;
   font-size       : 10pt;
   line-height     : 1.2;
+  text-align      : justify;
   column-gap      : 10mm;
 }
 
@@ -202,14 +200,19 @@
   }
   
   h4 {
+    display             : inline-block;
     font-size           : 1em;
     color               : black;
-    margin              : .5em .5em 0 0;
-    float               : left;
-    line-height         : 1.2;
+    margin-top          : 1em;
+    margin-right        : .5em;
     
     & + p {
-      margin-top        : .5em;
+      display           : inline;
+      
+      &::after {
+        content         : "";
+        display         : block;
+      }
     }
   }
   
@@ -226,10 +229,14 @@
     margin              : 1em 0;
   }
   
+  ul,ol,dl {
+    margin              : .5em 0;
+    text-align          : left;
+  }
+
   ul {
     list-style          : none;
     padding             : 0;
-    margin              : .5em 0;
 
     ul {
       margin-bottom     : .5em;
