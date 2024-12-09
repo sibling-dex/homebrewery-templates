@@ -1,0 +1,1099 @@
+```metadata
+title: Dragonbrew
+description: Another Dragonbane template based on Unbane by prof.tw
+tags:
+  - dragonbane
+  - theme
+systems: []
+renderer: V3
+theme: Blank
+
+```
+
+```css
+/* Some styling derived from:
+  Homebrewery default style: https://github.com/naturalcrit/homebrewery/blob/master/themes/V3/5ePHB/style.less
+  
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import url('https://fontlibrary.org/en/face/echotopia');
+
+@import url('https://fonts.cdnfonts.com/css/mendl-serif-trial');
+
+@font-face {
+    font-family: "QTFrizQuad";
+    src: url('https://un-bane.github.io/fonts/QTFrizQuad/QTFrizQuad.otf');
+}
+@font-face {
+  font-family: "QTFrizQuad";
+  src: url('https://un-bane.github.io/fonts/QTFrizQuad/QTFrizQuad-Bold.otf');
+  font-weight: bold;
+}
+@font-face { 
+  font-family: "Caveat";
+  src: url('https://un-bane.github.io/fonts/Caveat/static/Caveat-Regular.ttf');
+}
+@font-face {
+  font-family: "Caveat";
+  src: url('https://un-bane.github.io/fonts/Caveat/static/Caveat-Bold.ttf');
+  font-weight: bold;
+}
+
+
+
+
+*, *::before, *::after {
+  box-sizing  : border-box;
+}
+
+:root {
+	
+  /* Defaults: */
+	--HB_Color_Background            : #EEE5CE; /* Light parchment*/
+
+	--HB_Color_HeaderUnderline       : #00604D; /* Green*/
+	--HB_Color_HorizontalRule        : #9C2B1B; /* Maroon*/
+	--HB_Color_CaptionText           : #766649; /* Brown*/
+	--HB_Color_WatercolorStain       : #BBAD82; /* Light brown*/
+	--HB_Color_Footnotes             : #C9AD6A; /* Gold*/
+  
+  /* DB Colors */
+  --HB_Color_HeaderText            : #00604D; 
+  --demongreen                     : #00604D;
+  --dragonred                      : #EE3D3C;
+  --bloodred                       : #C42034;
+  --red                     : #9A342F;
+  --brown                   : #614F3D;
+  --table-dark              : #55220022;
+  --paperbox                : #66550022;
+  --HB_Color_Accent         : #CAC1A0; 
+  
+}
+
+
+.page {
+  /* height          : 297mm; */
+  /* width           : 210mm; */
+  background      : white;
+  background-image: linear-gradient(rgba(255,255,255, 0.4) 0 100%), url(https://sibling-dex.github.io/homebrewery-templates/img/parchment.jpg);
+  background-size: 100% 100%;
+
+  font-family     : "Crimson Pro", serif;
+  font-size       : 10pt;
+  line-height     : 1.2;
+  column-gap      : 10mm;
+}
+
+
+@media print {
+  .page {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+/* ==== COVERPAGE ==== */
+.page {
+  .coverpage {
+    display     : block;
+    column-span : all;
+    text-align  : center;
+
+    & > p {
+      width         : 10cm;
+      margin        : auto;
+      text-align    : center;
+      text-indent   : 0;
+      margin-bottom : 3mm;
+    }
+    
+    h1 {
+      width         : fit-content;
+      margin-left   : auto;
+      margin-right  : auto;
+      margin-bottom : .25em;
+      border-bottom : 4px solid;
+      color         : var(--dragonred);
+      font-size     : 60pt;
+      
+      &::before,
+      &::after {
+        content: unset;
+      }
+    }
+    
+    h2 {
+      color       : black;
+      font-size   : 20pt;
+    }
+  }
+  
+  .homebreweryCredits {
+    display           : block;
+    position          : absolute;
+    bottom            : 3.5cm;
+    left              : 0;
+    right             : 0;
+    margin            : auto;
+    
+    p {
+      font-family : "QTFrizQuad";
+      font-weight : bold;
+    }
+    
+    .homebreweryIcon {
+      margin      : .5em;
+    }
+  }
+  
+  .dragonbaneLogo {
+    display           : block;
+    position          : absolute;
+    bottom            : 10mm;
+    left              : 0;
+    right             : 0;
+    margin            : auto;
+    z-index           : 9;
+    width             : 300px;
+    height            : 75px;
+    background-image  : url('https://un-bane.github.io/images/Dragonbane-license-logo-red.png');
+    background-size   : cover;
+  }
+}
+
+
+/* ==== TYPOGRAPHY ==== */
+.page {
+  h1, h2, h3, h4 {
+    font-family         : "QTFrizQuad";
+    font-weight         : bold;
+  }
+  
+  h1, h2 {
+    text-align          : center;
+    text-transform      : uppercase;
+    color               : var(--demongreen);
+    font-size           : 34pt;
+    margin-top          : .25em;
+    margin-bottom       : .25em;
+    column-span         : all;
+    
+    && + * {
+      margin-top: 0;
+    }
+  }
+  
+  h1 {
+    display             : flex;
+    --sectionhead       : attr(id) ;
+    
+    &::before,
+    &::after {
+      content           : "";
+      height            : 4px;
+      background-color  : var(--demongreen);
+      flex-grow         : 1;
+      margin-top        : .6em;
+    }
+    &::before {
+      margin-right      : .2em;
+    }
+    &::after {
+      margin-left       : .2em;
+    }
+  }
+    
+  h3 {
+    text-transform      : uppercase;
+    font-size           : 11pt;
+    margin-bottom       : 0;
+    margin-top          : 4mm;
+    break-after         : avoid;
+  }
+  
+  h4 {
+    font-size           : 1em;
+    color               : black;
+    margin              : .5em .5em 0 0;
+    float               : left;
+    line-height         : 1.2;
+    
+    & + p {
+      margin-top        : .5em;
+    }
+  }
+  
+  p {
+    text-align          : justify;
+    hyphens             : auto;
+  }
+  
+  p + p {
+    text-indent         : 1em;
+  }
+  
+  .block {
+    margin              : 1em 0;
+  }
+  
+  ul {
+    list-style          : none;
+    padding             : 0;
+    margin              : .5em 0;
+
+    ul {
+      margin-bottom     : .5em;
+      margin-left       : 0;
+    }
+    
+    li {
+      margin-left       : 1.5em; 
+      
+      strong {
+        font-family     : "QTFrizQuad";
+      }
+      
+      &::before {
+        float           : left;
+        content         : "✦";
+        margin-left     : -1.5em;
+      }
+    }
+  }
+
+  :not(.dragonbox,.demonbox) > ul li {
+    & > strong:first-child {
+      color           : var(--demongreen);
+    }
+    & > em:first-child strong {
+      color           : var(--bloodred);
+    }
+
+    &:has(strong:first-child)::before {
+      color           : var(--demongreen);
+    }
+
+    &:has(em:first-child strong)::before {
+      color           : var(--bloodred);
+    }
+  }
+
+  .toc {
+    display             : block;
+    font-family         : "QTFrizQuad";
+    font-size           : 12pt;
+    
+    p {
+      text-indent       : 0pt;
+      overflow          : hidden;
+      display           : flex;
+      justify-content   : space-between;
+    }
+
+    h2 {
+      text-align        : left;
+      color             : black;
+      font-size         : 20pt;
+    }
+    
+    a {
+      white-space       : nowrap;
+      overflow          : hidden;
+      text-decoration   : none;
+      
+      &::after {
+        content       : "..........................................................................";
+        margin-left       : .1em;
+      }
+    }
+    
+    .number {
+      margin-left       : .2em;
+    }
+  }
+  
+  blockquote {
+    margin-bottom       : .5em;
+
+    & > p {
+      font-style        : italic;
+      font-size         : 12pt;
+    }
+
+    .author {
+      margin-top        : .5em;
+      font-family       : "QTFrizQuad";
+      font-style        : normal;
+      font-size         : 8pt;
+      font-weight       : bold;
+      text-transform    : uppercase;
+    }
+  }
+  
+  .code,
+  code {
+    border-radius       : 2px;
+    background          : #ffffffcc;
+    color               : black;
+    font-size           : 0.9em;
+    padding             : 0 .2em;
+  }
+
+  a {
+    color               : black;
+    text-decoration     : underline;
+  }
+  
+  .dropcap {
+    color               : var(--demongreen);
+    font-family         : "QTFrizQuad";
+    font-size           : 4.2em;
+    font-weight         : bold;
+    float               : left;
+    line-height         : 0.8;
+    margin-right        : .1em;
+  }
+  
+  .handwritten {
+    font-family         : "Caveat";
+  }
+  
+  hr{
+    border-style        : solid;
+    border-width        : 5px 20px;
+    border-image        : url("data:image/svg+xml;utf8,<svg height='10' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5 Z'/><path d='M5 5 L25 5' stroke='black' stroke-width='2px'/></svg>") 5 10 stretch;
+    border-image-outset : 0 10px;
+  }
+}
+
+
+/* ==== BOXES ==== */
+
+.page {
+  .tablebox,
+  .emptybox {
+    width                 : calc(100% - 10px);
+    padding               : 24px 0px 8px 0px;
+    margin                : 30px 5px 5px 5px;
+    position              : relative;
+  }
+
+  .tablebox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+  }
+  
+  .paperbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 8px 0px;
+    margin                : 15px 5px 15px 5px;
+    box-shadow            : 1px 4px 16px #888888;
+    background            : var(--paperbox);
+    border-style          : solid;
+    border-width          : 10px 20px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5   M10 25 Q7 23, 5 20 Q3 23, 0 25 Q3 27, 5 30 Q7 27, 10 25   M20 25 Q23 27, 25 30 Q27 27, 30 25 Q27 23, 25 20 Q23 23, 20 25 Z'/><path d='M5 5 L25 5 M5 25 L25 25' stroke='black' stroke-width='2px'/></svg>") 10 stretch;
+    border-image-outset   : 5px 10px;
+    position              : relative;
+  }
+
+  .dragonbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 24px 0px 8px 0px;
+    margin                : 35px 5px 15px 5px;
+    box-shadow            : 1px 4px 16px #888888;
+    background            : var(--paperbox);
+    border-style          : solid;
+    border-width          : 10px 20px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5   M10 25 Q7 23, 5 20 Q3 23, 0 25 Q3 27, 5 30 Q7 27, 10 25   M20 25 Q23 27, 25 30 Q27 27, 30 25 Q27 23, 25 20 Q23 23, 20 25 Z'/><path d='M5 5 L25 5 M5 25 L25 25' stroke='black' stroke-width='2px'/></svg>") 10 stretch;
+    border-image-outset   : 5px 10px;
+    position: relative;
+    
+    h2 {
+      width               : fit-content;
+    }
+  }
+
+  .demonbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 0px 16px 16px 16px;
+    margin                : 10px 5px 15px 5px;
+    box-shadow            : 2px 2px 16px #888888;
+    color                 : white;
+    background            : var(--HB_Color_HeaderText);
+    border-style          : solid;
+    border-width          : 11px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='80' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M5 5 L10 20 L10 30 Q10 38, 0 40 Q10 42, 10 50 L10 60 L5 75 L20 70 L30 70 Q38 70, 40 80 Q42 70, 50 70 L60 70 L75 75 L70 60 L70 50 Q70 42, 80 40 Q70 38, 70 30 L70 20 L75 5 L60 10L 50 10 Q42 10, 40 0 Q38 010, 30 10 L20 10 Z' fill='RGB(0, 96, 77)'/></svg>") 11 stretch;
+    border-image-outset   : 10px;
+    position: relative;
+    
+    h2 {
+      font-size           : 10pt;
+      color               : white;
+      margin-top          : 0;
+      margin-bottom       : 1em;
+    }
+  }
+
+  .dragonbox h2,
+  .tablebox h2,
+  .emptybox h2 {
+    position            : absolute;
+    display	            : flex;
+    align-items         : center;
+    justify-content     : center;
+    height              : 30px;
+    inset               : -25px 0 auto 0; 
+    margin              : auto;
+    font-size           : 10pt;
+    color               : white;
+    background          : var(--HB_Color_HeaderText);
+    border-style        : solid;
+    border-width        : 6px 16px;
+    border-image        : url("data:image/svg+xml;utf8,<svg height='40' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M22 5 Q20 5 ,20 2 Q13 13, 0 20 Q13 27, 20 38 Q20 35, 22 35 L38 35 Q40 35, 40 40 Q40 35, 42 35 L58 35 Q60 35,60 38 Q67 27, 80 20 Q67 13, 60 2 Q60 5, 58 5 L42 5 Q40 5, 40 0 Q40 5, 38, 5 Z' fill='RGB(0, 96, 77)'/></svg>") 6 21 stretch;
+    border-image-outset : 5px 15px;
+  }
+    
+  .tablebox h2, 
+  .emptybox h2 {
+    box-shadow      : 2px 2px 8px #888888;
+  }
+    
+  .dragonbox.wide,
+  .tablebox.wide,
+  .emptybox.wide {
+    margin-top      : 50px !important;
+  }
+  
+  .twocols {
+    columns         : 2;
+  }
+}
+
+
+/* ==== HEADER & FOOTER ==== */
+
+.page:not(:has(h1))::before {
+  content           : "";
+  display           : block;
+  width             : 100%;
+  border            : 2px solid var(--demongreen);
+/*  border-width      : 5px 20px;
+  border-image      : url("data:image/svg+xml;utf8,<svg height='10' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5' fill='RGB(0, 96, 77)'/><path d='M5 5 L25 5' stroke='RGB(0, 96, 77)' stroke-width='4px'/></svg>") 5 10 stretch; */
+  column-span       : all;
+} 
+
+.page::after {
+  background-image  : unset;
+}
+
+
+.page {
+  .pageNumber {
+    display	          : flex;
+    flex-direction    : column;
+    align-items       : center;
+    justify-content   : center;
+    font-weight       : bold;
+    font-family       : "QTFrizQuad";
+    color             : var(--demongreen);
+    text-transform    : uppercase;
+    width             : fit-content;
+    min-width         : 120px;
+    margin            : auto;
+    left              : 30px;
+    right             : 30px;
+    bottom            : 10mm;
+
+    &::after {
+      display           : block;
+      color             : white;
+      font-size         : 1.2em;
+      width             : 120px;
+      height            : 30px;
+      padding           : 4px 0;
+      background-image  : url("data:image/svg+xml;utf8,<svg height='30' width='50' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L0 2   Q20 10, 25 30   Q30 10, 50 2  L 50 0 Z' fill='RGB(0, 96, 77)'/></svg>");
+      background-size   : 100% 100%;
+    }
+  }
+}
+
+
+/* ==== TABLES ==== */
+.page{
+  table {
+    font-family     : "QTFrizQuad";
+    font-size       : 9pt;
+    width           : 100%;
+    margin-top      : .5em;
+    padding-bottom  : .5em;
+    
+    thead {
+      th {
+        text-transform: uppercase;
+        padding: 4px 6px;
+        border-bottom  : 2pt solid var(--brown); 
+      }
+    }
+
+    tr:nth-child(even):not(:first-child) {
+      background-color:none;
+    }    
+  }
+  
+  tbody {
+    td {
+      padding       : 4px 6px;
+      border-top    : 1pt solid var(--brown); 
+    }
+    
+    tr:nth-child(odd){
+      background-color:var(--table-dark);
+    }
+  }
+  .block > table {
+      margin-top: 0;
+  }
+}
+
+
+/* ==== IMAGES ==== */
+.page{
+  .marker {
+    position            : absolute;
+    display	            : flex;
+    align-items         : center;
+    justify-content     : center;
+    background-color    : var(--demongreen);
+    font-family         : "QTFrizQuad";
+    font-size           : 11pt;
+    font-weight         : bold;
+    color               : white;
+    width               : 1.5em;
+    height              : 1.5em;
+    border-radius       : 100%;
+  }
+}
+
+```
+
+{{coverpage
+
+![homebrewery_mug](http://i.imgur.com/hMna6G0.png) {width:280px,margin:-10mm}
+
+# DragonBrew
+
+## A Homebrewery-Template<br>for Dragonbane
+
+Version 0.8
+
+
+### AUTHOR:
+Sibling Dex
+
+
+### CREDITS:
+This template is based on [Unbane](https://homebrewery.naturalcrit.com/share/giOlHPKwqVA-) by prof.tw
+
+This game supplement was created under Fria Ligan AB’s [Dragonbane Third Party Supplement License](https://freeleaguepublishing.com/wp-content/uploads/2023/11/Dragonbane-License-Agreement.pdf) to be used with the core rules of Dragonbane.
+
+This game supplement is neither affiliated with, sponsored, or endorsed by Fria Ligan AB.
+}}
+
+
+{{homebreweryCredits
+Made With
+{{homebreweryIcon}}
+The Homebrewery  
+[Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
+}}
+
+
+{{dragonbaneLogo}}
+
+\page
+
+
+{{toc
+## Contents
+
+[Theme Features](#p2) {{number 2}}
+
+[Boxes](#p3) {{number 3}}
+
+[Profession](#p4) {{number 4}}
+
+[Kin](#p5) {{number 5}}
+
+[Heroic Abilities](#p5) {{number 5}}
+
+[School of Magic](#p6) {{number 6}}
+
+[Monster](#p7) {{number 7}}
+
+[Adventure Site](#p8) {{number 8}}
+}}
+
+
+-----
+
+
+### Credits
+This template was developed by **Sibling Dex**, based on [Unbane](https://homebrewery.naturalcrit.com/share/giOlHPKwqVA-) by **prof.tw**. You can find both of us on the Dragonbane Discord. Message us there if you are interested in helping with this project. A Github repository containing the resource files from Unbane is available here: https://github.com/un-bane/
+
+\column
+
+
+{{dragonbox
+## Work in Progess
+
+- **This theme is still work in progress!**
+
+If you like to contribute, request features, or need help, please join us in the Resources Forum on the Dragonbane Discord server.
+
+### Last Updated: 07 Dec. 2024
+}}
+
+
+### Licence
+
+The text in [this template](https://homebrewery.naturalcrit.com/share/IOEuWz2v8FFi) © 2024 by Sibling Dex is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)
+![](https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1) {width:1em,mix-blend-mode:multiply}
+![](https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1) {width:1em,mix-blend-mode:multiply}
+![](https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1) {width:1em,mix-blend-mode:multiply}
+
+
+::::
+
+# Theme Features
+
+### Headings
+This template includes modified `# h1` (full width, green, underlined), `## h2` (full width, green), `### h3` (black all caps), and `#### h4` (Run-in heading), headers.
+
+#### Paragraphs:
+The `#### h4` headings are meant as paragraph headings, and can also be used to write description lists.
+
+#### Paragraph Two:
+This is an example of a two-item description list using `#### h4` paragraph headings.
+
+### The Coverpage
+The `coverpage` block changes how headings `# h1`, `## h2` and `### h3` function and centeres all text. `# h1` becomes a big red title, `## h2` a smaller subtitle, and `### h3` become centered headings for subdivisions like "Author" and "Credits". 
+
+### Spacing
+Use any number of colons {{code &#58;&#58;&#58;&#58;}} to add vertical space anywhere on the page, between paragraphs, etc.
+
+
+\column
+
+
+### Fonts
+
+This template adds the following fonts that rely on the Unbane template:
+
+{{font-family:"Caveat" Caveat / **Bold Caveat**}} -- can be used by adding the `{{handwritten }}` tag around a piece of text.
+
+{{font-family:"QTFrizQuad" QTFrizQuad / **Bold QTFrizQuad**}} -- is used for headings, tables. and inside boxes.
+
+
+### Example Pages
+
+In the following, there are several pages that show certain types of homebrew, such as [professions](#p4), [kin, heroic abilities](#p5), spells and schools of magic, special items , locations, quests, etc. Feel free to follow the layouts proposed here or to break them in new and interesting ways.
+
+:
+
+{{demonbox
+## Warning: Use Chrome/chromium
+
+Many of this template's features, including google font integration and correct column breaking, sadly don't work on browsers like Firefox, for the time being, please use Chrome or Chromium with Homebrewery!
+}}
+
+{{pageNumber,auto Theme Features}}
+
+\page
+
+## Boxes
+
+{{dropcap T}}here are three types of box provided by this style: the Demonbox, Dragonbox and Emptybox. These are special environments that can be used to highlight special rules or important information in a compact way. These boxes are not floats but are placed as part of the text. Therefore, they can be placed normally to produce a one-column wide box, or with the addition of the `wide` tag, to create a two-column spanning box.
+
+{{dragonbox
+## Dragonbox
+
+- **These Rules Are:** Obligatory
+
+This is a `dragonbox`, it can be used to highlight important information in a compact and noticeable way.
+
+
+It can be used, for example, to typeset a Heroic Ability. In that case, you can use an list (using `-` or `*`), as above, to note the Willpower cost for the ability.
+}}
+
+\column
+
+{{emptybox
+## Emptybox
+
+This is an `emptybox`, it features the same heading as a `dragonbox` but not the coloured background. It is used in the tablebox environment but can also be used by itself.
+
+}}
+
+
+{{demonbox
+## Demonbox
+
+- **These Rules Are:** Optional
+
+This is a `demonbox`, they are used to add information about optional rules.
+
+The `demonbox` is fully coloured in the current accent colour and can be a drain on printer toner or ink. It is generally a good approach to use these boxes sparingly. A restrained use of boxes in general also prevents the layout from looking cluttered.
+}}
+
+{{tablebox,wide
+## Tablebox
+
+
+| DIE | LABEL       | ALIGNMENT | DESCRIPTION |
+|:---:|:----------- |:--------- |:----------- |
+|  1  | Dice        | Center    | If you want a table to be rollable, use the first column as the die or dice column. Give it a header denoting the die/dice used, and number the rows. |
+|  2  | Label       | Left      | The first or second column of a table should be the label of the entry. This gives a short and meaningful name to the entry in the row. |
+|  3  | Score       | Center    | You can add several narrower columns for short, standardized scores, such as price, availability, durability, etc. |
+|  4  | Description | Left | The typically last column in a table is a longer description of the entry. Use a breaking alignment for this, so the description can be more than one line. |
+}}
+
+
+
+{{dragonbox,wide,column-count:2
+## Wide Boxes
+Both `dragonbox` and `demonbox` can be used with the `wide`tag to make it span the whole page width. When using text inside a wide box, it is good practice to also add a `column-count:2` tag to the box to get a two column layout in the box and prevent overly long lines. 
+
+### Subsection
+Lower level headings such as `### h3` and `### h4` can be used inside boxes.
+
+#### Paragraph:
+Using these headings can help make the text inside a box more ordered and provide a better overview.
+}}
+
+
+
+
+{{pageNumber,auto Theme Features -- Boxes}}
+
+\page
+
+# Profession
+
+> "A quote from a real or fictional person that sets the mood or gives a glimpse into the type of profession you want to describe."
+> 
+> {{author -- The Author}}
+
+
+{{wide
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {height:450px,mix-blend-mode:multiply,margin-left:2cm}
+}}
+
+
+A longer text that describes who the people of your profession are, how they might think, what they typically do, how they are seen by others or how they see themselves, where they typically live or work, or whether they travel a lot, whether they earn a steady income or rely on a patron or the charity of others, are they religious or hold to a specific creed... etc.
+
+
+- **Key Attribute:** STR, AGI, CON, INT; WIL, or CHA
+- **Skills:** 8 skills to choose the initial 6 basic skills from, these should include at least one weapon skill.
+- **Heroic Ability:** A heroic ability or multiple to choose from, or a notice like "As a mage, you don’t get a starting heroic ability. Instead, you get your magic."
+
+\column
+
+
+| D6 | Starting Gear                                                |
+|:--:|:------------------------------------------------------------ |
+| 1  | Some gear, torch, flint & tinder, DX food rations, DY silver |
+| 2  | Some gear, torch, flint & tinder, DX food rations, DY silver |
+| 3  | Some gear, torch, flint & tinder, DX food rations, DY silver |
+
+{{column-count:2
+| D6 | Nickname   |
+|:--:|:-----------|
+| 1  | Some       |
+| 2  | Rather     |
+| 3  | Silly      |
+
+| D6 | Nickname   |
+|:--:|:-----------|
+| 4  | Or badass  |
+| 5  | sounding   |
+| 6  | nicknames  |
+}}
+
+
+{{pageNumber,auto Example -- Profession}}
+
+\page
+
+# Kin & Abilities
+
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:100%,mix-blend-mode:multiply}
+
+### Kin Name
+
+A description of the kin's origins, appearance, special features, their typical outlook on life, history, relation to others, how they are viewed by others or by themselves, their place in the cosmology of the setting, 
+
+
+{{column-count:2
+| D6 | First Name  |
+|:--:|:----------- |
+| 1  | Some        |
+| 2  | Names       |
+| 3  | That are    |
+
+| D6 | First Name  |
+|:--:|:----------- |
+| 4  | Typical for |
+| 5  | People of   |
+| 6  | This Kin    |
+}}
+
+
+{{dragonbox
+## Ability: Memorable Gift
+
+- **Willpower Points:** 3 or Varies
+
+A kin ability that can be activated at will. The ability will typically provide a boon in a common situation or lets you circumvent a rule. 
+
+}}
+
+{{dragonbox
+## Ability: Passive Ability
+
+- **Willpower Points:** ---
+
+You can also add a second, passive ability that provides a boon in very specific situations.
+
+}}
+
+\column
+
+{{emptybox
+## Some More Heroic Abilities
+
+
+### Basic Ability
+
+- **Requirement:** ---
+- **Willpower Points:** 2
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Typical Ability
+
+- **Requirement:** A Skill at 12
+- **Willpower Points:** 3
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Variable Ability
+
+- **Requirement:** A Skill at 12
+- **Willpower Points:** Varies
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Passive Ability
+
+- **Requirement:** A Skill at 12
+- **Willpower Points:** ---
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Crafting Ability
+
+- **Requirement:** A Skill at 12
+- **Willpower Points:** Varies
+
+A short description of what kind of items can be created with this sbility, what kinds of tools and resources are required, and what quick things you can do during a stretch.
+
+Then, something along the lines of: In one shift of time you can craft a (type of) item of your choice, such (examples, from the lists
+on pages XX–XX). It requires (a specified resource, of a certain weight or typical cost), and costs a number of WP equal to the item’s price in gold (rounded up). You can spread the work across multiple shifts if you do not have enough WP.
+}}
+
+
+{{pageNumber,auto Example -- Kin & Abilities}}
+
+\page
+
+{{imageMaskEdge5,--offset:0%,--rotation:180
+  ![](https://i.imgur.com/GZfjDWV.png){height:100%}
+}}
+<!-- Use --offset to shift the mask away from page center (can use cm instead of %)
+     Use --rotation to set rotation angle in degrees. -->
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# School of Magic
+
+
+### Magic Tricks
+
+#### Card Trick:
+You get an audience member to draw a card out of a fresh deck of cards and replace it. After a good shuffle, you produce the audience member's card from the deck.
+
+
+#### Coin Pull: 
+You can pull a silver coin out from behind the ear of an unsuspecting onlooker. It is up to you to decide who gets to keep it.
+
+#### Magic Rings:
+You can connect or separate two seemingly closed and solid rings. The real trick is to find a good use for this feat.
+
+\column
+
+### Rabbit out of a Hat
+- **Rank:** 1
+- **Prerequisite:** Your school of magic
+- **Requirement:** Word, gesture, focus (a hat)
+- **Casting time:** Action
+- **Range:** Personal
+- **Duration:** Stretch
+
+You instantly summon a small rabbit out of your hat. The animal has the stats of a cat (p. 99 of the Core Rulebook) and vanishes with a "Poof!" after a stretch. It follows its creator’s commands (free action) and acts independently, but must stay within sight of the mage.
+
+
+{{pageNumber,auto Example -- School of Magic}}
+
+\page
+
+
+# Monster
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+:
+
+{{tablebox
+## Monster Attacks
+
+| D6 | Attack                                 |
+|:--:|:---------------------------------------|
+| 1  | **Attack Name:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. |
+| 2  | **Attack Name:**  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. |
+| 3  | **Attack Name:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. |
+| 4  | **Attack Name:** Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. |
+| 5  | **Attack Name:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. |
+| 6  | **Attack Name:** Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. |
+
+}}
+
+\column
+
+{{paperbox
+|                                              |
+|:---------------------------------------------|
+| **Ferocity:** 2   **Size:** Large            |
+| **Movement:** 16   **Armor:** —   **HP:** 32 |
+
+:
+
+**Typical Gear:**:: A weapon or other gear the monster usually carries.
+
+**Ability:**:: A special ability or feature that applies to the monster.
+}}
+
+
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:15cm,mix-blend-mode:multiply,margin-left:-4cm}
+
+
+
+{{pageNumber,auto Example -- Monster}}
+
+\page
+
+
+# Adventure Site
+
+
+{{dropcap H}}ere, you should present a brief atmospheric description of the adventure site. It can feature some historical background information, a description of its surroundings, terrain type, plant-life or the type of settlement it is. 
+
+Keep more up-to-date information of what is happening here at the moment for the next section. Here, you should primarily set the tone for the site. you can also include a quote from some fictional traveler or scholar on the importance or their impression of the area.
+
+
+## The Situation
+
+Give a description of what has been going on immediately before the adventurers enter the site and what is happening at the moment. Also include what they are likely to encounter in this adventure site, keeping the desciption in broad strokes. Go into detail in the description of the individual locations below. 
+
+You can also introduce the most important locations, NPCs or monsters here, but also go into more detail in in the location desciptions an in the NPC and moster boxes.
+You can provide a map of the adventure site, like below, and number the locations on it. Provide more detailed descriptions of each location as seen on the next page.
+
+
+
+{{emptybox,wide
+## Map of the Adventure Site
+
+![Greybanner City](https://i0.wp.com/2minutetabletop.com/wp-content/uploads/2017/04/Greybanner-bw.jpg) {width:100%,mix-blend-mode:multiply}
+
+{{marker 1}}{top:80mm,left:85mm}
+{{marker 2}}{top:95mm,left:30mm}
+
+**Map credit:** ["Greybanner City", by 2minutetabletop.com](https://2minutetabletop.com/product/greybanner-city/) (CC BY-NC 4.0)
+}}
+
+
+
+{{pageNumber,auto Example -- Adventure Site}}
+
+\page
+
+
+
+
+
+## Locations
+
+### 1. The Arena of Glory
+
+> A short atmospheric description of the location that can be read out aloud to the players and summarizes how it looks at first glance, or one's first entrance.
+
+- **The Main Feature:** First of all, describe the main feature of this location. Provide the most imporant aspeccts in a brief, digestible paragraph.
+- **An NPC or Monster:** Describe a character or monster that inhabits the location.
+- ***A Secret:*** {color:red} Describe a hidden treasure or trap that can be discovered by a SPOT HIDDEN roll or has to be avoided by an ACROBATICS roll.
+
+
+### 2. Training Grouds
+
+> A short atmospheric description of the location that can be read out aloud to the players and summarizes how it looks at first glance, or one's first entrance.
+
+- **The Main Feature:** First of all, describe the main feature of this location. Provide the most imporant aspeccts in a brief, digestible paragraph.
+- **An NPC or Monster:** Describe a character or monster that inhabits the location.
+- ***A Secret:*** {color:red} Describe a hidden treasure or trap that can be discovered by a SPOT HIDDEN roll or has to be avoided by an ACROBATICS roll.
+
+
+\column
+
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:100%,mix-blend-mode:multiply}
+
+{{dragonbox
+## Important NPC
+
+Give a short description of an NPC that the adventurers will encounter in this location. Provide their appearance, motivations, maybe a short history and what they will want from the adventurers. Provide their stats in the following short format:
+
+|                                                              |
+|:-------------------------------------------------------------|
+| **Movement:** 10 &emsp; **Damage Bonus:** Str +D4            |
+| **Armor:** Leather (1) &emsp; **HP:** 20 &emsp; (**WP:** 8)  |
+| **Skills:** Awareness 10, Brawling: 12, Evade: 10            |
+| **Abilities:** Robust x 2                                    |
+| **Weapons:** Short sword (skill level 12, damage D10), short bow (skill level 12, damage D10) |
+
+
+}}
+
+
+
+
+{{pageNumber,auto Example -- Adventure Site}}

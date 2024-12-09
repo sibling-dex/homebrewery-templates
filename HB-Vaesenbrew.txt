@@ -1,0 +1,815 @@
+```metadata
+title: Vaesenbrew
+description: A Vaesen RPG Homebrewery template
+tags:
+  - meta:theme
+  - vaesen rpg
+systems: []
+renderer: V3
+theme: Blank
+
+```
+
+```css
+/*=======---  Example CSS styling  ---=======*/
+/* Any CSS here will apply to your document! */
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/hermetic-spellbook');
+@import url('https://fonts.cdnfonts.com/css/pr-astro');
+@import url('https://fonts.cdnfonts.com/css/agathodaimon');
+
+/* Fonts */
+@font-face {
+    font-family: "Berolina";
+    src: url('https://sibling-dex.github.io/homebrewery-templates/font/Berolina/Berolina.ttf');
+}
+
+@font-face {
+    font-family: "Flareserif";
+    src: url('https://sibling-dex.github.io/homebrewery-templates/font/Flareserif/Flareserif%20821%20Bold.otf');
+    font-weight: bold;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  --color-red: #9D3431;
+  --color-brown: #483417;
+  --color-note: #F2F0ED;
+  --color-row: #E6DED7;
+  
+  counter-reset: chapter-numbers;
+}
+
+
+@media print {
+  .page {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.page {
+  padding: 3cm 0 2cm 0;
+  column-gap: 1cm;
+
+  font-family: "Baskervville";
+  font-size: 11.5pt;
+  line-height: 1.2;
+  color: #44291E;
+
+
+  .header,
+  .pageNumber {
+    position: absolute;
+    left: 0 !important;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    font-family: "Baskervville";
+    font-size: 11.5pt;
+    font-weight: bold;
+    
+    &::before, &::after {
+      content: " · ";
+    }
+  }
+  
+  .header {
+    top: 1cm;
+    
+    &.auto::after {
+      content: "Chapter " counter(chapter-numbers) " · ";
+    }
+  }
+  .pageNumber {
+    bottom: 1cm;
+    
+    &.auto::after {
+      content: counter(page-numbers) " · ";
+    }
+  }
+  .columnWrapper {
+    width: 17cm;
+    height: 24cm;
+    margin: auto;
+  }
+  
+  &:has(.title) {
+    padding: 1cm 0;
+    column-count: 1;
+    
+    &::before,
+    &::after {
+      content: none;
+    }
+    
+    .columnWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 14cm;
+      
+      & > p {
+        margin: .5em 0;
+        text-indent: 0;
+      }
+    }    
+  }
+  
+  .title {
+    display: block;
+    font-family: "Flareserif";
+    font-size: 50pt;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-brown);
+    margin-top: 0;
+  }
+
+  .subtitle {
+    display: block;
+    font-family: "Baskervville";
+    font-weight: bold;
+    font-size: 13pt;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+    
+  .heroimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-span: all;
+    margin: 1cm auto;
+    padding-top: 1.1cm;
+    width: 9.22cm;
+    height: 10.43cm;
+    line-height: 0;
+    background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/Snake.png');
+      
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 8.5cm;
+      height: 8.5cm;
+      border-radius: 100%;
+      overflow: hidden;
+        
+      img {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+        
+  .author {
+    font-size: 15pt;
+  }
+    
+  .flw-logo {
+    display: block;
+    position: absolute;
+    bottom: 3.5cm;
+    left: 2cm;
+    right: 2cm;
+    height: 109px;
+    width: 212px;
+    margin: auto;
+    background-image: url("https://sibling-dex.github.io/homebrewery-templates/img/FLW.png");
+    background-size: cover;
+    mix-blend-mode: multiply;
+  }
+    
+  .copyright {
+    position: absolute;
+    bottom: 1cm;
+    left: 2cm;
+    right: 2cm;
+    width: auto;
+    
+    p {
+      font-size: 8pt;
+      text-align: justify;
+      text-indent: 0;
+      margin: .3em;
+    }
+  }
+
+  .homebreweryCredits {
+    margin: 5mm auto;
+    
+    p {
+      font-family: 'Baskervville';
+      font-size: 10pt;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+      text-indent: 0;
+      letter-spacing: .08em
+    }
+  }
+  
+  h1::after,
+  hr {
+    content: "";
+    display: block;
+    height: 3pt;
+    width: 90%;
+    margin: 1rem auto;
+    background-image: linear-gradient(to right, white, var(--color-brown) 20%, var(--color-brown) 80%, white);
+    border: 0;
+    mix-blend-mode: multiply;
+  }
+  
+  h1 {
+    column-span: all;
+    font-family: "Flareserif";
+    font-size: 36pt;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-brown);
+    margin-top: 0;
+    margin-bottom: 1em;
+    
+    counter-increment: chapter-numbers;
+    
+    &::before {
+      content: counter(chapter-numbers, upper-alpha);
+      font-family: "Hermetic Spellbook";
+      font-size: 100pt;
+      font-weight: normal;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2cm;
+      height: 2cm;
+      margin: 1rem auto 2rem auto;
+      /* border: 2pt solid var(--color-brown);
+      border-radius: 100%;*/
+    }
+  }
+  .heroimage + h1::before {content: unset;}
+  
+  h2 {
+    font-family: "Berolina";
+    font-size: 20pt;
+    font-weight: normal;
+    color: var(--color-brown);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+    break-after: avoid;
+  }
+  .columnWrapper > h2:first-child,
+  .header + h2 {
+    margin-top: 0;
+  }
+  
+  
+  h3 {
+    font-family: "Baskervville";
+    font-size: 13.5pt;
+    font-weight: bold;
+    color: var(--color-brown);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+    break-after: avoid;
+  }
+  .columnWrapper > h3:first-child,
+  .header + h3 {
+    margin-top: 0;
+  }
+  
+  h4 {
+    font-family: "Baskervville";
+    font-size: 11.5pt;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+    break-after: avoid;
+  }
+  
+  h5 {
+    font-family: "Baskervville";
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: 0pt;
+    break-after: avoid;
+  }
+  
+  p {
+    hyphens: auto;
+    text-align: justify;
+  
+    & + p {
+      text-indent: 1em;
+    }
+  }
+  
+  .dropcap {
+    color: var(--color-brown);
+    font-family: "Berolina";
+    font-size: 4em;
+    float: left;
+    margin-right: .1em;
+    margin-bottom: -.5em;
+  }
+  .handwritten {
+    font-family: "Homemade Apple";
+    font-style: normal;
+    
+    p {
+      text-align: left;
+    }
+  }
+  
+  blockquote {
+    font-size: 10pt;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 1em; 
+  }
+  
+  img {
+    width: 100%;
+    margin: auto;
+    mix-blend-mode: multiply;
+  }
+  p:has(img) {
+    text-align:center;
+  }
+  
+  .bullet::before {
+    content: "❧";
+  }
+  
+  .center {
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+    
+    li {
+      margin-left: 1.4em;
+      margin-bottom: 2pt;
+      
+      &::before {
+        float: left;
+        content: "❧";
+        margin-left: -1em;
+      }
+    }
+    ol {
+      margin: .5em 0;
+      
+      li {
+        margin-bottom: 2pt;
+      }
+    }
+  }
+  
+  table {
+    font-family: "Poppins";
+    font-size: 8pt;
+    margin: 3mm 0;
+    
+    thead {
+      font-weight: 600;
+      text-transform: uppercase;
+      
+      tr {
+        border-bottom: 2px solid var(--color-brown);
+      }
+    }
+    
+    th, td {
+      padding: 3pt 4pt 2pt 4pt;
+    }
+    
+    tbody {
+      tr {
+        border-top: 1px solid var(--color-brown);
+        
+        &:nth-of-type(odd) {
+          background-color: var(--color-row);
+        }
+      }
+    }
+  }
+  
+  .note {
+    background-color: var(--color-note);
+    border: 1px solid var(--color-brown);
+    padding: 8mm 1cm;
+    outline: 2px solid var(--color-brown);
+    outline-offset: -2mm;
+    margin: 5mm 0;
+    
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  .npc,
+  .box {
+    background-image:
+      radial-gradient(ellipse at left bottom, white 20%, transparent 20%),
+      radial-gradient(ellipse at right top, white 20%, transparent 20%),
+      url("https://sibling-dex.github.io/homebrewery-templates/img/border-top.png"), 
+      url("https://sibling-dex.github.io/homebrewery-templates/img/border-bottom.png");
+    background-repeat: no-repeat;
+    background-position: 
+      left bottom,
+      right top,
+      left top, 
+      right bottom;
+    padding: 1cm 1cm;
+    margin: 5mm 0;
+    
+    ul,ol {
+      font-family: "Poppins";
+      font-size: 9.5pt;
+      
+    }
+    
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+  .box {
+    p,h3 {
+      font-family: "Poppins";
+      font-size: 9.5pt;
+    }
+  }
+}
+```
+
+{{heroimage
+![PLACE IMAGE HERE](https://www.publicdomainpictures.net/pictures/290000/velka/lager-beer-frogs.jpg){height:9cm,width:auto}
+}}
+
+
+{{title,font-size:50pt Vaesenbrew}}
+
+{{subtitle A Vaesen Template for Homebrewery}}
+
+----------------------------------------------------------------
+
+
+> **INTRODUCTION. This is a Homebrewery template to create supplements for the Vaesen RPG by Free League Publishing. It can be used to create homebrew or supplements for the Free League Workshop program. Use, modify, recombine and adapt to your liking!**
+
+
+**BY** {{author **SIBLING DEX** }}
+
+{{flw-logo}}
+
+{{copyright
+This product was created under license. Vaesen and its logo are trademarks of Fria Ligan AB and Johan Egerkrans.
+
+This work contains material that is copyright Fria Ligan AB, Johan Egerkrans and/or other authors. Such material is used with permission under the Community Content Agreement for Free League Workshop.
+
+All other original material in this work is copyright [year] by [your legal name or company name] and published under the Community Content Agreement for Free League Workshop. 
+}}
+
+\page
+
+{{header Overview}}
+
+## About this Template
+
+This Homebrewery template is meant to replicate the [Free League Workshop](https://freeleaguepublishing.com/community-content/free-league-workshop/) - Vaesen templates for Word and InDesign.
+
+The Homebrewery makes the creation and sharing of great looking homebrews easy. It uses [Markdown](https://help.github.com/articles/markdown-basics/) with a little CSS magic to make your brews come to life.
+
+
+
+### Credits
+This template was made by **Sibling Dex**. You can find me on Reddit or the Vaesen RPG Discord server. Message me there if you are interested in helping with this project.
+
+The Homebrewery is licensed using the [MIT License](https://github.com/naturalcrit/homebrewery/blob/master/license). Which means you are free to use The Homebrewery codebase any way that you want, except for claiming that you made it yourself.
+
+To credit  Homebrewery, just reference that you made it with The Homebrewery, or use the following code to create the logo:
+
+{{homebreweryCredits
+Made With
+
+{{homebreweryIcon}}
+
+The Homebrewery  
+[Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
+}}
+
+
+{{note
+### Use Chrome(-ium) !!!
+
+Many of this template's features, including google font integration and correct column breaking, sadly don't work on browsers like Firefox, for the time being, please use Chrome or Chromium with Home-brewery!
+}}
+
+
+{{box
+### Work in Progess
+
+- **This template is work in progress!**
+
+If you like to contribute, request features, or need help, contact me on Reddit or the Vasesen RPG Discord server.
+
+:
+
+> **Last Updated: 06 Dec. 2024**
+}}
+
+
+### Recent Changes
+
+#### 2024-12-08:
+
+- Added `# h1` chapter headings, including runic symbols and hrule. 
+- Shifted all other headings down by 1.
+- Added the ability to ass a `{{heroimage ...}}` above a `# h1`  chapter heading
+
+
+{{pageNumber,auto}}
+
+\page
+
+# Introduction
+{{header,auto}}
+
+
+
+{{dropcap T}}his chapter presents the basics of the Vaesenbre template, including information about its typography, theme elements, boxes, headers and footers, and how to use special tags to customize the looks as you desire.
+
+
+
+## Theme Features
+
+### Headings
+This template includes modified headings:
+
+- `# h1` (36pt chapter heading)
+- `## h2` (20pt section heading)
+- `### h3` (13.5pt sub-section heading)
+- `#### h4` (11.5pt paragraph heading)
+
+#### Paragraphs:
+The `#### h4` headings are meant as paragraph headings, and can also be used to write description lists.
+
+#### Paragraph Two:
+This is an example of a two-item description list using `#### h4` paragraph headings.
+
+\column
+
+{{note
+### Fonts
+
+This template adds the following fonts:
+
+- {{font-family:"Flareserif" **FLARESERIF**}} -- for h1 and the title.
+
+- {{font-family:"Berolina" **BEROLINA**}} -- for h2, headers & footers.
+
+- {{font-family:"Baskervville" **Baskervville**}} -- for text and h3 headings
+
+- {{font-family:"Poppins" **Poppins**}} -- in tables and "box".
+
+- {{font-family:"Homemade Apple" Homemade Apple}} -- for handwritten text, use `{{handwritten ...}}`.
+
+- **Hermetic Spellbook:** {{font-family:"Hermetic Spellbook",font-size:20pt ABCDE}} -- for the chapter numbers above the chapter titles `# h1` 
+
+}}
+
+{{pageNumber,auto}}
+
+\page
+
+
+:::
+
+{{handwritten,wide,center
+> It is also possible to wite a text above the chapter title.  
+This is often done in the Vaesen books to include stilistic  
+elements, such as a handwritten letter that introduces an  
+aspect of the chapter that foloows. You can also include  
+an image, if you like.
+}}
+
+:::
+
+
+# Example Pages
+{{header,auto}}
+
+In the following, there are several pages that show certain types of homebrew, such as generic text layouts, archetypes, talents, vaesen, mysteries, NPCs, locations, etc. (most of these are still work in progress). Feel free to follow the layouts proposed here or to break them in new and interesting ways.
+
+
+
+{{pageNumber,auto}}
+
+\page
+
+
+{{header Example Pages}}
+
+
+
+## Heading Two
+
+> {{handwritten Lit volorerum ad maioris di dic tem qui dem conse con re, ipsam fugia vendis eos consequis eat pero id quis derorem voluptae verio. Nam, optatur, con ellis ni aut essime reperiatet ut is sim fugiam re, escienes a del exerspere, aciasi odi volupta cum audae nitat officae et, aut aut aut autatur simintem volor as sequis doluptis ullese voluptatur aut que quia eos sanderrovid quod maiorat iosandu.}}
+
+
+{{dropcap L}}aut evel inis mo et, volenihit deliquam ius.Ebit ipsumquo doluptas volore molorum in restem laboreni sedisimodiam ra comnit dolupta tecus.
+Tur accaepe nonsequam, imus aperro idus consequi doluptatem sitatium debit, qui ad unt.
+
+Ut ommod mi, si vellabo. Ficia id ut lignihit qui denihicimint ressitaspis aut andaepuda quia con- essintis debis quid que sit,
+Tem ad modipid ulparchit ex eatiistiis minvenda senis pero quibusto eume verchic aboribus, velendita senis perspit que venimus etur, ad et la coruntur re, etur?
+
+
+### Heading Three
+
+Invendis iminvel eum, ea dundit officaest que acia volores illaut adipsae. Nem. Alit, voluptasinum rerat praersperum ant, solupta speriaest apitend andipiciis il il idi dolor ad etur, cusdae etur sum ra dolorehenis conseque volupid istet, consequame pra dolorro restisi utas estiori oreheniminum exped quamet rate volore quistempore doluptatur?
+
+Poria dia sitistem samus, eum que vel maio omnimus magnihi ctotatur molessequis eriorat urempos magni audis ipistrumque estiis minimus sunditi te arumquas quo consequatur, voloribus et utaepe eos enis aut dit alis et doloremquo officid quo omnitam aspitat ullaut quibusa picate pratia ea cuptae omni dolum qui rero voloreium fugitiam et voles elluptatibus alit harit aut digent.
+
+\column
+
+#### Heading Four: 
+
+Pit dolumquam faccus pelenecti ommolup tibus, qui omni dolupta epedignam quas mi, volore labo. Quame cor molorerum remquam usandae. Adis volecullab intempor sendeseditem vid quia simolupta doluptatur aut re imus, unt dolorepe lacest, quist et vent aditia conet maios as etur arum imeCia pere, conseque mos represtem debisci taspell orisci abo. Ut ma cuptatet, sit voloresero qui res des iminctor aut delibust inctet a nost que poratqui cusapiciati occullaborum sinciur andae in everect endaecabore antum repudionet volum voluptatur?
+
+Solore corehendusam volorepe volorio et vent. Nonet, exerro con repudaepudae pereium dolup-
+tas endam sequiam, soluptae. Liatur, con prature autem voluptur, eturiam eniat.
+
+
+
+{{note
+### Note | Heading
+
+Parum quae odit et ea nes non pra consequid ut aut occatust, consequunt volles dusandam, comnissunt. Dolut eum soluptae ne serum fugit aliquam
+
+| D6  | Result | Description |
+|:---:|:-------|:------------|
+|  1  | Lose   |             |
+|  2  | Sorry  |             |
+|  3  | Tied   |             |
+|  4  | Tied   |             |
+|  5  | Almost |             |
+|  6  | Win    |             |
+}}
+
+{{pageNumber,auto}}
+
+\page
+
+{{header,auto}}
+
+### :far_snowflake: Bullet | Heading Three
+
+Magnimi nvellate min nis aut dolenda num in perferi onsequis si alitasi quiam ulpa a eturia qui- aepel enda nia aut quid que derum et et accullo rrorehendae istruntibus eveliquam voluptae velen- daerum et dollupt atemperum que abo. Endit ute pro et venecte conempo repudit, cuptaque net et alit, volupta tquodi conecto maiorem volorempor sunt et ut maio. Nam faccus quis am et quam, untibust perecab is est odignia es estiora tusaperfera sequi conem latempe rrovidus ressequi remporio. Et quo molore, et estempo rrorem dia nullecatur?
+
+- Archill acimenis mi, qui quiscil inusti quo 
+eturest runditi ssintem escima volo vel il mos eaquossit quas as elitate mossin ere 
+- consequiatur remodit quiaererumet archilis pre venist, ut vent, sum inullandi conem 
+
+1.	facese aut voluptasi adit inctatem in erum ut labo. Ximpersped experum velis asperum
+2.	faccus im renimus sunti od earcius am quis eum repeliquam serrovidite pratiust omni de 
+3.	solupta quodis qui coreste sus aut occulparum 4. evenda quos es in et doloreserum qui dolori-
+orio quid qui cumendam
+
+
+
+{{box
+### Box | Heading
+
+Poria dia sitistem samus, eum que vel maio omnimus magnihi ctotatur molessequis eriorat urempos magni audis ipistrumque estiis minimus sunditi te arumquas quo consequatur.
+}}
+
+\column
+
+![](https://sibling-dex.github.io/homebrewery-templates/img/Bebel.jpg){width:5cm}
+
+{{npc
+### NPC name 
+
+> "A typical quote from the character!"
+
+Magnimi nvellate min nis aut dolenda num in perferi onsequis si alitasi quiam ulpa a eturia qui- aepel enda nia aut quid que derum et et accullo rrorehendae istruntibus eveliquam voluptae velen- daerum et dollupt atemperum que abo. 
+
+Endit ute pro et venecte conempo repudit, cuptaque net et alit, volupta tquodi conecto maiorem volorempor sunt et ut maio. Nam faccus quis am et quam, untibust perecab is est odignia es estiora tusaperfera sequi conem latempe rrovidus ressequi remporio. Et quo molore, et estempo rrorem dia nullecatur?
+
+- Physique 3  {{width:1em}} Precision 2  {{width:1em}} Logic 1 {{width:1em}} Empathy 2
+
+- **Skill** 3 {{width:1em}} **Skill** 2 {{width:1em}} **Skill** 1
+
+- Talent 1 {{width:1em}} Talent 2
+
+- **Equipment:** Knife, pipe
+}}
+
+
+{{pageNumber,auto}}
+\page
+
+{{header Example Pages}}
+
+## {{font-size:28pt Archetype}}
+
+> A longer quote that illustrates the character, background or image of the archetype.
+Poria dia sitistem samus, eum que vel maio omnimus magnihi ctotatur molessequis eriorat urempos magni audis ipistrumque estiis minimus sunditi te arumquas quo consequatur, voloribus et utaepe eos enis aut dit alis et doloremquo officid quo omnitam aspitat ullaut quibusa picate pratia ea cuptae omni dolum qui rero voloreium fugitiam et voles elluptatibus alit harit aut digent.
+
+:::
+
+![](https://www.publicdomainpictures.net/pictures/190000/velka/elegant-gentleman.jpg){width:7cm,filter:sepia(1)}
+
+\column
+
+Choose among the suggestions below or make one
+up yourself.
+
+##### NAME
+
+- FIRST NAME: A couple of names
+- LAST NAME: Some last names
+
+##### MOTIVATION
+
+- Finding something
+- A goal or aspiration 
+· 
+
+
+##### TRAUMA
+
+- Attacked by a Vaesen 
+- Confronted with a new reality
+- An unusual event
+
+
+##### DARK SECRET
+
+- An addiction
+- A past crime
+- A curse or problem
+
+
+##### RELATIONSHIPS
+
+Choose a relationship for each of the other player
+characters, or make up your own.
+
+- A relationship
+- What I think of them
+- What I want from them
+
+{{box 
+- **MAIN ATTRIBUTE:** Attribute
+- **MAIN SKILL:** Skill
+- **TALENTS:** Talent:1, Talent:2, Talent:3
+- **RESOURCES:** 1--8
+- **EQUIPMENT:** Some typical posessions
+}}
+
+{{pageNumber,auto}}
+\page
+
+{{heroimage
+![PLACE IMAGE HERE](https://www.publicdomainpictures.net/pictures/290000/velka/lager-beer-frogs.jpg){height:9cm,width:auto}
+}}
+
+# Mytery Example
+{{header,auto}}
+
+
+{{pageNumber,auto}}
+\page
+
+# Chapter
+{{header,auto}}
+
+
+
+{{pageNumber,auto}}

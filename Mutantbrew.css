@@ -1,0 +1,541 @@
+/*=======---  Example CSS styling  ---=======*/
+/* Any CSS here will apply to your document! */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Big+Shoulders+Display:wght@100..900&family=Karantina:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Fonts */
+@font-face {
+    font-family: "Big Noodle Titling";
+    src: url('https://sibling-dex.github.io/homebrewery-templates/font/BigNoodleTitling%201/big_noodle_titling.ttf');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  --color-brown: 191, 94, 20;
+  
+  counter-reset: chapter-numbers;
+}
+
+@media print {
+  .page {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.page {
+	background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/Background.png');
+  background-size: 100% calc(100% - 3.5cm);
+  background-position: 0 2cm;
+  padding: 3cm 0 2.5cm 0;
+  column-gap: 1cm;
+
+  font-family: "Arvo";
+  font-size: 9pt;
+  line-height: 1.4;
+  
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    background: #181612;
+    width: 100%;
+  }
+  &::before {
+    top: 0;
+    height: 2cm;
+  }
+  &::after {
+    bottom: 0;
+    height: 1.5cm;
+  }
+  
+  .columnWrapper {
+    width: 17cm;
+    height: 23cm;
+    margin: auto;
+  }
+  
+  .header,
+  .footer,
+  .pageNumber {
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-family: "Big Noodle Titling";
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18pt;
+    color: white;
+    width: fit-content;
+    height: 1.2em;
+  }
+  .header {
+    top: 8mm;
+  }
+  .footer,
+  .pageNumber {
+    bottom: 4mm;
+  }
+  
+  .sectionNumber {
+    position: absolute;
+    font-family: "Big Noodle Titling";
+    font-size: 24pt;
+    width: 1cm;
+    height: 1.4cm;
+    color: RGBA(var(--color-brown), 0.8);
+    border-style: solid;
+    border-color: RGBA(var(--color-brown), 0.8);
+    border-width: 2mm 0;
+    mix-blend-mode: multiply;
+    
+    &.auto::after {
+      content: counter(chapter-numbers, decimal-leading-zero);
+    }
+      
+    &::before {
+      content: ""; 
+      display: block;
+      position: absolute;
+      background-color: RGBA(var(--color-brown), 0.8);
+      background-clip: content-box;
+      width: 1cm;
+      height: 4cm;
+      padding: 2mm 0;
+      border-style: solid;
+      border-color: RGBA(var(--color-brown), 0.8);
+      border-width: 4mm 0;
+    }
+  }
+  &:nth-child(even) {
+    .sectionNumber {
+      top: 6.4cm;
+      left: 0;
+      text-align: right;
+      
+      &::before {
+        bottom: 1.4cm;
+      }
+    }
+  }
+  &:nth-child(odd) {
+    .sectionNumber {
+      bottom: 6cm;
+      right: 0;
+      text-align: left;
+      
+      &::before {
+        top: 1.4cm;
+      }
+    }
+  }
+  
+  &:nth-child(even) {
+    .header,
+    .footer,
+    .pageNumber {
+      left: 0;
+      
+      &::before {
+        content: "";
+        background-color: #AEAEAC;
+        width: 1cm;
+        height: .8em;
+        margin-right: .5em;
+      }
+    }
+  }
+  
+  &:nth-child(odd) {
+    .header,
+    .footer,
+    .pageNumber {
+      right: 0;
+      
+      &::after {
+        content: "";
+        background-color: #AEAEAC;
+        width: 1cm;
+        height: .8em;
+        margin-left: .5em;
+      }
+    }
+    .pageNumber.auto::before {
+      content: counter(page-numbers);
+    }
+  }
+  
+  &:has(.title) {
+    padding: 1cm 0;
+    column-count: 1;
+    font-size: 10pt;
+    background-size: 100% 100%;
+    background-position: 0;
+    
+    &::before,
+    &::after {
+      content: none;
+    }
+    
+    .columnWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 14cm;
+      
+      & > p {
+        margin: .5em 0;
+        text-indent: 0;
+      }
+    }
+  }
+  
+  &:has(.fullpage) {
+    padding: 0;
+    column-count: 1;
+      
+    &::before,
+    &::after {
+      content: unset;
+    }
+    
+    .columnWrapper {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .fullpage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+    
+  .myz-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    &::before {
+      content: "";
+      display: block;
+      height: 2cm;
+      width: 4.45cm;
+      background-image: url("https://sibling-dex.github.io/homebrewery-templates/img/mutantyearzero_logo.png");
+      background-size: cover;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: .5cm;
+      width: 6cm;
+      background-image: url("https://sibling-dex.github.io/homebrewery-templates/img/Wire.png");
+      background-size: cover;
+      mix-blend-mode: multiply;
+    }
+  }
+    
+  .title {
+    display: block;
+    font-family: "Karantina";
+    font-size: 83pt;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: RGB(var(--color-brown));
+    margin-top: 0;
+  }
+    
+  .subtitle {
+    display: block;
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    font-size: 13pt;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+    
+  .heroimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightgrey;
+    border: 1px solid grey;
+    margin: 5mm auto;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+  }
+    
+  .author {
+    font-size: 15pt;
+  }
+    
+  .flw-logo {
+    display: block;
+    position: absolute;
+    bottom: 2.5cm;
+    left: 2cm;
+    right: 2cm;
+    width: 3.5cm;
+    height: 3.8cm;
+    margin: auto;
+    background-image: url("https://sibling-dex.github.io/homebrewery-templates/img/FL-Workshop.jpg");
+    background-size: cover;
+    mix-blend-mode: multiply;
+  }
+   
+  .copyright {
+    position: absolute;
+    bottom: 1cm;
+    left: 2cm;
+    right: 2cm;
+    width: auto;
+    font-size: 9pt; 
+    text-align: justify;
+  }
+  
+  .homebreweryCredits {
+    margin: 3mm auto;
+    
+    p {
+      font-family: 'Arvo';
+      font-size: 10pt;
+      font-weight: bold;
+      line-height: 1.4;
+      text-align: center;
+      text-indent: 0;
+      letter-spacing: .08em
+    }
+  }
+  
+  h1 {
+    column-span: all;
+    font-family: "Big Noodle Titling";
+    font-size: 75pt;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: RGB(var(--color-brown));
+    margin: 0 0 5mm 0;
+    
+    counter-increment: chapter-numbers;
+    
+    &::before {
+      content: counter(chapter-numbers, decimal-leading-zero);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 85pt;
+      width: 4.5cm;
+      height: 4.5cm;
+      margin: 5mm auto;
+      border: 3mm solid RGB(var(--color-brown));
+      border-radius: 100%;
+      mix-blend-mode: multiply;
+    }
+  }
+  
+  h2 {
+    font-family: "Big Noodle Titling";
+    font-size: 20pt;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 1em;
+    margin-bottom: .2em;
+  }
+  .columnWrapper > h1:first-child,
+  :is(.header,.sectionNumber) + h1 {
+    margin-top: 0;
+  }
+  
+  h3 {
+    font-family: "Arvo";
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+  }
+  .columnWrapper > h2:first-child,
+  :is(.header,.sectionNumber) + h2 {
+    margin-top: 0;
+  }
+  
+  h4 {
+    display: inline-block;
+    font-family: "Arvo";
+    font-size: 9pt;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-right: .5em;
+    
+    & + p {
+      display: inline;
+      
+      &::after {
+        content: "";
+        display: block;
+      }
+    }
+  }
+    
+  p {
+    text-align: justify;
+    hyphens: auto;
+  
+    & + p {
+      text-indent: 1.5em;
+    }
+  }
+  
+  blockquote {
+    font-size: 10pt;
+    font-style: italic;
+    text-align: left;
+  }
+  
+  .bullet::before {
+    content: "¤";
+  }
+  
+  
+  :is(ul,ol,dl) {
+    margin: 1em 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-left: 1.4em;
+      
+      &::before {
+        float: left;
+        content: "¤";
+        margin-left: -1em;
+      }
+    }
+  }
+  
+  table {
+    font-family: "Nunito Sans";
+    font-size: 8pt;
+    margin: 3mm 0;
+    
+    thead {
+      font-weight: 800;
+      text-transform: uppercase;
+      
+      tr {
+        border-bottom: 1pt solid black;
+      }
+    }
+    
+    th, td {
+      padding: 3pt 4pt 2pt 4pt;
+    }
+    
+    tbody {
+      tr {
+        border-top: 1px solid black;
+        
+        &:nth-of-type(odd) {
+          background-color: #D7E0DE;
+        }
+      }
+    }
+  }
+    
+  .note {
+    font-family: "Nunito Sans";
+    margin: 3mm 0;
+    border-top: 24px solid black;
+    border-bottom: 24px solid black;
+    border-image: url("https://sibling-dex.github.io/homebrewery-templates/img/Wire.png") 32 round;
+    mix-blend-mode: multiply;
+    
+    & > * {
+      margin-left: 5mm;
+      margin-right: 5mm;
+    }
+    h3 {
+      font-family: "Nunito Sans";
+      font-weight: 800;
+    }
+    p {
+      font-family: "Nunito Sans";
+      font-size: 9.5pt;
+    }
+    table {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  .box {
+    display: block;
+    z-index: 9;
+    margin: 5mm 0;
+    padding: 5mm; 
+    color: white;
+    border-top: 4mm solid black;
+    border-bottom: 4mm solid black;
+    background-image: url("https://sibling-dex.github.io/homebrewery-templates/img/Box.png");
+        background-size: 100% 100%;
+    border-image: url("https://sibling-dex.github.io/homebrewery-templates/img/Black-Yellow.png") 18 round;
+    
+    :is(h2,h3) {
+      margin-top: 0;
+    }
+    
+    &.top {
+      margin-top: 0;
+      border-top: 0;
+      padding-top: 0; 
+    
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        translate: -5mm -100%;
+        width: 8cm;
+        height: 10cm;
+        background-image: url("https://sibling-dex.github.io/homebrewery-templates/img/Box.png");
+        background-size: 100% 100%;
+        transform: rotateX(180deg);
+      }
+    }
+    &.bottom {
+      margin-bottom: 0;
+      border-bottom: 0;
+      padding-bottom: 0; 
+      position: absolute;
+      width: 8cm;
+      height: 100%;
+    }
+  }
+  
+  .feature {
+    h3 {
+      text-align: center;
+      border-top: 1pt solid black;
+      border-bottom: 1pt solid black;
+      padding: .5em 0 .3em 0;
+      margin: 2em 0 1em 0;
+    }
+  }
+}
