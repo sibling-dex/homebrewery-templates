@@ -1,0 +1,572 @@
+/* Some styling derived from:
+  Homebrewery default style: https://github.com/naturalcrit/homebrewery/blob/master/themes/V3/5ePHB/style.less
+  
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import url('https://fontlibrary.org/en/face/echotopia');
+
+@import url('https://fonts.cdnfonts.com/css/mendl-serif-trial');
+
+@font-face {
+    font-family: "QTFrizQuad";
+    src: url('https://un-bane.github.io/fonts/QTFrizQuad/QTFrizQuad.otf');
+}
+@font-face {
+  font-family: "QTFrizQuad";
+  src: url('https://un-bane.github.io/fonts/QTFrizQuad/QTFrizQuad-Bold.otf');
+  font-weight: bold;
+}
+@font-face { 
+  font-family: "Caveat";
+  src: url('https://un-bane.github.io/fonts/Caveat/static/Caveat-Regular.ttf');
+}
+@font-face {
+  font-family: "Caveat";
+  src: url('https://un-bane.github.io/fonts/Caveat/static/Caveat-Bold.ttf');
+  font-weight: bold;
+}
+
+
+
+
+*, *::before, *::after {
+  box-sizing  : border-box;
+}
+
+:root {
+	
+  /* Defaults: */
+	--HB_Color_Background            : #EEE5CE; /* Light parchment*/
+
+	--HB_Color_HeaderUnderline       : #00604D; /* Green*/
+	--HB_Color_HorizontalRule        : #9C2B1B; /* Maroon*/
+	--HB_Color_CaptionText           : #766649; /* Brown*/
+	--HB_Color_WatercolorStain       : #BBAD82; /* Light brown*/
+	--HB_Color_Footnotes             : #C9AD6A; /* Gold*/
+  
+  /* DB Colors */
+  --HB_Color_HeaderText            : #00604D; 
+  --demongreen                     : #00604D;
+  --dragonred                      : #EE3D3C;
+  --bloodred                       : #C42034;
+  --red                     : #9A342F;
+  --brown                   : #614F3D;
+  --table-dark              : #55220022;
+  --paperbox                : #66550022;
+  --HB_Color_Accent         : #CAC1A0; 
+  
+}
+
+
+.page {
+  /* height          : 297mm; */
+  /* width           : 210mm; */
+  background      : white;
+  background-image: linear-gradient(rgba(255,255,255, 0.4) 0 100%), url(https://sibling-dex.github.io/homebrewery-templates/img/parchment.jpg);
+  background-size: 100% 100%;
+
+  font-family     : "Crimson Pro", serif;
+  font-size       : 10pt;
+  line-height     : 1.2;
+  column-gap      : 10mm;
+}
+
+
+@media print {
+  .page {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+/* ==== COVERPAGE ==== */
+.page {
+  .coverpage {
+    display     : block;
+    column-span : all;
+    text-align  : center;
+
+    & > p {
+      width         : 10cm;
+      margin        : auto;
+      text-align    : center;
+      text-indent   : 0;
+      margin-bottom : 3mm;
+    }
+    
+    h1 {
+      width         : fit-content;
+      margin-left   : auto;
+      margin-right  : auto;
+      margin-bottom : .25em;
+      border-bottom : 4px solid;
+      color         : var(--dragonred);
+      font-size     : 60pt;
+      
+      &::before,
+      &::after {
+        content: unset;
+      }
+    }
+    
+    h2 {
+      color       : black;
+      font-size   : 20pt;
+    }
+  }
+  
+  .homebreweryCredits {
+    display           : block;
+    position          : absolute;
+    bottom            : 3.5cm;
+    left              : 0;
+    right             : 0;
+    margin            : auto;
+    
+    p {
+      font-family : "QTFrizQuad";
+      font-weight : bold;
+    }
+    
+    .homebreweryIcon {
+      margin      : .5em;
+    }
+  }
+  
+  .dragonbaneLogo {
+    display           : block;
+    position          : absolute;
+    bottom            : 10mm;
+    left              : 0;
+    right             : 0;
+    margin            : auto;
+    z-index           : 9;
+    width             : 300px;
+    height            : 75px;
+    background-image  : url('https://un-bane.github.io/images/Dragonbane-license-logo-red.png');
+    background-size   : cover;
+  }
+}
+
+
+/* ==== TYPOGRAPHY ==== */
+.page {
+  h1, h2, h3, h4 {
+    font-family         : "QTFrizQuad";
+    font-weight         : bold;
+  }
+  
+  h1, h2 {
+    text-align          : center;
+    text-transform      : uppercase;
+    color               : var(--demongreen);
+    font-size           : 34pt;
+    margin-top          : .25em;
+    margin-bottom       : .25em;
+    column-span         : all;
+    
+    && + * {
+      margin-top: 0;
+    }
+  }
+  
+  h1 {
+    display             : flex;
+    --sectionhead       : attr(id) ;
+    
+    &::before,
+    &::after {
+      content           : "";
+      height            : 4px;
+      background-color  : var(--demongreen);
+      flex-grow         : 1;
+      margin-top        : .6em;
+    }
+    &::before {
+      margin-right      : .2em;
+    }
+    &::after {
+      margin-left       : .2em;
+    }
+  }
+    
+  h3 {
+    text-transform      : uppercase;
+    font-size           : 11pt;
+    margin-bottom       : 0;
+    margin-top          : 4mm;
+    break-after         : avoid;
+  }
+  
+  h4 {
+    font-size           : 1em;
+    color               : black;
+    margin              : .5em .5em 0 0;
+    float               : left;
+    line-height         : 1.2;
+    
+    & + p {
+      margin-top        : .5em;
+    }
+  }
+  
+  p {
+    text-align          : justify;
+    hyphens             : auto;
+  }
+  
+  p + p {
+    text-indent         : 1em;
+  }
+  
+  .block {
+    margin              : 1em 0;
+  }
+  
+  ul {
+    list-style          : none;
+    padding             : 0;
+    margin              : .5em 0;
+
+    ul {
+      margin-bottom     : .5em;
+      margin-left       : 0;
+    }
+    
+    li {
+      margin-left       : 1.5em; 
+      
+      strong {
+        font-family     : "QTFrizQuad";
+      }
+      
+      &::before {
+        float           : left;
+        content         : "✦";
+        margin-left     : -1.5em;
+      }
+    }
+  }
+
+  :not(.dragonbox,.demonbox) > ul li {
+    & > strong:first-child {
+      color           : var(--demongreen);
+    }
+    & > em:first-child strong {
+      color           : var(--bloodred);
+    }
+
+    &:has(strong:first-child)::before {
+      color           : var(--demongreen);
+    }
+
+    &:has(em:first-child strong)::before {
+      color           : var(--bloodred);
+    }
+  }
+
+  .toc {
+    display             : block;
+    font-family         : "QTFrizQuad";
+    font-size           : 12pt;
+    
+    p {
+      text-indent       : 0pt;
+      overflow          : hidden;
+      display           : flex;
+      justify-content   : space-between;
+    }
+
+    h2 {
+      text-align        : left;
+      color             : black;
+      font-size         : 20pt;
+    }
+    
+    a {
+      white-space       : nowrap;
+      overflow          : hidden;
+      text-decoration   : none;
+      
+      &::after {
+        content       : "..........................................................................";
+        margin-left       : .1em;
+      }
+    }
+    
+    .number {
+      margin-left       : .2em;
+    }
+  }
+  
+  blockquote {
+    margin-bottom       : .5em;
+
+    & > p {
+      font-style        : italic;
+      font-size         : 12pt;
+    }
+
+    .author {
+      margin-top        : .5em;
+      font-family       : "QTFrizQuad";
+      font-style        : normal;
+      font-size         : 8pt;
+      font-weight       : bold;
+      text-transform    : uppercase;
+    }
+  }
+  
+  .code,
+  code {
+    border-radius       : 2px;
+    background          : #ffffffcc;
+    color               : black;
+    font-size           : 0.9em;
+    padding             : 0 .2em;
+  }
+
+  a {
+    color               : black;
+    text-decoration     : underline;
+  }
+  
+  .dropcap {
+    color               : var(--demongreen);
+    font-family         : "QTFrizQuad";
+    font-size           : 4.2em;
+    font-weight         : bold;
+    float               : left;
+    line-height         : 0.8;
+    margin-right        : .1em;
+  }
+  
+  .handwritten {
+    font-family         : "Caveat";
+  }
+  
+  hr{
+    border-style        : solid;
+    border-width        : 5px 20px;
+    border-image        : url("data:image/svg+xml;utf8,<svg height='10' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5 Z'/><path d='M5 5 L25 5' stroke='black' stroke-width='2px'/></svg>") 5 10 stretch;
+    border-image-outset : 0 10px;
+  }
+}
+
+
+/* ==== BOXES ==== */
+
+.page {
+  .tablebox,
+  .emptybox {
+    width                 : calc(100% - 10px);
+    padding               : 24px 0px 8px 0px;
+    margin                : 30px 5px 5px 5px;
+    position              : relative;
+  }
+
+  .tablebox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+  }
+  
+  .paperbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 8px 0px;
+    margin                : 15px 5px 15px 5px;
+    box-shadow            : 1px 4px 16px #888888;
+    background            : var(--paperbox);
+    border-style          : solid;
+    border-width          : 10px 20px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5   M10 25 Q7 23, 5 20 Q3 23, 0 25 Q3 27, 5 30 Q7 27, 10 25   M20 25 Q23 27, 25 30 Q27 27, 30 25 Q27 23, 25 20 Q23 23, 20 25 Z'/><path d='M5 5 L25 5 M5 25 L25 25' stroke='black' stroke-width='2px'/></svg>") 10 stretch;
+    border-image-outset   : 5px 10px;
+    position              : relative;
+  }
+
+  .dragonbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 24px 0px 8px 0px;
+    margin                : 35px 5px 15px 5px;
+    box-shadow            : 1px 4px 16px #888888;
+    background            : var(--paperbox);
+    border-style          : solid;
+    border-width          : 10px 20px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5   M10 25 Q7 23, 5 20 Q3 23, 0 25 Q3 27, 5 30 Q7 27, 10 25   M20 25 Q23 27, 25 30 Q27 27, 30 25 Q27 23, 25 20 Q23 23, 20 25 Z'/><path d='M5 5 L25 5 M5 25 L25 25' stroke='black' stroke-width='2px'/></svg>") 10 stretch;
+    border-image-outset   : 5px 10px;
+    position: relative;
+    
+    h2 {
+      width               : fit-content;
+    }
+  }
+
+  .demonbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 0px 16px 16px 16px;
+    margin                : 10px 5px 15px 5px;
+    box-shadow            : 2px 2px 16px #888888;
+    color                 : white;
+    background            : var(--HB_Color_HeaderText);
+    border-style          : solid;
+    border-width          : 11px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='80' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M5 5 L10 20 L10 30 Q10 38, 0 40 Q10 42, 10 50 L10 60 L5 75 L20 70 L30 70 Q38 70, 40 80 Q42 70, 50 70 L60 70 L75 75 L70 60 L70 50 Q70 42, 80 40 Q70 38, 70 30 L70 20 L75 5 L60 10L 50 10 Q42 10, 40 0 Q38 010, 30 10 L20 10 Z' fill='RGB(0, 96, 77)'/></svg>") 11 stretch;
+    border-image-outset   : 10px;
+    position: relative;
+    
+    h2 {
+      font-size           : 10pt;
+      color               : white;
+      margin-top          : 0;
+      margin-bottom       : 1em;
+    }
+  }
+
+  .dragonbox h2,
+  .tablebox h2,
+  .emptybox h2 {
+    position            : absolute;
+    display	            : flex;
+    align-items         : center;
+    justify-content     : center;
+    height              : 30px;
+    inset               : -25px 0 auto 0; 
+    margin              : auto;
+    font-size           : 10pt;
+    color               : white;
+    background          : var(--HB_Color_HeaderText);
+    border-style        : solid;
+    border-width        : 6px 16px;
+    border-image        : url("data:image/svg+xml;utf8,<svg height='40' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M22 5 Q20 5 ,20 2 Q13 13, 0 20 Q13 27, 20 38 Q20 35, 22 35 L38 35 Q40 35, 40 40 Q40 35, 42 35 L58 35 Q60 35,60 38 Q67 27, 80 20 Q67 13, 60 2 Q60 5, 58 5 L42 5 Q40 5, 40 0 Q40 5, 38, 5 Z' fill='RGB(0, 96, 77)'/></svg>") 6 21 stretch;
+    border-image-outset : 5px 15px;
+  }
+    
+  .tablebox h2, 
+  .emptybox h2 {
+    box-shadow      : 2px 2px 8px #888888;
+  }
+    
+  .dragonbox.wide,
+  .tablebox.wide,
+  .emptybox.wide {
+    margin-top      : 50px !important;
+  }
+  
+  .twocols {
+    columns         : 2;
+  }
+}
+
+
+/* ==== HEADER & FOOTER ==== */
+
+.page:not(:has(h1))::before {
+  content           : "";
+  display           : block;
+  width             : 100%;
+  border            : 2px solid var(--demongreen);
+/*  border-width      : 5px 20px;
+  border-image      : url("data:image/svg+xml;utf8,<svg height='10' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5' fill='RGB(0, 96, 77)'/><path d='M5 5 L25 5' stroke='RGB(0, 96, 77)' stroke-width='4px'/></svg>") 5 10 stretch; */
+  column-span       : all;
+} 
+
+.page::after {
+  background-image  : unset;
+}
+
+
+.page {
+  .pageNumber {
+    display	          : flex;
+    flex-direction    : column;
+    align-items       : center;
+    justify-content   : center;
+    font-weight       : bold;
+    font-family       : "QTFrizQuad";
+    color             : var(--demongreen);
+    text-transform    : uppercase;
+    width             : fit-content;
+    min-width         : 120px;
+    margin            : auto;
+    left              : 30px;
+    right             : 30px;
+    bottom            : 10mm;
+
+    &::after {
+      display           : block;
+      color             : white;
+      font-size         : 1.2em;
+      width             : 120px;
+      height            : 30px;
+      padding           : 4px 0;
+      background-image  : url("data:image/svg+xml;utf8,<svg height='30' width='50' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L0 2   Q20 10, 25 30   Q30 10, 50 2  L 50 0 Z' fill='RGB(0, 96, 77)'/></svg>");
+      background-size   : 100% 100%;
+    }
+  }
+}
+
+
+/* ==== TABLES ==== */
+.page{
+  table {
+    font-family     : "QTFrizQuad";
+    font-size       : 9pt;
+    width           : 100%;
+    margin-top      : .5em;
+    padding-bottom  : .5em;
+    
+    thead {
+      th {
+        text-transform: uppercase;
+        padding: 4px 6px;
+        border-bottom  : 2pt solid var(--brown); 
+      }
+    }
+
+    tr:nth-child(even):not(:first-child) {
+      background-color:none;
+    }    
+  }
+  
+  tbody {
+    td {
+      padding       : 4px 6px;
+      border-top    : 1pt solid var(--brown); 
+    }
+    
+    tr:nth-child(odd){
+      background-color:var(--table-dark);
+    }
+  }
+  .block > table {
+      margin-top: 0;
+  }
+}
+
+
+/* ==== IMAGES ==== */
+.page{
+  .marker {
+    position            : absolute;
+    display	            : flex;
+    align-items         : center;
+    justify-content     : center;
+    background-color    : var(--demongreen);
+    font-family         : "QTFrizQuad";
+    font-size           : 11pt;
+    font-weight         : bold;
+    color               : white;
+    width               : 1.5em;
+    height              : 1.5em;
+    border-radius       : 100%;
+  }
+}
+
