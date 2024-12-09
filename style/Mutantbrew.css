@@ -410,11 +410,17 @@ body {
     text-align: left;
   }
   
-  .bullet::before {
-    content: "¤";
+  code {
+    font-family: "Courier";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.9em;
+    background-color: lightgrey;
+    border-radius: 3px;
+    color: black;
+    padding: .06em 2px .04em 2px;
   }
-  
-  
+    
   ul,ol,dl {
     margin: 1em 0;
     text-align: left;
