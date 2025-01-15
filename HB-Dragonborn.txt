@@ -1,0 +1,1336 @@
+```metadata
+title: Dragonborn
+description: The Elder Scrolls Mod for Dragonbane (TES-DB)
+tags: []
+systems: []
+renderer: V3
+theme: Blank
+
+```
+
+```css
+/* Some styling derived from:
+  Homebrewery default style: https://github.com/naturalcrit/homebrewery/blob/master/themes/V3/5ePHB/style.less
+  
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fontlibrary.org/en/face/echotopia');
+@import url('https://fonts.cdnfonts.com/css/goudymedieval');
+@import url('https://fonts.cdnfonts.com/css/oblivion');
+
+@font-face {
+    font-family: "QTFrizQuad";
+    src: url('https://un-bane.github.io/fonts/QTFrizQuad/QTFrizQuad.otf');
+}
+@font-face {
+  font-family: "QTFrizQuad";
+  src: url('https://un-bane.github.io/fonts/QTFrizQuad/QTFrizQuad-Bold.otf');
+  font-weight: bold;
+}
+@font-face { 
+  font-family: "Caveat";
+  src: url('https://un-bane.github.io/fonts/Caveat/static/Caveat-Regular.ttf');
+}
+@font-face {
+  font-family: "Caveat";
+  src: url('https://un-bane.github.io/fonts/Caveat/static/Caveat-Bold.ttf');
+  font-weight: bold;
+}
+
+*, *::before, *::after {
+  box-sizing  : border-box;
+}
+
+:root {  
+  /* DB Colors */
+  --color-demongreen    : #00604D;
+  --color-dragonred     : #EE3D3C;
+  --color-bloodred      : #C42034;
+  --color-brown         : #614F3D;
+  --color-table-dark    : #55220022;
+  --color-paperbox      : #66550022;
+  
+  --color-accent        : var(--color-brown);
+}
+
+
+.page {
+  /* height          : 297mm; */
+  /* width           : 210mm; */
+  background      : white;
+  background-image: linear-gradient(rgba(255,255,255, 0.4) 0 100%), url(https://sibling-dex.github.io/homebrewery-templates/img/parchment.jpg);
+  background-size: 100% 100%;
+
+  font-family     : "Crimson Pro", serif;
+  font-size       : 10pt;
+  line-height     : 1.2;
+  text-align      : justify;
+  column-gap      : 10mm;
+}
+
+
+@media print {
+  .page {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+/* ==== COVERPAGE ==== */
+.page {
+  .coverpage {
+    display     : block;
+    column-span : all;
+    text-align  : center;
+
+    & > p {
+      width         : 10cm;
+      margin        : auto;
+      text-align    : center;
+      text-indent   : 0;
+      margin-bottom : 3mm;
+    }
+    
+    h1 {
+      width         : fit-content;
+      margin        : auto;
+      border-top    : 4px solid;
+      color         : var(--color-accent);
+      font-size     : 60pt;
+      font-weight   : normal;
+      
+      &::before,
+      &::after {
+        content: unset;
+      }
+    }
+    
+    h2 {
+      font-family     : "GoudyMedieval";
+      text-transform  : none;
+      color           : black;
+      font-size       : 24pt;
+    }
+  }
+  
+  .homebreweryCredits {
+    display           : block;
+    margin            : auto;
+    
+    p {
+      font-family : "QTFrizQuad";
+      font-weight : bold;
+    }
+    
+    .homebreweryIcon {
+      margin      : .5em;
+    }
+  }
+  
+  .dragonbaneLogo {
+    display           : block;
+    margin            : auto;
+    z-index           : 9;
+    width             : 300px;
+    height            : 75px;
+    background-image  : url('https://un-bane.github.io/images/Dragonbane-license-logo-red.png');
+    background-size   : cover;
+  }
+}
+
+
+/* ==== TYPOGRAPHY ==== */
+.page {
+  h1, h2, h3, h4 {
+    font-family         : "QTFrizQuad";
+  }
+  
+  h1, h2 {
+    text-align          : center;
+    text-transform      : uppercase;
+    color               : var(--color-accent);
+    font-size           : 34pt;
+    margin-top          : .25em;
+    margin-bottom       : .25em;
+    column-span         : all;
+    
+    && + *:not(.dragonbox) {
+      margin-top: 0;
+    }
+    && + .dragonbox {
+      margin-top: 4mm;
+    }
+  }
+  
+  h1 {
+    display             : flex;
+    --sectionhead       : attr(id) ;
+    
+    &::before,
+    &::after {
+      content           : "";
+      height            : 4px;
+      background-color  : var(--color-accent);
+      flex-grow         : 1;
+      margin-top        : .6em;
+    }
+    &::before {
+      margin-right      : .2em;
+    }
+    &::after {
+      margin-left       : .2em;
+    }
+  }
+    
+  h3 {
+    text-transform      : uppercase;
+    font-size           : 11pt;
+    margin-bottom       : 0;
+    margin-top          : 4mm;
+    break-after         : avoid;
+  }
+  
+  h4 {
+    display             : inline-block;
+    font-size           : 1em;
+    color               : black;
+    margin-top          : 1em;
+    margin-right        : .5em;
+    
+    & + p {
+      display           : inline;
+      
+      &::after {
+        content         : "";
+        display         : block;
+      }
+    }
+  }
+  
+  p {
+    text-align          : justify;
+    hyphens             : auto;
+  }
+  
+  p + p {
+    text-indent         : 1em;
+  }
+  
+  .block {
+    margin              : 1em 0;
+  }
+  
+  ul,ol,dl {
+    margin              : .5em 0;
+    text-align          : left;
+  }
+
+  ul {
+    list-style          : none;
+    padding             : 0;
+
+    ul {
+      margin-bottom     : .5em;
+      margin-left       : 0;
+    }
+    
+    li {
+      margin-left       : 1.5em; 
+      
+      strong {
+        font-family     : "QTFrizQuad";
+      }
+      
+      &::before {
+        float           : left;
+        content         : "✦";
+        margin-left     : -1.5em;
+      }
+    }
+  }
+
+
+  .toc {
+    display             : block;
+    font-family         : "QTFrizQuad";
+    font-size           : 12pt;
+    
+    p {
+      text-indent       : 0pt;
+      overflow          : hidden;
+      display           : flex;
+      justify-content   : space-between;
+    }
+
+    h2 {
+      text-align        : left;
+      color             : black;
+      font-size         : 20pt;
+    }
+    
+    a {
+      white-space       : nowrap;
+      overflow          : hidden;
+      text-decoration   : none;
+      
+      &::after {
+        content       : "..........................................................................";
+        margin-left       : .1em;
+      }
+    }
+    
+    .number {
+      margin-left       : .2em;
+    }
+  }
+  
+  blockquote {
+    margin-bottom       : .5em;
+
+    & > p {
+      font-style        : italic;
+      font-size         : 12pt;
+    }
+
+    .author {
+      margin-top        : .5em;
+      font-family       : "QTFrizQuad";
+      font-style        : normal;
+      font-size         : 8pt;
+      font-weight       : bold;
+      text-transform    : uppercase;
+    }
+  }
+  
+  .code,
+  code {
+    border-radius       : 2px;
+    background          : #ffffffcc;
+    color               : black;
+    font-size           : 0.9em;
+    padding             : 0 .2em;
+  }
+
+  a {
+    color               : black;
+    text-decoration     : underline;
+  }
+  
+  .dropcap {
+    color               : var(--color-accent);
+    font-family         : "QTFrizQuad";
+    font-size           : 4.2em;
+    font-weight         : bold;
+    float               : left;
+    line-height         : 0.8;
+    margin-right        : .1em;
+  }
+  
+  .handwritten {
+    font-family         : "Caveat";
+  }
+  
+  hr{
+    border-style        : solid;
+    border-width        : 5px 20px;
+    border-image        : url("data:image/svg+xml;utf8,<svg height='10' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5 Z'/><path d='M5 5 L25 5' stroke='black' stroke-width='2px'/></svg>") 5 10 stretch;
+    border-image-outset : 0 10px;
+  }
+  
+  img {
+    mix-blend-mode: multiply;
+  }
+}
+
+
+/* ==== BOXES ==== */
+
+.page {
+  .tablebox,
+  .emptybox {
+    width                 : calc(100% - 10px);
+    padding               : 24px 0px 8px 0px;
+    margin                : 30px 5px 5px 5px;
+    position              : relative;
+  }
+
+  .tablebox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+  }
+  
+  .paperbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 8px 0px;
+    margin                : 15px 5px 15px 5px;
+    box-shadow            : 1px 4px 16px #888888;
+    background            : var(--color-paperbox);
+    border-style          : solid;
+    border-width          : 10px 20px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5   M10 25 Q7 23, 5 20 Q3 23, 0 25 Q3 27, 5 30 Q7 27, 10 25   M20 25 Q23 27, 25 30 Q27 27, 30 25 Q27 23, 25 20 Q23 23, 20 25 Z'/><path d='M5 5 L25 5 M5 25 L25 25' stroke='black' stroke-width='2px'/></svg>") 10 stretch;
+    border-image-outset   : 5px 10px;
+    position              : relative;
+  }
+
+  .dragonbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 24px 0px 8px 0px;
+    margin                : 35px 5px 15px 5px;
+    box-shadow            : 1px 4px 16px #888888;
+    background            : var(--color-paperbox);
+    border-style          : solid;
+    border-width          : 10px 20px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5   M10 25 Q7 23, 5 20 Q3 23, 0 25 Q3 27, 5 30 Q7 27, 10 25   M20 25 Q23 27, 25 30 Q27 27, 30 25 Q27 23, 25 20 Q23 23, 20 25 Z'/><path d='M5 5 L25 5 M5 25 L25 25' stroke='black' stroke-width='2px'/></svg>") 10 stretch;
+    border-image-outset   : 5px 10px;
+    position: relative;
+    
+    h2 {
+      width               : fit-content;
+    }
+  }
+
+  .demonbox {
+    font-family           : "QTFrizQuad";
+    font-size             : 9pt;
+    width                 : calc(100% - 10px);
+    padding               : 0px 16px 16px 16px;
+    margin                : 10px 5px 15px 5px;
+    box-shadow            : 2px 2px 16px #888888;
+    color                 : white;
+    background            : var(--color-accent);
+    border-style          : solid;
+    border-width          : 11px;
+    border-image          : url("data:image/svg+xml;utf8,<svg height='80' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M5 5 L10 20 L10 30 Q10 38, 0 40 Q10 42, 10 50 L10 60 L5 75 L20 70 L30 70 Q38 70, 40 80 Q42 70, 50 70 L60 70 L75 75 L70 60 L70 50 Q70 42, 80 40 Q70 38, 70 30 L70 20 L75 5 L60 10L 50 10 Q42 10, 40 0 Q38 010, 30 10 L20 10 Z' fill='RGB(0, 96, 77)'/></svg>") 11 stretch;
+    border-image-outset   : 10px;
+    position: relative;
+    
+    h2 {
+      font-size           : 10pt;
+      color               : white;
+      margin-top          : 0;
+      margin-bottom       : 1em;
+    }
+  }
+
+  .dragonbox h2,
+  .tablebox h2,
+  .emptybox h2 {
+    position            : absolute;
+    display	            : flex;
+    align-items         : center;
+    justify-content     : center;
+    height              : 30px;
+    inset               : -25px 0 auto 0; 
+    margin              : auto;
+    font-size           : 10pt;
+    font-weight         : bold;
+    color               : white;
+    background          : var(--color-accent);
+    border-style        : solid;
+    border-width        : 6px 16px;
+    border-image        : url("data:image/svg+xml;utf8,<svg height='40' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M22 5 Q20 5 ,20 2 Q13 13, 0 20 Q13 27, 20 38 Q20 35, 22 35 L38 35 Q40 35, 40 40 Q40 35, 42 35 L58 35 Q60 35,60 38 Q67 27, 80 20 Q67 13, 60 2 Q60 5, 58 5 L42 5 Q40 5, 40 0 Q40 5, 38, 5 Z' fill='currentColor'/></svg>") 6 21 stretch;
+    border-image-outset : 5px 15px;
+  }
+    
+  .tablebox h2, 
+  .emptybox h2 {
+    box-shadow      : 2px 2px 8px #888888;
+  }
+    
+  .dragonbox.wide,
+  .tablebox.wide,
+  .emptybox.wide {
+    margin-top      : 50px !important;
+  }
+  
+  .twocols {
+    columns         : 2;
+  }
+  
+  .class {
+    display: block;
+    padding-left: 2.8cm;
+    margin: 5mm 0 !important;
+    
+    img {
+      float: left;
+      margin-left: -2.8cm;
+      width: 2.5cm;
+    }
+    
+    h3 {
+      margin-top: 0;
+    }
+    
+    p + ul {
+      clear: both;
+      margin: 0;
+      margin-left: -2.8cm;
+      padding-top: .5em;
+    }
+    
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+
+/* ==== HEADER & FOOTER ==== */
+
+.page:not(:has(h1))::before {
+  content           : "";
+  display           : block;
+  width             : 100%;
+  border            : 2pt solid var(--color-accent);
+/*  border-width      : 5px 20px;
+  border-image      : url("data:image/svg+xml;utf8,<svg height='10' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5' fill='RGB(0, 96, 77)'/><path d='M5 5 L25 5' stroke='RGB(0, 96, 77)' stroke-width='4px'/></svg>") 5 10 stretch; */
+  column-span       : all;
+  margin-bottom     : 5mm;
+} 
+
+.page::after {
+  background-image  : unset;
+}
+
+
+.page {
+  .pageNumber {
+    display	          : flex;
+    flex-direction    : column;
+    align-items       : center;
+    justify-content   : center;
+    font-weight       : bold;
+    font-family       : "QTFrizQuad";
+    color             : var(--color-accent);
+    text-transform    : uppercase;
+    width             : fit-content;
+    min-width         : 120px;
+    margin            : auto;
+    left              : 30px;
+    right             : 30px;
+    bottom            : 10mm;
+
+    &.auto::after {
+      content         : "— " counter(page-numbers) " —";
+      color           : var(--color-accent);
+      font-size       : 12pt;
+    }
+  }
+}
+
+/* ==== TABLES ==== */
+.page{
+  table {
+    font-family     : "QTFrizQuad";
+    font-size       : 9pt;
+    width           : 100%;
+    margin-top      : .5em;
+    padding-bottom  : .5em;
+    
+    thead {
+      th {
+        text-transform: uppercase;
+        padding: 4px 6px;
+        border-bottom  : 2pt solid var(--color-brown); 
+      }
+    }
+
+    tr:nth-child(even):not(:first-child) {
+      background-color:none;
+    }    
+  }
+  
+  tbody {
+    td {
+      padding       : 4px 6px;
+      border-top    : 1pt solid var(--color-brown); 
+    }
+    
+    tr:nth-child(odd){
+      background-color:var(--color-table-dark);
+    }
+  }
+  .block > table {
+      margin-top: 0;
+  }
+  p:has(img) {
+    text-align      : center;
+  }
+}
+
+
+/* ==== IMAGES ==== */
+.page{
+  .marker {
+    position            : absolute;
+    display	            : flex;
+    align-items         : center;
+    justify-content     : center;
+    background-color    : var(--color-accent);
+    font-family         : "QTFrizQuad";
+    font-size           : 11pt;
+    font-weight         : bold;
+    color               : white;
+    width               : 1.5em;
+    height              : 1.5em;
+    border-radius       : 100%;
+  }
+}
+
+```
+
+{{coverpage
+
+![Elder Scrolls Symbol](https://static.wikia.nocookie.net/elderscrolls/images/5/5f/SkyrimAELogo.png){height:8cm}
+
+## The Elder Scrolls Mod for Dragonbane
+
+# Dragonborn
+
+
+#### (TES-DB v0.380)
+
+### AUTHOR:
+Sibling Dex
+
+
+### CREDITS:
+This non-commercial rules supplement was created to be used with the core rules of Dragonbane but is neither affiliated with, sponsored, or endorsed by Fria Ligan AB.
+
+All images were taken from The Elder Scrolls series of video games or [The Elder Scrolls Wiki](https://elderscrolls.fandom.com/wiki/The_Elder_Scrolls_Wiki), the copyright of which is held by Bethesda Softworks. All trademarks and registered trademarks present in the image are proprietary to Bethesda Softworks, the inclusion of which implies no affiliation with this rules supplement. The use of such images is believed to fall under the fair dealing clause of copyright law.
+
+{{homebreweryCredits
+Made With
+{{homebreweryIcon}}
+The Homebrewery  
+[Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
+}}
+
+{{dragonbaneLogo}}
+}}
+
+\page
+
+# Stats
+
+
+
+{{dragonbox
+## Attributes
+
+Some of the main character attributes of Dragonbane have been renamed to match their Elder Scrolls counterparts: 
+
+- **Strength (STR):**     Raw muscle power.                
+- **Endurance (END):**    Physical fitness and resilience. (*replaces Constitution*)
+- **Agility (AGL):**      Body control, and speed.
+- **Intelligence (INT):** Mental acuity, and intellect.
+- **Willpower (WIL):**    Self-discipline and focus.
+- **Personality (PER):**  Force of personality and empathy. (*replaces Charisma*)
+}}
+
+\column
+
+### Resource Pools
+
+Instead of the normal Hit Points and Willpower points, a character has three point pools:
+
+#### Health (END):
+Your Health Point (HP) rating determines how much damage you can take. Your maximum number of HP is equal to your END, but can be increased by the heroic ability ROBUST.
+
+#### Stamina (STR/AGL):
+Stamina Points (SP) are used to perform physical talents. Your maximum number of SP is equal to your STR or AGL (whichever is higher), but can be increased by the heroic ability TIRELESS.
+
+#### Magicka (WIL):
+Magicka Points (MP) are used for magic and mental talents. Your maximum number of MP is equal to your WIL, but can be increased by the heroic ability FOCUSED.
+
+
+## Crafting Skills
+
+While all other skills remain the same as in the Dragonbane core rulebook, CRAFTING is replaced by the following skills: Alchemy, Enchanting, and Smithing.
+
+In one shift, you craft a item of your choice from the relevant lists in the rulebook. Crafting an item requires access to a recipe or schematic, the tools of the trade, consumes components, and has a SP or MP cost. The cost in SP/MP is equal to the item’s price in gold (rounded up). You can spread the work across multiple shifts if you do not have enough SP/MP.
+
+For each shift working on the item, spend SP/MP and roll on the relevant crafting skill. On a success, you make progress towards creating the item equal to the spent SP/MP. On a failure, you still spend the points and components, but don't make any new progress---you don't lose any progress already achieved.
+
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/a/a3/Load_image_light_armor.png)
+### Enchanting (INT):
+In a stretch, you can attempt to identify an enchanted item. If successful, you find out all spells and their strength, with which the item was enchanted. 
+
+To imbue an item with a spell requires knowledge of the spell to be put on it, an enchantment ritual table or altar, and the use of a soul gem with emough MP that would be required to cast the spell, plus a number of extra points to charge the item.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/4/42/Image_alchemy.png)
+
+### Alchemy (INT):
+This ability requires alchemy tools and a recipe handbook. As an action, you can identify a plant, mushroom, or  and tell its beneficial or poisonous properties. You can spend one shift in the wild, to attempt a ALCHEMY roll. On a success, you find D3 ingredients.
+
+In one shift, you craft a potion or poison, for which you have the recipe. Each item requires the use of a bottle, which are reusable unless they are broken in use. Each shift of work also requires spending one use of ingredients.
+}}
+
+:
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/6/65/Load_image_armorer.png)
+
+### Smithing (STR):
+As an adventurer, you must often repair your gear if it breaks. Typically, it takes one shift to repair a damaged item, and you need access to the appropriate tools.
+
+In one stretch, you can attempt to sharpen a bladed or pointed weapon. Against a sharpened weapon, the armor rating of an item counts as one step lower. The effect wears off after one combat encounter where the weapon was used to attack or parry. 
+}}
+
+{{pageNumber,auto}}
+\page
+
+# Kin
+
+
+### 1. Choose a Kin
+First of all, you are born as a particular kin to the people of one of the main cultural groups of Tamriel. Your kin is either human, mer (elf) or you are one of the two kinds of beastfolk. Among human or mer, you also belong to a cultural group. Your kin grants you two or three kin talents.
+
+{{columns:2
+| D10 | Kin      |
+|:---:|:---------|
+|  1  | Breton   |
+|  2  | Imperial |
+|  3  | Nord     |
+|  4  | Redguard |
+|  5  | Aldmer   |
+
+| D10 | Kin      |
+|:---:|:---------|
+|  6  | Bosmer   |
+|  7  | Dunmer   |
+|  8  | Orsimer  |
+|  9  | Argonian |
+| 10  | Khajiit  |
+}}
+
+
+
+
+# Human
+
+{{class
+![A Breton](https://static.wikia.nocookie.net/elderscrolls/images/b/ba/Breton1.png)
+
+### Breton
+
+In addition to their quick and perceptive grasp of spellcraft, even the humblest of High Rock's Bretons can boast a resistance to magic. Bretons can call upon the Dragonskin power to absorb spells.
+
+- **Dragonskin:**
+  Once per day, you can activate this ability as a reaction to absorb half of the Magicka (rounded up) spent from an incoming spells.
+
+- **Magic Resistance (2 MP):**
+  You get a boon on WIL rolls against spells and take 2 points less magical damage.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/5/5f/Imperial.png)
+
+### Imperial
+
+Natives of Cyrodiil, they have proved to be shrewd diplomats and traders. They are skilled with combat and magic. Anywhere gold coins might be found, Imperials always seem to find a few more. They can call upon the Voice of the Emperor to calm an enemy.
+
+- **Voice of the Emperor:**
+  Once per day, you can calm all nearby people for a stretch.
+
+- **Imperial Luck (2 MP):**
+  Add one additional die to a roll on how many coins you find.
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/2/24/Nord.png)
+
+### Nord
+
+Citizens of Skyrim, they are a tall and fair-haired people. Strong and hardy, Nords are famous for their resistance to cold and their talent as warriors. They can use a Battlecry to make opponents flee.
+
+- **Battle Cry:**
+  Once per day, you can activate this ability to inflict Wild Panic (see page 53 of the Dragonbane rulebook) in a target.
+
+- **Cold Resistance (2 SP):**
+  Take half damage (rounded down) from an instance of cold damage or gain a boon on a roll to withstand the cold.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/5/56/Redguard1.png)
+
+### Redguard
+
+The most naturally talented warriors in Tamriel, the Redguards of Hammerfell have a hardy constitution and a natural resistance to poison. They can call upon an Adrenaline Rush in combat.
+
+- **Adrenaline Rush:**
+  Once per day, during a round rest, you regain an additional D6 Stamina.
+
+- **Poison Resistance (2 SP):**
+  Take half damage (rounded down) from an instance of poison damage.
+}}
+
+
+{{pageNumber,auto}}
+\page
+
+# Mer
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/b/b5/Altmer1.png)
+
+### Altmer
+
+Also known as "Altmer" in their homeland of Summerset Isle, the high elves are the most strongly gifted in the arcane arts of all people. They can call upon their Highborn power to regenerate Magicka quickly.
+
+- **Highborn:**
+  Your maximum Magicka is increased by 2.
+
+- **Fortify Magicka:**
+  Once per day, during a round rest, you regain an additional D6 Magicka immediately.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/8/87/WoodElf.png)
+
+### Bosmer
+
+The clanfolk of the Western Valenwood forests, also known as "Bosmer." Wood elves make good scouts and thieves, and there are no finer archers in all of Tamriel. They have natural resistances to both poisons and diseases. They can Command Animals to fight for them.
+
+- **Command Animal:**
+  Once per day, you can activate this ability to make an animal an ally for a stretch.
+
+- **Disease & Poison Resistance (2 SP):**
+  You gain a boon on CON rolls against poison or disease.
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/3/3e/Lore-race-Dunmer.png)
+
+### Dunmer
+
+Also known as "Dunmer" in their homeland of Morrowind, dark elves are noted for their stealth and magic skills. They are naturally resistant to fire and can call upon their Ancestor's Wrath to surround themselves in fire.
+
+- **Ancestor's Wrath:**
+  Once per day, you can activate this ability to cast Ancestor's Wrath for a stretch.
+
+- **Fire Resistance (2 MP):**
+  Take half damage (rounded down) from an instance of fire damage.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/3/3e/Lore-race-Orsimer.png)
+
+### Orsimer
+
+The people of the Wrothgarian and Dragontail Mountains, Orcish smiths are prized for their craftsmanship. Orc troops in Heavy Armor are among the finest in the Empire, and are fearsome when using their Berserker Rage.
+
+- **Berserker Rage:**
+  Once per day, you can activate this ability to go into a rage for up to a stretch. While raging, you gain an additional d6 damage bonus die, to all attacks. After the rage, you become Exhausted.
+- **Physical Resistance (2 SP):**
+  Take half damage (rounded down) from an instance of physical damage.
+}}
+
+# Beastfolk
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/4/4c/Argonian.png)
+
+### Argonian
+
+This reptilian people, well-suited for the treacherous swamps of their Black Marsh homeland, has developed a natural resistance to diseases and the ability to breathe underwater. They can call upon the Histskin to regenerate health very quickly.
+
+- **Histskin:**
+  Once per day, during a round rest, you heal an additional D6 Health immediately.
+
+- **Waterbreathing:**
+  You can breathe underwater.
+
+- **Disease Resistance (2 SP):**
+  You gain a boon on CON rolls against diseases.
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/c/c9/Khajiit1.png)
+
+### Khajiit
+
+Hailing from the province of Elsweyr, they are intelligent, quick, and agile. They make excellent thieves due to their natural stealthiness. All Khajiit can see in the dark at will and have unarmed claw attacks.
+
+- **Night Eye (2 SP):**
+  You can activate this ability when in darkness, allowing you to lift one of the effects of darkness (see page 52) for one round.
+
+- **Claws:**
+  When attacking with your claws, your unarmed attacks gain a D6 bonus damage die and deal slashing or piercing damage.
+}}
+
+{{pageNumber,auto}}
+\page
+
+# Birthsign
+
+### 2. Choose a Birthsign
+Second, you are born under a particular star sign, which counts as your Birthsign. Each Birthsign grans you a perk or special ability.
+
+To choose a Birthsign at random, roll a D20 on the following list, re-roll anything above a 13.
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/3/35/TESIV_Sign_Apprentice.png)
+
+### 1 -- The Apprentice
+
+Once per day, you get an additional round rest that allows you to restore 2D6 MP during which you take double damage from magic.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/c/c4/TESIV_Sign_Atronach.png)
+
+### 2 -- The Atronach
+With the Atronach birthsign, you cannot restore Magicka while resting. Instead you gain half the Magicka points spent on any spell cast onto you.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/b/b2/TESIV_Sign_Lady.png)
+
+### 3 -- The Lady
+Once per day, you can call on the Lady's Blessing and get a boon on any Willpower, Personality or Endurance roll.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/a/a2/TESIV_Sign_Lord.png)
+
+### 4 -- The Lord
+Once per day, you get an additional round rest that allows you to restore 2D6 HP but also gain the Trollkin curse, and permanent take +D6 damage from fire.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/8/88/TESIV_Sign_Lover.png)
+
+### 5 -- The Lover
+Once a day, you can use the Lover's Kiss power to paralyze an opponent for one round, during which they cannot move or take actions.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/9/98/TESIV_Sign_Mage.png)
+
+### 6 -- The Mage
+The Mage ability confers a permanent bonus of +4 MP.
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/c/c5/TESIV_Sign_Ritual.png)
+
+### 7 -- The Ritual
+Once a day, you can use the Mara's Gift power as a powerful Restore Health spell. The Blessed Word can turn the undead.
+}}
+
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/3/3f/TESIV_Sign_Serpent.png)
+
+### 8 -- The Serpent
+Gains the Serpent spell to cause a slow but potent poison on touch, while simultaneously curing and dispelling magic on the Hero. Casting this spell costs 100 points of Fatigue.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/7/7e/TESIV_Sign_Shadow.png)
+
+### 9 -- The Shadow
+Once a day, you can use the Moonshadow power to become Invisible for up to a stretch.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/1/1e/TESIV_Sign_Steed.png)
+
+### 10 -- The Steed
+The Steed ability grants a bonus of 20 Speed attribute.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/c/c5/TESIV_Sign_Thief.png)
+
+### 11 -- The Thief
+The Thief ability grants a 10-point bonus to Agility, Speed, and Luck attributes.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/2/22/TESIV_Sign_Tower.png)
+
+### 12 -- The Tower
+With the Tower Key power, once a day open a door or container of Average lock level or less. The Tower Warden reflects five points of damage for 120 seconds a day.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/a/ac/TESIV_Sign_Warrior.png)
+
+### 13 -- The Warrior
+The Warrior ability grants a bonus of 10 points to Strength and Endurance attributes.
+}}
+
+
+{{pageNumber,auto}}
+\page
+
+# Class
+
+
+
+### 3. Choose a starting Class
+Third, you have a particular profession or training in your Class. Your calss determines 6 of your initially trained skills
+
+{{columns:2
+To determine your class randomly, first roll on the table to the immediate right to determine your class specialization, then roll on the class table to the far right, re-rolling any rolled 8's.
+
+| D6  | Specialization |
+|:---:|:---------------|
+| 1-2 | Combat         |
+| 3-4 | Magic          |
+| 5-6 | Stealth        |
+}}
+
+\column
+
+| D8  | Combat      | Magic       | Stealth     |
+|:---:|:------------|:------------|:------------|
+|  1  | Archer      | Battlemage  | Acrobat     |
+|  2  | Barbarian   | Healer      | Agent       |
+|  3  | Crusader    | Mage        | Assassin    |
+|  4  | Knight      | Nightblade  | Bard        |
+|  5  | Rogue       | Sorcerer    | Monk        |
+|  6  | Scout       | Spellsword  | Pilgrim     |
+|  7  | Warrior     | Witchhunter | Thief       |
+
+## Available Classes
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/9/94/TESIV_Class_Acrobat.png)
+
+### Acrobat
+The kind of person that uses agility and endurance to their advantage. Unafraid of jumping long distances.
+
+- **Specialization:** Stealth
+- **Key Attributes:** Agility, Endurance
+- **Skills:** Acrobatics, Bows, Evade, Knives, Performance, Slings, Sneaking
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/b/bd/TESIV_Class_Agent.png)
+
+### Agent
+Charming when they can be seen and almost invisible when in shadow.
+
+- **Specialization:** Stealth
+- **Key Attributes:** Agility, Personality
+- **Skills:** Acrobatics, Bartering, Bluffing, Bows, Illusion, Lockpicking, Sneaking
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/2/2a/TESIV_Class_Archer.png)
+
+### Archer
+A marksman, adept at combat at great distances. Able to take down foes before they have a chance to draw sword.
+
+- **Specialization:** Combat
+- **Key Attributes:** Agility, Strength
+- **Skills:** Acrobatics, Awareness, Bows, Bushcraft, Hunting and Fishing, Knives, Slings, Sneaking
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/d/d3/TESIV_Class_Assassin.png)
+
+### Assassin
+Nimble and quiet, they move in darkness to strike at the unsuspecting. Locks hold no doors shut to them.
+
+- **Specialization:** Stealth
+- **Key Attributes:** Intelligence, Agility
+- **Skills:** Acrobatics, Alchemy, Bows, Knives, Lockpicking, Sneaking, Spot Hidden
+}}
+
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/b/b8/TESIV_Class_Barbarian.png)
+
+### Barbarian
+Fearsome brutes who inspire fear and dread in the hearts of their enemies, finding little use for heavy armor.
+
+- **Specialization:** Combat
+- **Key Attributes:** Endurance, Strength
+- **Skills:** Athletics, Axes, Beast Lore, Blocking, Hammers, Hand-to-Hand, Riding
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/e/e0/TESIV_Class_Bard.png)
+
+### Bard
+Intelligent and personable, they prefer to accomplish tasks with their words first, and sword second.
+
+- **Specialization:** Stealth
+- **Key Attributes:** Intelligence, Personality
+- **Skills:** Acrobatics, Bluffing, Evade, Knives, Languages, ­Myths and Legends, Performance, Persuasion
+}}
+
+{{pageNumber,auto}}
+\page
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/f/f0/TESIV_Class_Battlemage.png)
+
+### Battlemage
+Able to resolve most conflicts with either spell or sword. They are a deadly mix of scholar and soldier.
+
+- **Specialization:** Magic
+- **Key Attributes:** Intelligence, Strength
+- **Skills:** Alchemy, Alteration, Conjuration, Destruction, Mysticism, Swords, Myths and Legends
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/7/7b/TESIV_Class_Crusader.png)
+
+### Crusader
+A combatant who wields the power of brute strength and medicinal knowledge. Cheating death after every fight, they rely on their keen knowledge of restoration to fight yet again.
+
+- **Specialization:** Combat
+- **Key Attributes:** Strength, Willpower
+- **Skills:** Blocking, Destruction, Hammers, Hand-to-Hand, Restoration, Riding, Swords
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/4/4c/TESIV_Class_Healer.png)
+
+### Healer
+Fighters of poison and illness. The ancient art of restoration is their ally, and the deadly art of destruction is their weapon.
+
+- **Specialization:** Magic
+- **Key Attributes:** Personality, Willpower
+- **Skills:** Alchemy, Alteration, Bartering, Illusion, Myths and Legends, Persuasion, Restoration
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/8/87/TESIV_Class_Knight.png)
+
+### Knight
+The most noble of all combatants. Strong in body and in character.
+
+- **Specialization:** Combat
+- **Key Attributes:** Personality, Strength
+- **Skills:** Blocking, Hammers, Myths and Legends, Illusion, Persuasion, Riding, Spears, Swords
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/7/7f/TESIV_Class_Mage.png)
+
+### Mage
+Preferring to use their extensive knowledge of all things magical, they wield a might more powerful than the sharpest blade.
+
+- **Specialization:** Magic
+- **Key Attributes:** Intelligence, Willpower
+- **Skills:** Alchemy, Alteration, Conjuration, Destruction, Enchanting, Illusion, Mysticism, Restoration
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/d/dc/TESIV_Class_Monk.png)
+
+### Monk
+Quick and cunning with the empty hand, they are strong in spirit. They prefer to solve conflict by arrow or by fist.
+
+- **Specialization:** Stealth
+- **Key Attributes:** Agility, Willpower
+- **Skills:** Acrobatics, Alteration, Awareness, Evade, Hand-to-Hand, Slings, Sneaking
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/c/cd/TESIV_Class_Nightblade.png)
+
+### Nightblade
+Spell and shadow are their friends. By darkness they move with haste, casting magic to benefit their circumstances.
+
+- **Specialization:** Magic
+- **Key Attributes:** Agility, Willpower
+- **Skills:** Awareness, Alchemy, Alteration, Destruction, Evade, Restoration, Sneaking, Swords
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/8/80/TESIV_Class_Pilgrim.png)
+
+### Pilgrim
+Hearty folk, well-versed in the tomes of old. They profit in life by bartering in the market, or by persuading the weak-minded.
+
+- **Specialization:** Stealth
+- **Key Attributes:** Endurance, Personality
+- **Skills:** Bartering, Blocking, Hammers, Myths and Legends, Persuasion, Smithing, Spot Hidden
+}}
+
+{{pageNumber,auto}}
+\page
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/4/42/TESIV_Class_Rogue.png)
+
+### Rogue
+They use speed in combat rather than brute force. Persuasive in conversation, their tongues are as sharp as blades.
+
+- **Specialization:** Combat
+- **Key Attributes:** Personality, Agility
+- **Skills:** Acrobatics, Bartering, Bluffing, Evade, Illusion, Performance, Persuasion, Swords
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/6/6c/TESIV_Class_Scout.png)
+
+### Scout
+Preferring the rolling countryside to the city life, the forests rather than busy highways, they are gifted with the ability to evade, guard and protect themselves with great proficiency.
+
+- **Specialization:** Combat
+- **Key Attributes:** Endurance, Agility
+- **Skills:** Acrobatics, Alchemy, Beast Lore, Bows, Bushcraft, Hunting and Fishing, Knives, Spears
+}}
+
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/8/8e/TESIV_Class_Sorcerer.png)
+
+### Sorcerer
+Besting the most well-equipped fighters, they rely on the spells of the mystic arts. Unique to these mages is the bodily stamina to be armed with the thickest armor.
+
+- **Specialization:** Magic
+- **Key Attributes:** Endurance, Intelligence
+- **Skills:** Alchemy, Alteration, Conjuration, Destruction, Enchanting, Mysticism, Restoration, Shields
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/e/e8/TESIV_Class_Spellsword.png)
+
+### Spellsword
+More nimble and athletic than the sorcerer, and better suited for spell-casting than the knight, their attacks are unpredictable. Students of combat and magic.
+
+- **Specialization:** Magic
+- **Key Attributes:** Endurance, Willpower
+- **Skills:** Alteration, Awareness, Bluffing, Destruction, Illusion, Restoration, Shields, Swords
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/3/39/TESIV_Class_Thief.png)
+
+### Thief
+Profiting from the losses of others is their love. Able to be swift in shadow, and crafty in bartering. Locks are enemies, and lock-picks are their swords.
+
+- **Specialization:** Stealth
+- **Key Attributes:** Agility, Personality
+- **Skills:** Acrobatics, Awareness, Bluffing, Evade, Lockpicking, Pickpocketing, Sneaking, Spot Hidden
+}}
+
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/c/cc/TESIV_Class_Warrior.png)
+
+### Warrior
+Unafraid of light weaponry, they plow into the fray with little regard for injury. Masters of all melee tools, they put little faith in the magical arts.
+
+- **Specialization:** Combat
+- **Key Attributes:** Endurance, Strength
+- **Skills:** Axes, Bows, Hand-to-Hand, Crossbows, Evade, Hammers, Spears, Swords
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/b/bd/TESIV_Class_Witchhunter.png)
+
+### Witchhunter
+Swift on foot and clever with spells, they use distance as their ally. Slower adversaries are fodder for their arrows, not advised to get up close with enemies of greater strength. 
+
+- **Specialization:** Magic
+- **Key Attributes:** Agility, Intelligence
+- **Skills:** Alchemy, Acrobatics, Bows, Conjuration, Destruction, Lockpicking, Mysticism, Myths and Legends
+}}
+
+{{pageNumber,auto}}
+\page
+
+# Magic
+
+Exploring magic is as much art as it is science. There are different schools of magic, each with a unique view on what magic is and how it works. Each school of magic is a separate skill. 
+
+As a newly created character you can be trained in one or more magic skills. All your other magic skills have the base chance, just like other skills. You may also select three rank 1 spells and three magic tricks to start the game with. They must be chosen from a school of magic that you are trained in.
+
+### Spellcrafting
+
+Spellcrafting, or spellmaking, is the art of creating unique spells, usually through combining multiple existing spells. A custom spell can have more than one effect (such as frost and fire damage). The magnitude of the effect is proportional to the magicka required to cast the spell. Multiple effects have compounding magicka requirements.
+
+
+## Schools of Magicka
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/e/ea/Load_image_alteration.png)
+
+### Alteration (Wil):
+Alteration is a magic arts skill that involves the manipulation of parts of the physical world and its natural properties. It includes the ability to walk on water and breathe it, open locks, shield oneself from physical and magical damage, and alter a target's encumbrance. The Cheydinhal Mages Guild specializes in Alteration.
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/a/ae/Load_image_conjuration.png)
+
+### Conjuration (Int):
+Conjuration is a magic skill that governs the summoning of Daedric and undead servants, conjure magical weapons and armor, and repel the undead. The Chorrol Mages Guild specializes in Conjuration. 
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/2/27/Load_image_destruction.png)
+
+### Destruction (Wil):
+Destruction is a magic arts skill that imbues the caster with the ability to cast destructive spells that include fire spells, frost spells, shock spells, and weakness to fire, frost, and shock spells. The Skingrad Mages Guild specializes in Destruction.
+}}
+
+\column
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/0/07/Load_image_illusion.png)
+
+### Illusion (Per):
+The Illusion skill grants the ability utilize spells that charm, conceal, create light, silence, paralyze, command, or affect morale, or aggressiveness. The Bravil Mages Guild specializes in Illusion. 
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/9/92/Load_image_mysticism.png)
+
+### Mysticism (Int):
+Mysticism is a magic arts skill that manipulates magic and forces in the world. It includes spells that absorb, reflect, and dispel magic, as well as the ability to move objects, sense nearby life, and bind souls into stones for future use. The Leyawiin Mages Guild specializes in Mysticism. 
+}}
+
+{{class
+![](https://static.wikia.nocookie.net/elderscrolls/images/c/c3/Load_image_restoration.png)
+
+### Restoration (Wil):
+Those skilled in the Restoration field of magic arts can restore, fortify, or absorb physical and magical attributes, cure disease, and resist magical attacks. This takes the longest of all magic schools to train by oneself. The Anvil Mages Guild specializes in Restoration. 
+}}
+
+{{pageNumber,auto}}
+\page
+
+# Spellcrafting
+
+Spellcrafting, or spellmaking, is the art of creating unique spells, usually through combining multiple existing spells. A custom spell can have more than one effect (such as frost and fire damage). The magnitude of the effect is proportional to the magicka required to cast the spell. Multiple effects have compounding magicka requirements.
+
+
+
+{{pageNumber,auto}}

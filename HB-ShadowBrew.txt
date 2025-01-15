@@ -1,0 +1,527 @@
+```metadata
+title: ShadowBrew – a ShadowDark template
+description: A Shadowdark RPG - Homebrewery template
+tags:
+  - meta:theme
+  - shadowdark
+  - osr
+systems: []
+renderer: V3
+theme: Blank
+
+```
+
+```css
+/*=======---  Example CSS styling  ---=======*/
+/* Any CSS here will apply to your document! */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturCook:wght@700&family=Grenze+Gotisch:wght@100..900&family=Grenze:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/jsl-blackletter');
+@import url('https://fonts.cdnfonts.com/css/traditio-ah');
+@import url('https://fonts.cdnfonts.com/css/old-newspaper');
+
+
+
+body {
+
+  --width-margins: 13mm;
+}
+
+.page {
+  width: 148mm;
+  height: 210mm;
+  padding: var(--width-margins);
+  
+  font-family: "Montserrat";
+  font-size: 10pt;
+  font-weight: normal;
+  line-height: 1.2;
+  column-gap: 5mm;
+
+  &:has(h1) {
+    columns: 1;
+  }
+  
+  h1 {
+    font-family: 'UnifrakturCook', sans-serif;
+    font-weight: normal;
+    font-size: 48pt;
+    text-align: center;
+    /*background: url(https://sibling-dex.github.io/homebrewery-templates/img/SD-line.png) bottom / 100% no-repeat;*/
+    Border-bottom: 3pt solid Black;
+    margin-bottom: 0.2em;
+    margin-top: 20mm;
+  }
+  
+  h2 {
+    font-family: 'Grenze Gotisch', serif;
+    font-weight: 700;
+    font-size: 14pt;
+    text-align: center;
+  }
+  &:has(h2):not(:has(h1)) {
+    padding-top: 35mm;
+  
+    h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 40pt;
+      height: 3cm;
+      width: 100%;
+      color: white;
+      background: black;
+      padding-top: .5em;
+    }
+  }
+  
+  h3 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    margin-bottom: 10pt;
+  }
+  
+  h4 {
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-right: .5em;
+    
+    & + p {
+      display: inline;
+      
+      &::after {
+        content: "";
+        display: block;
+        margin-bottom: 5mm;
+      }
+    }
+  }
+  
+  h5 {
+    font-size: 13pt;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/stroke.png) center / 105%;
+    padding: 4pt;
+    margin: 0 -1mm;
+    margin-bottom: 3mm;
+  }
+  
+  p, ul, ol, table {
+    margin-bottom: 5mm;
+    hyphens: auto;
+  }
+  
+  hr {
+    border: none;
+    height: 5mm;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/SD-line.png) center / cover no-repeat;
+    margin-bottom: 5mm;
+  }
+  
+  blockquote {
+    font-family: 'Grenze', serif;
+    font-weight: 600;
+    font-size: 14pt;
+    text-align: center;
+    color: white;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/stroke.png) center / cover;
+    mix-blend-mode: multiply;
+    padding: 1em 3em;
+    margin: 5mm -5mm;
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  table {
+    th, td {
+      padding: 3pt 4pt 2pt 4pt;
+    }
+    
+    tbody {
+      tr {
+        border-top: 1pt solid black;
+      }
+    }
+  }
+  
+  .homebreweryCredits {
+      font-size: 8pt;
+  
+    p {
+      font-family: 'Open Sans';
+      font-weight: 600;
+      letter-spacing: normal;
+      margin: 0;
+    }
+    p:nth-of-type(2) {
+      font-family: 'CodeBold';
+      font-size: 14pt;
+    }
+    a {
+      font-family: 'Open Sans';
+      font-size: 8pt;
+    }
+    .homebreweryIcon {
+      height: 1cm;
+      margin: 1mm auto;
+    }
+  }
+  
+  .shadowdarkLogo {
+    display: block;
+    width: 44mm;
+    height: 20mm;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/Third-Party-Shadowdark-Logo-Black.png) center/100% no-repeat;
+    margin: auto;
+  }
+  
+  .fullpage {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    mix-blend-mode: multiply;
+  }
+  
+  .titlepage {
+    display: block;
+    box-sizing: content-box;
+    width: 93mm;
+    margin: 0 auto;
+    padding: 0 6mm;
+    
+    h4, p {
+      font-size: 7pt;
+    }
+  }
+  
+  &:has(.dark){
+    background: black url(https://sibling-dex.github.io/homebrewery-templates/img/frame.png) center / 95% 100% no-repeat;
+    background-clip: border-box;
+  }
+  
+  &:has(.grunge){
+    background: black url(https://sibling-dex.github.io/homebrewery-templates/img/black-grunge-frame.jpg) center / 95% 95% no-repeat;
+    background-clip: border-box;
+  }
+}
+
+
+```
+
+{{titlepage,dark
+# ShadowBrew
+
+## A Homebrewery Template for Shadowdark RPG
+
+:::
+
+#### Author:
+Sibling Dex
+
+
+#### Template:
+[This Supplement] uses [ShadowBrew](https://homebrewery.naturalcrit.com/share/UHqC503ByHK2) - A Shadowdark RPG Homebrewery template by Sibling Dex.
+
+#### Disclaimer:
+[This Supplement] is an independent product published under the [Shadowdark RPG Third-Party License](https://www.thearcanelibrary.com/blogs/shadowdark-blog/faq-on-the-shadowdark-rpg-third-party-license) and is not affiliated with The Arcane Library, LLC. Shadowdark RPG © 2023 The Arcane Library, LLC.
+
+#### Images:
+The illustations used in this example document for the ShadowBrew template are in the Public Domain.
+
+#### Fonts:
+UnifrakturCook font © J. 'Mach' Wust. 
+Grenze & Grenze Gotisch fonts by Renata Polastri © Omnibus-Type.
+Montserrat font family © Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly.
+
+{{columns:2
+{{homebreweryCredits
+Made With
+
+{{homebreweryIcon}}
+
+The Homebrewery  
+[Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
+}}
+
+{{shadowdarkLogo}}
+}}
+}}
+
+{{pageNumber,auto}}
+\page
+
+## About this Template
+
+### Credits
+This Homebrewery template was made by **Sibling Dex**.
+
+The Homebrewery is licensed using the [MIT License](https://github.com/naturalcrit/homebrewery/blob/master/license). Which means you are free to use The Homebrewery codebase any way that you want, except for claiming that you made it yourself.
+
+To credit  Homebrewery, just reference that you made it with The Homebrewery, or use the following code to create the logo:
+
+{{homebreweryCredits
+Made With
+
+{{homebreweryIcon}}
+
+The Homebrewery  
+[Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
+}}
+
+\column
+
+##### Work in Progess
+
+**This template is still work in progress!**
+If you like to contribute, request features, or need help, contact me on Reddit.
+
+
+##### Recent Changes
+
+#### 2025-01-11:
+
+- Changes the main fonts to avoid too close similarity with the official ShadowDark style
+- Added the ability to add `{{dark}}` or `{{grunge}}` to pages
+
+#### 2025-01-10:
+
+- Initial release
+
+{{wide
+> **USE CHROME(-IUM)!**
+> Many Homebrewery features don't yet work on browsers like Firefox.  
+
+> When printing to PDF, remember to set the paper size to A5 to get the right format!
+}}
+
+{{pageNumber,auto}}
+\page
+
+# Introduction
+
+{{height:8cm}}
+
+> This chapter introduces the basics of the ShadowBrew template, including its typography and main elements.
+
+{{pageNumber,auto}}
+\page
+
+## Theme Features
+
+The Homebrewery uses [Markdown](https://help.github.com/articles/markdown-basics/) with a little CSS magic added in.
+
+### Headings
+This template includes modified headings:
+
+- `# h1` (48pt chapter heading)
+- `## h2` (40pt section heading)
+- `### h3` (14pt sub-section heading)
+- `#### h4` (10pt paragraph heading)
+- `##### h5` (13pt black bar heading, used for tables)
+
+#### Paragraphs:
+The `#### h4` headings are meant as paragraph headings, and can also be used to write description lists.
+
+### Fonts
+
+This template adds these fonts:
+
+- {{font-family:"UnifrakturCook" **UnifrakturCook**}} -- for h1 headings.
+- {{font-family:"Grenze Gotisch" **Grenze Gotisch**}} -- for h2 headings 
+- {{font-family:"Grenze" **Grenze**}} -- for blockquotes.
+- {{font-family:"Montserrat" **Montserrat**}} -- for text, h3-5.
+
+You can add `{font-family:...}` to individual elements.
+
+\column
+
+### Tables
+
+Both normal tables and page-wide tables---inside a `{{wide ...}}` environment---are supported. Add a h5 heading before them to get the following  look:
+
+##### Heading Five
+
+| Left   | Center | Right |
+|:-------|:------:|------:|
+| 1      |    1   |     1 |
+| 2      |    2   |     2 |
+| 3      |    3   |     3 |
+| 4      |    4   |     4 |
+
+
+### The Dark
+
+As shown on the title page, you can add the  `{{dark}}` or `{{grunge}}` tag to a page to give it a dark border.
+
+You can also remove the tag to get a cleaner titlepage.
+
+### Example Pages
+
+In the following, some example pages will be added to show off how to easily create new monsters, spells, classes, etc.
+
+
+{{pageNumber,auto}}
+\page
+
+## Images
+
+
+### 1- or 2-columns
+You can include one-column-wide images as normal. To add an image that spans both columns, add `{wide}` tag after the image code or input it inside a `{{wide ...}}` environment.
+
+See below for an example.
+
+\column
+
+### Fullpage Images
+
+To add a fullpage image, add `{fullpage}` tag after the image code or input it inside a `{{fullpage ...}}` environment. You still need to add `\page` commands before and after the image manually!
+
+See the next page for an example.
+
+
+!["Alice in Wonderland" illustration №25 by Tenniell](https://upload.wikimedia.org/wikipedia/commons/6/69/Alice_par_John_Tenniel_25.png) {wide,width:100%,mix-blend-mode:multiply}
+
+{{pageNumber,auto}}
+\page
+
+![](https://upload.wikimedia.org/wikipedia/commons/6/6a/Albrecht_D%C3%BCrer%2C_Saint_George_Killing_the_Dragon%2C_1501-1504%2C_NGA_6715.jpg){fullpage,filter:grayscale(1)contrast(10)}
+
+\page
+
+# Example Pages
+{grunge}
+
+## With `{{Grunge}}`
+
+{{height:6cm}}
+
+> This is a blockquote that can be used for inspiration or mood-setting. Best limited to two lines.
+
+{{pageNumber,auto}}
+\page
+
+## Example Races
+
+### March Hare
+
+The March Hare will be much the most interesting, and perhaps as this is May it won't be raving mad – at least not so mad as it was in March.
+
+You know the Common and Uncommon languages.
+
+#### Mad.
+You cannot go mad, for you are it already.
+
+\column
+
+### Dormouse
+
+'You might just as well say,' added the Dormouse, who seemed to be talking in his sleep, 'that "I breathe when I sleep" is the same thing as "I sleep when I breathe"!'
+
+You know the Common language.
+
+#### Sleeper.
+You are always falling asleep.
+
+
+
+!["Alice in Wonderland" illustration №25 by Tenniell](https://upload.wikimedia.org/wikipedia/commons/6/69/Alice_par_John_Tenniel_25.png) {wide,width:100%,mix-blend-mode:multiply}
+
+
+{{pageNumber,auto}}
+\page
+
+![](https://upload.wikimedia.org/wikipedia/commons/1/18/TheJabberwocky.png){fullpage,grunge}
+
+\page
+
+## Hatter Class
+
+Twinkle, twinkle, little bat!  
+How I wonder what you're at!  
+Up above the world you fly,  
+Like a teatray in the sky.
+
+
+#### Weapons:
+Scissors, needles
+
+#### Armor: 
+Hats
+
+#### Hit Dice:
+1d7
+
+#### Languages:
+You know the hatters' language, which you use to talk to hats.
+
+\column
+
+#### Class Talent One.
+A starting feature or talent granted by your class.
+
+#### Class Talent Two.
+A starting feature or talent granted by your class.
+
+#### Class Talent Three.
+A starting feature or talent granted by your class.
+
+
+{{wide
+##### Class Talents
+| 2d6 | Effect |
+|:---:|:-------|
+| 2   | You gain a talent or stat bonus, possiply with a choice. |
+| 3-6 | You gain a talent or stat bonus, possiply with a choice. |
+| 7-9 | You gain a talent or stat bonus, possiply with a choice. |
+|10-11| You gain a talent or stat bonus, possiply with a choice. |
+| 12  | Choose a talent or +2 points to distribute to ability scores |
+
+
+> "A neat one-liner that adds some flavour!"  
+> –Dex, human scholar
+}}
+
+{{pageNumber,auto}}
+\page
+
+## Spells
+
+##### Spell Name
+
+*Tier X, wizard/cleric*
+
+#### Duration:
+Concentration / Instant / X rounds / X Days
+
+#### Range: 
+Self / Close / Near / Far
+
+Here comes a spell description, keep it short but be precise.
+
+\column
+
+##### Spell Name
+
+*Tier X, wizard/cleric*
+
+#### Duration:
+Concentration / Instant / X rounds / X Days
+
+#### Range: 
+Self / Close / Near / Far
+
+Here comes a spell description, keep it short but be precise.
+
+:::
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/75/Historia_Mundi_Naturalis%2C_Plinii_Secundi.jpg){wide,width:100%,filter:grayscale(1)contrast(2)}
+
+{{pageNumber,auto}}
