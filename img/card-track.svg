@@ -3,8 +3,8 @@
 
 <svg
    width="170mm"
-   height="80mm"
-   viewBox="0 0 170 80"
+   height="90mm"
+   viewBox="0 0 170 90"
    version="1.1"
    id="svg1"
    sodipodi:docname="card-track.svg"
@@ -31,7 +31,7 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g16" />
   <defs
      id="defs1">
     <marker
@@ -58,9 +58,9 @@
      id="layer1">
     <g
        id="g10"
-       transform="translate(1.4629795,-4.9985134)">
+       transform="translate(0.48765982,-2.8040441)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect1"
          width="25"
          height="35"
@@ -80,9 +80,9 @@
     </g>
     <g
        id="g9"
-       transform="translate(1.4629795,-4.9985134)">
+       transform="translate(0.48765982,-2.8040441)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect2"
          width="25"
          height="35"
@@ -103,9 +103,9 @@
     </g>
     <g
        id="g8"
-       transform="translate(1.4629795,-4.9985134)">
+       transform="translate(0.48765982,-2.8040441)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect3"
          width="25"
          height="35"
@@ -126,9 +126,9 @@
     </g>
     <g
        id="g7"
-       transform="translate(1.4629795,-4.9985134)">
+       transform="translate(0.48765982,-2.8040441)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect4"
          width="25"
          height="35"
@@ -149,9 +149,9 @@
     </g>
     <g
        id="g6"
-       transform="translate(1.4629795,-4.9985134)">
+       transform="translate(0.48765982,-2.8040441)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect5"
          width="25"
          height="35"
@@ -172,9 +172,9 @@
     </g>
     <g
        id="g5"
-       transform="translate(1.4629795,-4.9985134)">
+       transform="translate(0.48765982,-2.8040441)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect6"
          width="25"
          height="35"
@@ -195,9 +195,9 @@
     </g>
     <g
        id="g11"
-       transform="translate(0.48765983,32.795126)">
+       transform="translate(0.36574487,40.841513)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect10"
          width="25"
          height="35"
@@ -217,9 +217,9 @@
     </g>
     <g
        id="g12"
-       transform="translate(0.36574486,33.648531)">
+       transform="translate(0.2438299,41.694918)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect11"
          width="25"
          height="35"
@@ -240,9 +240,9 @@
     </g>
     <g
        id="g13"
-       transform="translate(0.73148982,33.160871)">
+       transform="translate(0.60957486,41.207258)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect12"
          width="25"
          height="35"
@@ -263,9 +263,9 @@
     </g>
     <g
        id="g14"
-       transform="translate(0.97531972,33.404701)">
+       transform="translate(0.85340476,41.451088)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect13"
          width="25"
          height="35"
@@ -286,9 +286,9 @@
     </g>
     <g
        id="g15"
-       transform="translate(1.2191496,32.551296)">
+       transform="translate(1.0972346,40.597683)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect14"
          width="25"
          height="35"
@@ -309,9 +309,9 @@
     </g>
     <g
        id="g16"
-       transform="translate(1.7068095,33.404701)">
+       transform="translate(1.5848945,41.451088)">
       <rect
-         style="fill:#f9ecce;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#552200;fill-opacity:0.13333334;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect15"
          width="25"
          height="35"
@@ -333,73 +333,73 @@
     <circle
        style="fill:#e72f32;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="path16"
-       cx="13.038902"
-       cy="30.661612"
+       cx="12.063582"
+       cy="32.856079"
        r="5" />
     <path
        style="fill:#00604d;fill-opacity:1;stroke:#00604d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
-       d="M 52.537861,31.149272 63.266378,31.027358"
+       d="M 51.562541,33.343741 62.291058,33.221827"
        id="path17"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#00604d;fill-opacity:1;stroke:#00604d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
-       d="M 77.53043,8.9607485 88.258947,8.8388345"
+       d="M 76.55511,11.155218 87.283627,11.033304"
        id="path18"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#00604d;fill-opacity:1;stroke:#e72f32;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
-       d="M 84.482554,31.149272 73.266378,31.027358"
+       d="M 83.507234,33.343741 72.291058,33.221827"
        id="path19"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#00604d;fill-opacity:1;stroke:#e72f32;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
-       d="M 109.47513,8.9607485 98.258947,8.8388345"
+       d="M 108.49981,11.155218 97.283627,11.033304"
        id="path20"
        sodipodi:nodetypes="cc" />
     <circle
        style="fill:#00604d;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="circle16"
-       cx="68.266373"
-       cy="31.027357"
+       cx="67.291054"
+       cy="33.221825"
        r="5" />
     <circle
        style="fill:#00604d;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="circle17"
-       cx="93.258942"
-       cy="8.8388348"
+       cx="92.283623"
+       cy="11.033304"
        r="5" />
     <path
        style="fill:#00604d;fill-opacity:1;stroke:#00604d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
-       d="m 113.37343,69.918231 10.72852,-0.121914"
+       d="m 113.25152,77.964618 10.72852,-0.121914"
        id="path21"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#00604d;fill-opacity:1;stroke:#00604d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
-       d="m 138.366,47.729708 10.72852,-0.121914"
+       d="m 138.24409,55.776095 10.72852,-0.121914"
        id="path22"
        sodipodi:nodetypes="cc" />
     <circle
        style="fill:#00604d;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="circle22"
-       cx="129.10196"
-       cy="69.796318"
+       cx="128.98004"
+       cy="77.842705"
        r="5" />
     <circle
        style="fill:#00604d;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="circle23"
-       cx="154.09453"
-       cy="47.607788"
+       cx="153.97261"
+       cy="55.654175"
        r="5" />
     <path
        style="fill:#00604d;fill-opacity:1;stroke:#e72f32;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
-       d="M 61.437654,69.308658 H 72.044256"
+       d="M 61.315739,77.355045 H 71.922341"
        id="path23"
        sodipodi:nodetypes="cc" />
     <circle
        style="fill:#e72f32;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="circle20"
-       cx="77.04425"
-       cy="69.308662"
+       cx="76.922333"
+       cy="77.355049"
        r="5" />
   </g>
 </svg>
