@@ -1,3 +1,8 @@
+---
+layout: default
+title: Homebrewery Templates
+---
+
 # Homebrewery Templates
 > by Sibling Dex
 
