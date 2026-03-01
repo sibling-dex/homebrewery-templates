@@ -1,7 +1,7 @@
 # Homebrewery Templates
 > by Sibling Dex
 
-Here is an overview of templates made by me for [The Hmebrewery](https://homebrewery.naturalcrit.com/):
+Here is an overview of templates made by me for [The Homebrewery](https://homebrewery.naturalcrit.com/):
 
 | Preview | Description |
 |:--------|:------------|
