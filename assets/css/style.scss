@@ -6,6 +6,9 @@
 table {
 	img {
 		vertical-align: text-top;
+		min-width: 120px;
+  		max-width: 240px;
+  		width: 100%;
 	}
 	td, th {
 		padding: 4px;
