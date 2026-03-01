@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
-table img {
-	vertical-align: text-top;
+table {
+	img {
+		vertical-align: text-top;
+	}
+	td, th {
+		padding: 4px;
+	}
 }
