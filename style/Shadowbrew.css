@@ -1,0 +1,222 @@
+/*=======---  Example CSS styling  ---=======*/
+/* Any CSS here will apply to your document! */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturCook:wght@700&family=Grenze+Gotisch:wght@100..900&family=Grenze:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/jsl-blackletter');
+@import url('https://fonts.cdnfonts.com/css/traditio-ah');
+@import url('https://fonts.cdnfonts.com/css/old-newspaper');
+
+
+
+body {
+  --width-margins: 13mm;
+}
+
+.page {
+  width: 148mm;
+  height: 210mm;
+  padding: var(--width-margins);
+  
+  font-family: "Montserrat";
+  font-size: 10pt;
+  font-weight: normal;
+  line-height: 1.2;
+  column-gap: 5mm;
+
+  &:has(h1) {
+    columns: 1;
+  }
+  
+  h1 {
+    font-family: 'UnifrakturCook', sans-serif;
+    font-weight: normal;
+    font-size: 48pt;
+    text-align: center;
+    /*background: url(https://sibling-dex.github.io/homebrewery-templates/img/SD-line.png) bottom / 100% no-repeat;*/
+    Border-bottom: 3pt solid Black;
+    margin-bottom: 0.2em;
+    margin-top: 20mm;
+  }
+  
+  h2 {
+    font-family: 'Grenze Gotisch', serif;
+    font-weight: 700;
+    font-size: 14pt;
+    text-align: center;
+  }
+  &:has(h2):not(:has(h1)) {
+    padding-top: 35mm;
+  
+    h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 40pt;
+      height: 3cm;
+      width: 100%;
+      color: white;
+      background: black;
+      padding-top: .5em;
+    }
+  }
+  
+  h3 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    margin-bottom: 10pt;
+  }
+  
+  h4 {
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-right: .5em;
+    
+    & + p {
+      display: inline;
+      
+      &::after {
+        content: "";
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  
+  h5 {
+    font-size: 13pt;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/stroke.png) center / 105%;
+    padding: 4pt;
+    margin: 0 -1mm;
+    margin-bottom: 1mm;
+  }
+  
+  p, ul, ol, table {
+    margin-bottom: 1em;
+    hyphens: auto;
+  }
+  
+  hr {
+    border: none;
+    height: 5mm;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/SD-line.png) center / cover no-repeat;
+    margin-bottom: 5mm;
+  }
+  
+  blockquote {
+    font-family: 'Grenze', serif;
+    font-weight: 600;
+    font-size: 14pt;
+    text-align: center;
+    color: white;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/stroke.png) center / cover;
+    mix-blend-mode: multiply;
+    padding: 1em 3em;
+    margin: 5mm -5mm;
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  .notes,
+  .footnotes {
+    border-top: 1pt solid black;
+    padding-top: .8em;
+    
+    & > * {
+      font-size: 8pt;
+      margin: 0;
+    }
+  }
+  .footnotes {
+    position: absolute;
+    inset: auto  var(--width-margins) calc(var(--width-margins) + 1em) var(--width-margins);
+    width: 122mm;
+  }
+  
+  table {
+    th, td {
+      padding: 3pt 4pt 2pt 4pt;
+    }
+    
+    tbody {
+      tr {
+        border-top: 2px solid black;
+      }
+    }
+    thead {
+      tr {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+  
+  .homebreweryCredits {
+      font-size: 8pt;
+  
+    p {
+      font-family: 'Open Sans';
+      font-weight: 600;
+      letter-spacing: normal;
+      margin: 0;
+    }
+    p:nth-of-type(2) {
+      font-family: 'CodeBold';
+      font-size: 14pt;
+    }
+    a {
+      font-family: 'Open Sans';
+      font-size: 8pt;
+    }
+    .homebreweryIcon {
+      height: 1cm;
+      margin: 1mm auto;
+    }
+  }
+  
+  .shadowdarkLogo {
+    display: block;
+    width: 44mm;
+    height: 20mm;
+    background: url(https://sibling-dex.github.io/homebrewery-templates/img/Third-Party-Shadowdark-Logo-Black.png) center/100% no-repeat;
+    margin: auto;
+  }
+  
+  .fullpage {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    mix-blend-mode: multiply;
+  }
+  
+  .titlepage {
+    display: block;
+    box-sizing: content-box;
+    width: 93mm;
+    margin: 0 auto;
+    padding: 0 6mm;
+    
+    h4, p {
+      font-size: 7pt;
+    }
+  }
+  
+  &:has(.dark){
+    background: black url(https://sibling-dex.github.io/homebrewery-templates/img/frame2.png) center / 95% 100% no-repeat;
+    background-clip: border-box;
+  }
+  
+  &:has(.grunge){
+    background: black url(https://sibling-dex.github.io/homebrewery-templates/img/black-grunge-frame.jpg) center / 95% 95% no-repeat;
+    background-clip: border-box;
+  }
+}
+
+
+
