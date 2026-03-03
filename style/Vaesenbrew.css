@@ -17,12 +17,11 @@
     font-weight: bold;
 }
 
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-body {
+body  {
   --color-red: #9D3431;
   --color-brown: #483417;
   --color-note: #F2F0ED;
@@ -48,6 +47,8 @@ body {
   line-height: 1.2;
   color: #44291E;
 
+  contain: none;
+  content-visibility: visible;
 
   .header,
   .pageNumber {
@@ -61,15 +62,18 @@ body {
     font-weight: bold;
     
     &::before, &::after {
-      content: " · ";
+      content: " · " ;
     }
   }
   
   .header {
     top: 1cm;
-    
+     
+    &::after {
+      content: " · ";
+    }
     &.auto::after {
-      content: "Chapter " counter(chapter-numbers) " · ";
+      content: " Chapter " counter(chapter-numbers) " · ";
     }
   }
   .pageNumber {
@@ -192,13 +196,19 @@ body {
     margin: 5mm auto;
     
     p {
-      font-family: 'Baskervville';
-      font-size: 10pt;
-      font-weight: bold;
-      line-height: 1.2;
-      text-align: center;
-      text-indent: 0;
-      letter-spacing: .08em
+      font-family: 'Open Sans';
+      font-size: 8pt;
+    }
+    p:nth-of-type(2) {
+      font-family: 'CodeBold';
+      font-size: 14pt;
+    }
+    a {
+      font-family: 'Open Sans';
+      font-size: 8pt;
+    }
+    .homebreweryIcon {
+      margin: 2mm auto;
     }
   }
   
@@ -453,4 +463,8 @@ body {
     }
   }
 }
+
+
+
+
 

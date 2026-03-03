@@ -1,6 +1,6 @@
 /*=======---  Example CSS styling  ---=======*/
 /* Any CSS here will apply to your document! */
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Big+Shoulders+Display:wght@100..900&family=Karantina:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Karantina:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 /* Fonts */
 @font-face {
@@ -27,7 +27,8 @@ body {
 }
 
 .page {
-	background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/Background.png');
+  background-image: url(https://sibling-dex.github.io/homebrewery-templates/img/Background.png), url(https://sibling-dex.github.io/homebrewery-templates/img/black-grunge-frame.jpg);
+  background-blend-mode: hard-light;
   background-size: 100% calc(100% - 3.5cm);
   background-position: 0 2cm;
   padding: 3cm 0 2.5cm 0;
@@ -37,6 +38,10 @@ body {
   font-size: 9pt;
   line-height: 1.4;
   text-align: justify;
+  
+  contain: none;
+  content-visibility: unset;
+
   
   &::before,
   &::after {
@@ -311,16 +316,22 @@ body {
   }
   
   .homebreweryCredits {
-    margin: 3mm auto;
+    margin: 5mm auto;
     
     p {
-      font-family: 'Arvo';
-      font-size: 10pt;
-      font-weight: bold;
-      line-height: 1.4;
-      text-align: center;
-      text-indent: 0;
-      letter-spacing: .08em
+      font-family: 'Open Sans';
+      font-size: 8pt;
+    }
+    p:nth-of-type(2) {
+      font-family: 'CodeBold';
+      font-size: 14pt;
+    }
+    a {
+      font-family: 'Open Sans';
+      font-size: 8pt;
+    }
+    .homebreweryIcon {
+      margin: 2mm auto;
     }
   }
   
@@ -471,6 +482,7 @@ body {
   }
     
   .note {
+    display: block;
     font-family: "Nunito Sans";
     margin: 3mm 0;
     border-top: 24px solid black;
@@ -505,7 +517,7 @@ body {
     border-top: 4mm solid black;
     border-bottom: 4mm solid black;
     background-image: url("https://sibling-dex.github.io/homebrewery-templates/img/Box.png");
-        background-size: 100% 100%;
+    background-size: 100% 100%;
     border-image: url("https://sibling-dex.github.io/homebrewery-templates/img/Black-Yellow.png") 18 round;
     
     :is(h2,h3) {
@@ -540,6 +552,8 @@ body {
   }
   
   .feature {
+    display: block;
+    
     h3 {
       text-align: center;
       border-top: 1pt solid black;

@@ -1,0 +1,19 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+table {
+	img {
+		vertical-align: text-top;
+		min-width: 120px;
+  		max-width: 240px;
+  		width: 100%;
+	}
+	td, th {
+		padding: 4px;
+	}
+	th {
+		font-weight: 600;
+	}
+}
