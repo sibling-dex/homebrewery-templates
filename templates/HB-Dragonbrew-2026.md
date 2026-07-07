@@ -1,0 +1,2170 @@
+```metadata
+title: Dragonbrew – A template for Dragonbane
+description: Another Dragonbane template based on Unbane by prof.tw
+tags:
+  - dragonbane
+  - theme
+  - meta:theme
+renderer: V3
+theme: Blank
+snippets:
+  - name: brew_snippets
+    subsnippets:
+      - name: dragonbox
+        gen: |+
+
+          {{dragonbox 
+          ### Title
+
+          Some text goes here.
+          }}
+
+      - name: demonbox
+        gen: |+
+
+          {{demonbox 
+          ### Title
+
+          Some text goes here.
+          }}
+
+      - name: chapter title
+        gen: |+
+
+          # Chapter Title
+          {title="Add description here"}
+
+      - name: NPC
+        gen: >+
+
+          {{dragonbox
+
+          ### Important NPC
+
+
+          Give a short description of an NPC that the adventurers will encounter
+          in this location. Provide their appearance, motivations, maybe a short
+          history and what they will want from the adventurers. Provide their
+          stats in the following short format:
+
+
+          |                                                              |
+
+          |:-------------------------------------------------------------|
+
+          | **Movement:** 10 &emsp; **Damage Bonus:** Str +D4            |
+
+          | **Armor:** Leather (1) &emsp; **HP:** 20 &emsp; (**WP:** 8)  |
+
+          | **Skills:** Awareness 10, Brawling: 12, Evade: 10            |
+
+          | **Abilities:** Robust x 2                                    |
+
+          | **Weapons:** Short sword (skill level 12, damage D10), short bow
+          (skill level 12, damage D10) |
+
+          }}
+
+      - name: Kin Ability
+        gen: >+
+
+          {{dragonbox
+
+          ### Ability: Memorable Gift
+
+
+          - **Willpower Points:** 3 or Varies
+
+
+          A kin ability that can be activated at will. The ability will
+          typically provide a boon in a common situation or lets you circumvent
+          a rule. 
+
+          }}
+
+      - name: Heroic Ability
+        gen: >+
+
+          {{dragonbox
+
+          ### Ability: Super Skill
+
+
+          - **Requirement:** Skill 12
+
+          - **Willpower Points:** Number or Varies
+
+
+          A heroic ability that can be activated at will. The ability will
+          typically provide a boon in a common situation or lets you circumvent
+          a rule. 
+
+          }}
+
+      - name: monster
+        gen: >+
+
+          {{paperbox
+
+          |                                              |
+
+          |:---------------------------------------------|
+
+          | **Ferocity:** 2   **Size:** Large            |
+
+          | **Movement:** 16   **Armor:** —   **HP:** 32 |
+
+
+          :
+
+
+          **Typical Gear:**:: A weapon or other gear the monster usually
+          carries.
+
+
+          **Ability:**:: A special ability or feature that applies to the
+          monster.
+
+          }}
+
+      - name: monster attacks
+        gen: >+
+
+          {{tablebox
+
+          ### Monster Attacks
+
+
+          | D6 | Attack                                 |
+
+          |:--:|:---------------------------------------|
+
+          | 1  | **Attack Name:** Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. |
+
+          | 2  | **Attack Name:**  Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum. |
+
+          | 3  | **Attack Name:** Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. |
+
+          | 4  | **Attack Name:** Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum. |
+
+          | 5  | **Attack Name:** Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. |
+
+          | 6  | **Attack Name:** Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum. |
+
+          }}
+
+      - name: title page
+        gen: >+
+
+          ![homebrewery_mug](http://i.imgur.com/hMna6G0.png)
+          {width:280px,margin-top:-10mm}
+
+
+          {{titlepage}}
+
+
+          # DragonBrew
+
+          {title,font-size:60pt}
+
+
+          ## A Homebrewery-Template for Dragonbane
+
+          {subtitle}
+
+
+          ### AUTHOR:
+
+          [The Author]
+
+
+          ### CREDITS:
+
+          This game supplement was created using the
+          [DragonBrew](https://homebrewery.naturalcrit.com/share/IOEuWz2v8FFi)
+          template by Sibling Dex
+
+
+          ["Parchment Paper
+          Background"](https://www.publicdomainpictures.net/en/view-image.php?image=488602&picture=parchment-paper-background-texture)
+          by Andrea Stöckel (Public Domain)
+
+          ["Old Scroll
+          Texture"](https://www.deviantart.com/esther-sanz/art/Old-Scroll-Texture-II-114214631)
+          by Esther Sanz([CC BY
+          3.0](http://creativecommons.org/licenses/by/3.0/))
+
+
+
+          This game supplement was created under Fria Ligan AB’s [Dragonbane
+          Third Party Supplement
+          License](https://freeleaguepublishing.com/wp-content/uploads/2023/11/Dragonbane-License-Agreement.pdf)
+          to be used with the core rules of Dragonbane.
+
+
+          This game supplement is neither affiliated with, sponsored, or
+          endorsed by Fria Ligan AB.
+
+
+          ### Made With:
+
+
+          {{homebreweryIcon}}
+
+
+          The Homebrewery  
+
+          [Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
+
+          {homebrewery}
+
+          {{dragonbaneLogo}}
+
+      - name: one-page title
+        gen: |+
+
+          # One-Page Title
+          {title}
+
+      - name: one-page attribution footer
+        gen: >-
+
+          {{footer-left,dragonbaneLogo}}
+
+          {{footer-right
+
+          - **Author:** YOUR NAME HERE
+
+          - This game supplement was created using the
+          [DragonBrew](https://homebrewery.naturalcrit.com/share/IOEuWz2v8FFi)
+          homebrewery template.
+
+          - This game supplement was created under Fria Ligan AB’s [Dragonbane
+          Third Party Supplement
+          License](https://freeleaguepublishing.com/wp-content/uploads/2023/11/Dragonbane-License-Agreement.pdf)
+          to be used with the core rules of Dragonbane. This game supplement is
+          neither affiliated with, sponsored, or endorsed by Fria Ligan AB.
+
+          }}
+
+```
+
+```css
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/colus');
+@import url('https://fonts.cdnfonts.com/css/friz-quadrata-std');
+
+
+*, *::before, *::after {
+  box-sizing  : border-box;
+}
+
+:root {
+  /* DB Colors */
+  --accent-color            : var(--demongreen); 
+  --light-color             : #ffffffec;
+  --demongreen              : RGB(0, 96, 77);
+  --dragonred               : RGB(231, 47, 50);
+  --bloodred                : RGB(196, 32, 52);
+  --red                     : #9A342F;
+  --brown                   : #614F3D;
+  --blue                    : #004360;
+  --table-dark              : #55220022;
+  --paperbox                : #66550022;
+  --root                    : #908E8C;
+
+  background-color: var(--root);
+  counter-reset: chapter-numbers part-numbers;  
+}
+
+.page {
+  height          : 297mm;
+  width           : 210mm;
+  background      : #6a6666;
+  background-image: url(https://sibling-dex.github.io/homebrewery-templates/img/parchment_light.jpg);
+  background-size : 100% 100%;
+  background-position: center;
+  font-family     : "Crimson Pro";
+  font-size       : 10pt;
+  line-height     : 1.2;
+  column-gap      : 10mm;
+  padding         : 14mm 0 0;
+  
+  contain: none;
+  content-visibility: unset;
+  
+  .columnWrapper {
+    width         : 17cm;
+    height        : 252mm;
+    margin        : auto;
+    
+    & > *:not(.dragonbox,.tablebox,.emptybox):first-child {
+      margin-top: 0;
+    }
+    & > *:is(.dragonbox,.tablebox,.emptybox):first-child {
+      margin-top: 20px;
+    }
+  }
+  *:is(.columnSplit,.rowSplit,hr,h1,h2) + *:not(.dragonbox,.tablebox,.emptybox,.paperbox) {
+    margin-top: 0;
+  }
+  *:is(.columnSplit,.rowSplit,hr,h1,h2) + *:is(.dragonbox,.tablebox,.emptybox) {
+    margin-top: 20px;
+  }
+  *:is(.columnSplit,.rowSplit,hr,h1,h2) + *:is(.paperbox) {
+    margin-top: 10px;
+  }
+}
+
+.rowSplit {
+  display: block !important;
+  column-span: all;
+  width: 100%;
+  margin: 1em 0;
+}
+
+@media print {
+  .page {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+/* ==== COVERPAGE ==== */
+.page {
+  &.titlepage,
+  &:has(.titlepage) {
+    .columnWrapper {
+      display     : block;
+      columns     : 1;
+      text-align  : center;
+    
+      & > p,
+      & > blockquote {
+        width         : 8cm;
+        margin        : auto;
+        text-align    : center;
+        text-indent   : 0;
+        margin-bottom : 3mm;
+      }
+    }
+  }
+  
+  .homebreweryCredits {
+    display           : block;
+    position          : absolute;
+    bottom            : 3cm;
+    left              : 0;
+    right             : 0;
+    margin            : auto;
+  }
+  .homebrewery {
+    font-family     : 'CodeBold';
+    font-size       : 14pt;
+    letter-spacing  : .08em;
+    
+    a {
+      font-family     : "Open Sans", sans-serif;
+      font-size       : 10pt;
+      font-weight     : 600;
+      letter-spacing  : normal;
+    }
+  }
+  .homebreweryIcon {
+    display         : block;
+    height          : 1.5cm;
+    margin-top      : 2mm;
+    margin-bottom   : 3mm;
+    background      : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.65 94.6"><path d="M63.45.09s-45.91,12.4-46,12.45a.71.71,0,0,0-.15.08l-.15.1-.12.11a1.07,1.07,0,0,0-.14.16l-.09.11-.12.23,0,.06L.2,54.9a1.59,1.59,0,0,0,.11,1.69L29.36,94h0l0,0,.08.08.08.08.09.09.08.06.13.07a0,0,0,0,0,0,0,1.59,1.59,0,0,0,.27.12l.13.05.06,0a1.55,1.55,0,0,0,.37,0,1.63,1.63,0,0,0,.31,0l45.67-8.3.16,0,.11,0,.12,0,.06,0s0,0,0,0l.06,0a1.65,1.65,0,0,0,.36-.28l0-.06a1.6,1.6,0,0,0,.26-.38s0,0,0,0v0h0a.14.14,0,0,1,0-.06L94.52,43.74a1.4,1.4,0,0,0,.11-.4.41.41,0,0,0,0-.11,1.13,1.13,0,0,0,0-.26.66.66,0,0,0,0-.14,2,2,0,0,0-.06-.26l0-.11a2.68,2.68,0,0,0-.18-.33v0L65.29.6C64.77-.31,63.45.09,63.45.09ZM74.9,81.7l-28.81-18L78.5,38.49ZM44.1,61l-11-40.17L77,35.39ZM82,37.78l8.92,5.95L79,73.48Zm4.46-1.1-4.6-3.06L75.69,21.36Zm-9.26-4.8-42.07-14,28.05-14ZM30.56,16.34l-6.49-2.16L47.85,7.7Zm-11.35-.21L27.88,19,7.64,45Zm10.73,5.76L40.78,61.64,4.64,54.42Zm10.82,43.2L30.26,89.6,5.75,58.09Zm3.16,1.24L71.74,83.72l-38.26,7Z"/></svg>') center / contain no-repeat;
+  }
+  
+  .dragonbaneLogo {
+    display           : block;
+    position          : absolute;
+    inset             : auto 0 1.5cm 0;
+    margin            : 5mm auto;
+    z-index           : 9;
+    width             : 100%;
+    height            : 80px;
+    background        : url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ENG_red.png') center / contain no-repeat;
+    &.eng {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ENG_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ENG_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ENG_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ENG_neg.png');}
+    }
+    &.swe {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SWE_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SWE_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SWE_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SWE_neg.png');}
+    }
+    &.cze {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_CZE_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_CZE_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_CZE_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_CZE_neg.png');}
+    }
+    &.dan {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_DAN_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_DAN_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_DAN_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_DAN_neg.png');}
+    }
+    &.fre {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_FRE_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_FRE_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_FRE_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_FRE_neg.png');}
+    }
+    &.ger {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_GER_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_GER_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_GER_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_GER_neg.png');}
+    }
+    &.hun {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_HUN_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_HUN_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_HUN_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_HUN_neg.png');}
+    }
+    &.ita {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ITA_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ITA_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ITA_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ITA_neg.png');}
+    }
+    &.nor {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_NOR_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_NOR_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_NOR_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_NOR_neg.png');}
+    }
+    &.pol {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POL_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POL_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POL_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POL_neg.png');}
+    }
+    &.por {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POR_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POR_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POR_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POR_neg.png');}
+    }
+    &.spa {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SPA_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SPA_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SPA_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SPA_neg.png');}
+    }
+    &.ukr {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_UKR_red.png');
+      &.red { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_UKR_red.png');}
+      &.black { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_UKR_pos.png');}
+      &.white { background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_UKR_neg.png');}
+    }
+  }
+  .DBCompatibleLogo {
+    display           : block;
+    position          : absolute;
+    inset             : auto 0 1.5cm 0;
+    margin            : 5mm auto;
+    z-index           : 9;
+    width             : 300px;
+    height            : 80px;
+    background        : url('https://sibling-dex.github.io/homebrewery-templates/img/DB_Compatible_logo.png') center / cover no-repeat;
+  }
+}
+
+
+/* ==== TYPOGRAPHY ==== */
+.page {
+  h1, h2, h3, h4, h5 {
+    font-family         : "Colus";
+    font-weight         : 700;
+  }
+  
+  h1 {
+    position            : relative;
+    text-align          : center;
+    color               : var(--accent-color);
+    font-size           : 34pt;
+    width               : 174mm;
+    margin              : 0 -2mm .25em;
+    column-span         : all;
+    padding             : 32px 0 16px 0;
+    background-image    : 
+        url("data:image/svg+xml;utf8,<svg height='32' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 8 L0 16 L2 24 L4 16 Z' fill='RGB(0, 96, 77)'/><path d='M168 8 L170 16 L168 24 L166 16 Z' fill='RGB(0, 96, 77)'/><path d='M2 9 L2 23 L168 23 L168 9 Z' fill='RGB(0, 96, 77)'/><path d='M85 3 Q83 9, 81 9 L81 23 Q83 23, 85 30 Q87 23, 89 23 L89 9 Q87 9, 85 3 Z' fill='RGB(0, 96, 77)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 4 L0 8 L2 12 L4 8 Z' fill='RGB(0, 96, 77)'/><path d='M168 4 L170 8 L168 12 L166 8 Z' fill='RGB(0, 96, 77)'/><path d='M2 6 L2 10 L168 10 L168 6 Z' fill='RGB(0, 96, 77)'/><path d='M85 0 Q83 6, 81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z' fill='RGB(0, 96, 77)'/></svg>");
+    background-repeat   : no-repeat;
+    background-size     : 100% 32px, 100% 16px;
+    background-position : top, bottom;
+    
+    &::before {
+      content           : "" attr(title);
+      position          : absolute;
+      inset             : -10px 0 0 0;
+      font-size         : 10pt;
+      color             : var(--light-color);
+      line-height       : 1;
+      letter-spacing    : .25em;
+      height            : 20px;
+      width             : fit-content;
+      min-width         : 5cm;
+      margin            : 0 auto;
+      padding           : 10pt 2em 0;
+      background-image  :  
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  L20 5 L20 15 L0 15 Z' fill='RGB(0, 96, 77)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 15  Q8 8, 10 2 Q10 5, 20 5 L20 15 Z' fill='RGB(0, 96, 77)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 10 L0 5 Q8 5, 10 0 Q12 5, 20 5 L20 10 Z' fill='RGB(0, 96, 77)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  Q10 5, 10 2 Q12 8, 20 15 L0 15 Z' fill='RGB(0, 96, 77)'/></svg>");
+      background-size   : calc(100% - 60px) 20px, 40px 20px, 40px 20px, 40px 20px;
+      background-repeat : no-repeat;
+      background-position: center, left, center, right;
+    }
+    &.chapterNumber {
+      counter-increment : chapter-numbers;
+      &::before {
+        content         : attr(title) " " counter(chapter-numbers);
+      }
+      &.auto::before {
+        content         : "Chapter " counter(chapter-numbers);
+      }
+    }
+    &.partNumber {
+      counter-increment : part-numbers;
+      &::before {
+        content         : attr(title) " " counter(part-numbers, upper-roman);
+      }
+      &.auto::before {
+        content         : "Part " counter(part-numbers, upper-roman);
+      }
+    }
+          
+    &.title {
+      display       : block;
+      width         : calc(100% + 4mm);
+      margin        : 0 -2mm .25em;
+      color         : var(--dragonred);
+      font-size     : 40pt;
+      padding       : 0 0 16px 0;
+      background-image  : 
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 4 L0 8 L2 12 L4 8 Z' fill='RGB(238, 61, 60)'/><path d='M168 4 L170 8 L168 12 L166 8 Z' fill='RGB(238, 61, 60)'/><path d='M2 6 L2 10 L168 10 L168 6 Z' fill='RGB(238, 61, 60)'/><path d='M85 0 Q83 6, 81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z' fill='RGB(238, 61, 60)'/></svg>");
+      background-size     : 100% 16px;
+      background-position : bottom;
+      
+      &::before { content: unset;}
+    }
+    &.red {
+      color         : var(--bloodred);
+      background-image    : 
+        url("data:image/svg+xml;utf8,<svg height='32' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(196, 32, 52)'><path d='M2 8 L0 16 L2 24 L4 16 Z'/><path d='M168 8 L170 16 L168 24 L166 16 Z'/><path d='M2 9 L2 23 L168 23 L168 9 Z'/><path d='M85 3 Q83 9, 81 9 L81 23 Q83 23, 85 30 Q87 23, 89 23 L89 9 Q87 9, 85 3 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(196, 32, 52)'><path d='M2 4 L0 8 L2 12 L4 8 Z'/><path d='M168 4 L170 8 L168 12 L166 8 Z'/><path d='M2 6 L2 10 L168 10 L168 6 Z'/><path d='M85 0 Q83 6, 81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z'/></svg>");
+        &::before {
+        background-image  :  
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  L20 5 L20 15 L0 15 Z' fill='RGB(196, 32, 52)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 15  Q8 8, 10 2 Q10 5, 20 5 L20 15 Z' fill='RGB(196, 32, 52)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 10 L0 5 Q8 5, 10 0 Q12 5, 20 5 L20 10 Z' fill='RGB(196, 32, 52)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  Q10 5, 10 2 Q12 8, 20 15 L0 15 Z' fill='RGB(196, 32, 52)'/></svg>");
+        }
+    }
+  }
+  
+  h2 {
+    text-align          : center;
+    color               : var(--accent-color);
+    font-size           : 34pt;
+    margin-top          : .25em;
+    margin-bottom       : .25em;
+    column-span         : all;
+    
+    &.subtitle {
+      color       : black;
+      font-size   : 20pt;
+      margin-bottom : 1em;
+    }
+    &.red {
+      color         : var(--dragonred);
+    }
+  }
+    
+  h3 {
+    font-size           : 11pt;
+    margin-bottom       : 0;
+    margin-top          : 4mm;
+    break-after         : avoid;
+    
+    &.dragonhead {
+      position            : relative;
+      display	            : grid;
+      place-content       : center;
+      height              : 40px;
+      width               : fit-content;
+      margin              : auto;
+      padding             : 0 2.5em;
+      color               : var(--light-color);
+      background-image    : 
+        url("data:image/svg+xml;utf8,<svg height='40' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 L0 35 L170 35 L170 5 Z' fill='RGB(0, 96, 77)'/></svg>"), 
+        url("data:image/svg+xml;utf8,<svg height='40' width='40' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 L0 35 Q16 35, 20 40 Q24 35, 40 35 L40 5 Q24 5, 20 0 Q16 5, 0 5 Z' fill='RGB(0, 96, 77)'/></svg>"), 
+        url("data:image/svg+xml;utf8,<svg height='40' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M30 5 Q20 5 ,20 2 Q13 13, 0 20 Q13 27, 20 38 Q20 35, 30 35 Z' fill='RGB(0, 96, 77)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='40' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 Q10 5 ,10 2 Q17 13, 30 20 Q17 27, 10 38 Q10 35, 0 35 Z' fill='RGB(0, 96, 77)'/></svg>");
+      background-position : center, center, left center, right center;
+      background-size     : calc(100% - 40px) 40px, 40px, 30px 40px, 30px 40px;
+      background-repeat   : no-repeat;
+    }
+  }
+  
+  h4 {
+    display             : inline-block;
+    font-size           : 8pt;
+    margin-top          : 1em;
+    margin-right        : .5em;
+    
+    & + p {
+      display           : inline;
+      
+      &::after {
+        content         : "";
+        display         : block;
+      }
+    }
+  }
+    
+  p {
+    hyphens             : auto;
+  }
+  
+  p + p:not(:has(.dropcap)) {
+    text-indent         : 1em;
+  }
+  
+  .block {
+    margin              : 1em 0;
+  }
+  
+  .narrow {
+    column-span         : none;
+  }
+  
+  ul,ol,dl {
+    margin              : .5em 0;
+    text-align          : left;
+  }
+
+  ul {
+    list-style          : "✦   ";
+    padding             : 0;
+
+    ul {
+      list-style        : "⯌  ";
+      margin            : 0 0 0 -.5em;
+    }
+    li {
+      margin-left       : 1.5em;
+    }
+  }
+  
+  strong {
+    font-weight: 800;
+  }
+  .med {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  del {
+    text-decoration-thickness: 1.5pt;
+  }
+  .colus {
+    font-family     : "Colus";
+    font-size       : 0.9em;
+  }
+  
+  .small {
+    font-size       : 8pt;
+    font-family     : "Crimson Pro", serif;
+    font-weight     : normal;
+  }
+  
+  :not(.dragonbox,.demonbox) > ul li {
+    & > strong:first-child {
+      color           : var(--accent-color);
+    }
+    & > em:first-child strong {
+      color           : var(--dragonred);
+    }
+
+    &:has(strong:first-child)::marker {
+      color           : var(--accent-color);
+    }
+
+    &:has(em:first-child strong)::marker {
+      color           : var(--dragonred);
+    }
+  }
+
+  .toc {
+    display             : block;
+    font-size           : 12pt;
+    column-span         : all;
+    width               : 50%;
+    margin              : auto;
+    
+    p {
+      text-indent       : 0pt !important;
+      overflow          : hidden;
+      display           : flex;
+      justify-content   : space-between;
+    }
+
+    h2 {
+      text-align        : left;
+      color             : black;
+      font-size         : 20pt;
+      column-span       : none;
+    }
+    
+    a {
+      white-space       : nowrap;
+      overflow          : hidden;
+      text-decoration   : none;
+      
+      &::after {
+        content       : "..........................................................................";
+        margin-left       : .1em;
+      }
+    }
+    
+    .number {
+      margin-left       : .2em;
+    }
+  }
+  
+  blockquote {
+    margin-bottom       : 1em;
+
+    & > p {
+      font-style        : italic;
+      font-weight       : 500;
+      font-size         : 11pt;
+      text-align        : left;
+    }
+  
+    ul li,
+    .author {
+      list-style        : "— ";
+      margin-top        : .5em;
+      font-family       : "Colus";
+      font-style        : normal;
+      font-size         : 7pt;
+      font-weight       : bold;
+    }
+  }
+  
+  .code,
+  code {
+    border-radius       : 2px;
+    background          : #ffffffcc;
+    color               : black;
+    font-size           : 0.9em;
+    padding             : 0 .2em;
+  }
+
+  a {
+    color               : inherit;
+    text-decoration     : underline;
+  }
+  
+  .dropcap {
+    color               : var(--accent-color);
+    font-family         : "Colus";
+    font-size           : 4em;
+    font-weight         : bold;
+    float               : left;
+    line-height         : 0.75;
+    margin-right        : .1em;
+    margin-top          : .12em;
+  }
+  
+  .handwritten {
+    font-family         : "Caveat";
+  }
+
+  hr {
+    border            : none;
+    height            : 16px;
+    width             : calc(100% + 4mm);
+    margin            : 1em -2mm;
+    column-span       : all;
+    background-image  : 
+      url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 4 L0 8 L2 12 L4 8 Z' fill='RGB(0, 96, 77)'/></svg>"),
+      url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 4 L0 8 L2 12 L4 8 Z' fill='RGB(0, 96, 77)'/></svg>"),
+      url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 6 L2 10 L168 10 L168 6 Z' fill='RGB(0, 96, 77)'/></svg>"),
+      url("data:image/svg+xml;utf8,<svg height='16' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 0 Q3 6, 1 6 L1 10 Q3 10, 5 16 Q7 10, 9 10 L9 6 Q7 6, 5 0 Z' fill='RGB(0, 96, 77)'/></svg>");
+    background-size   : 16px 16px, 16px 16px, calc(100% - 8px) 16px, 10mm 16px;
+    background-position: left, right, center, center;
+    background-repeat : no-repeat;
+  }
+    
+  .stack {
+    display: inline-block;
+    white-space: pre;
+    font-size: 45%;
+    font-weight: 900;
+    line-height: 0.87;
+    margin-top: .42em;
+    margin-left: .25ex;
+    margin-right: .25ex;
+  }
+}
+
+
+/* ==== BOXES ==== */
+.page {
+  .tablebox,
+  .emptybox,
+  .dragonbox,
+  .picturebox,
+  .demonbox,
+  .paperbox {
+    display: inline-block;
+    &.wide {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }           
+  .tablebox,
+  .emptybox,
+  .dragonbox,
+  .picturebox,
+  .paperbox {
+    position: relative;
+    margin: 30px 0 10px;
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+    &::before {
+      position: absolute;
+      inset: -4px -8px;
+      content: "";
+      display: block;
+      width: calc(100% + 16px);
+      height: 8px;
+      background-image  : 
+        url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 2 L0 8 L2 14 L4 8 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 2 L0 8 L2 14 L4 8 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 6 L2 10 L168 10 L168 6 Z'/></svg>");
+      background-size   : 16px 10px, 16px 10px, calc(100% - 6px) 10px;
+      background-position: left, right, center;
+      background-repeat : no-repeat;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        height: 12px;
+        width: calc(100% + 16px);
+        inset: auto -8px -6px;
+        background-image: 
+        url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 2 L0 8 L2 14 L4 8 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 2 L0 8 L2 14 L4 8 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 6 L2 10 L168 10 L168 6 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 0 Q3 6, 1 6 L1 10 Q3 10, 5 16 Q7 10, 9 10 L9 6 Q7 6, 5 0 Z'/></svg>");
+      background-size   : 16px 10px, 16px 10px, calc(100% - 6px) 10px, 8mm 10px;
+      background-position: left, right, center, center;
+      background-repeat : no-repeat;
+    }
+  }
+  
+  .tablebox,
+  .emptybox,
+  .dragonbox,
+  .picturebox {
+    h3:first-child {
+      z-index             : 9;
+      position            : absolute;
+      display	            : grid;
+      place-content       : center;
+      height              : 40px;
+      width               : fit-content;
+      inset               : -20px 0 auto; 
+      margin              : auto;
+      padding             : 0 2.5em;
+      color               : var(--light-color);
+      background-image    : 
+        url("data:image/svg+xml;utf8,<svg height='40' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 L0 35 L170 35 L170 5 Z' fill='RGB(0, 96, 77)'/></svg>"), 
+        url("data:image/svg+xml;utf8,<svg height='40' width='40' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 L0 35 Q16 35, 20 40 Q24 35, 40 35 L40 5 Q24 5, 20 0 Q16 5, 0 5 Z' fill='RGB(0, 96, 77)'/></svg>"), 
+        url("data:image/svg+xml;utf8,<svg height='40' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M30 5 Q20 5 ,20 2 Q13 13, 0 20 Q13 27, 20 38 Q20 35, 30 35 Z' fill='RGB(0, 96, 77)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='40' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 Q10 5 ,10 2 Q17 13, 30 20 Q17 27, 10 38 Q10 35, 0 35 Z' fill='RGB(0, 96, 77)'/></svg>");
+      background-position : center, center, left center, right;
+      background-size     : calc(100% - 40px) 40px, 40px, 30px 40px, 30px 40px;
+      background-repeat   : no-repeat;
+      
+      & + * {
+        margin-top      : 0 !important;
+      }
+    }
+  }
+  .picturebox,
+  .dragonbox,
+  .demonbox,
+  .paperbox {
+    filter: drop-shadow(1px 1px 4px #00000066);
+  }
+  .dragonbox,
+  .paperbox {
+    background        : url(https://sibling-dex.github.io/homebrewery-templates/img/scroll-n.png) center / 100% no-repeat;
+    
+    &.wide {
+        background        : url(https://sibling-dex.github.io/homebrewery-templates/img/scroll-nw.png) center / 100% no-repeat;
+    }
+    
+    & > hr {
+      height            : 12px;
+      margin            : 4mm -2mm;
+      column-span       : all;
+      background-image  : 
+        url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 2 L0 8 L2 14 L4 8 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 2 L0 8 L2 14 L4 8 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 6 L2 10 L168 10 L168 6 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 0 Q3 6, 1 6 L1 10 Q3 10, 5 16 Q7 10, 9 10 L9 6 Q7 6, 5 0 Z'/></svg>");
+      background-size   : 16px 10px, 16px 10px, calc(100% - 6px) 10px, 8mm 10px;
+      background-position: left, right, center, center;
+      background-repeat : no-repeat;
+    }
+  }
+  .dragonbox {
+    padding: 30px 20px 15px;
+  }
+  .paperbox {
+    padding: 15px 20px;
+    margin: 15px 0;
+  }
+  .picturebox {
+    padding               : 0px;
+    background            : white;
+    
+    & > p:has(img) {
+      line-height         : 0;
+    }
+  }
+  .tablebox,
+  .emptybox {
+    padding               : 24px 0 0;
+    &::after {
+      content: none;
+    }
+  }
+  
+  .demonbox {
+    color                 : var(--light-color);
+    font-weight           : 500;
+    width                 : calc(100% + 10px);
+    padding               : 20px 25px;
+    margin                : 10px -5px;
+    background            : var(--accent-color);
+    background-clip       : padding-box;
+    position              : relative;
+    
+    border-style   : solid;
+    border-width   : 11px;
+    border-image   : url("data:image/svg+xml;utf8,<svg height='80' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M5 5 L10 20 L10 30 Q10 38, 0 40 Q10 42, 10 50 L10 60 L5 75 L20 70 L30 70 Q38 70, 40 80 Q42 70, 50 70 L60 70 L75 75 L70 60 L70 50 Q70 42, 80 40 Q70 38, 70 30 L70 20 L75 5 L60 10L 50 10 Q42 10, 40 0 Q38 010, 30 10 L20 10 Z' fill='RGB(0, 96, 77)'/></svg>") 11 / 11px stretch;
+       
+    h3:first-child {
+      column-span         : all;
+      text-align          : center;
+      color               : var(--light-color);
+      margin-top          : 0;
+      margin-bottom       : .5em;
+    }
+    table {
+      tr, th, td {
+        padding: 1px 0 !important;
+        border-color: transparent !important;
+        background-color: transparent !important;
+      }
+      thead {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  .twocols {
+    columns: 2;
+  }
+}
+
+/* ==== HEADER & FOOTER ==== */
+.page:not(:has(h1,.title)) .columnWrapper::before {
+  content           : " ";
+  display           : block;
+  height            : 16px;
+  width             : calc(100% + 4mm);
+  margin            : 8px -2mm 10pt;
+  background-image  : url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 4 L0 8 L2 12 L4 8 Z' fill='RGB(0, 96, 77)'/><path d='M168 4 L170 8 L168 12 L166 8 Z' fill='RGB(0, 96, 77)'/><path d='M2 6 L2 10 L168 10 L168 6 Z' fill='RGB(0, 96, 77)'/><path d='M85 0 Q83 6 ,81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z' fill='RGB(0, 96, 77)'/></svg>");
+  background-size   : 100% 16px;
+  column-span       : all;
+} 
+
+.page::after {
+  background-image  : unset;
+}
+
+.page {
+  .pageNumber {
+    display	          : flex;
+    flex-direction    : column;
+    align-items       : center;
+    justify-content   : center;
+    font-weight       : bold;
+    font-family       : "Colus";
+    line-height       : 1.25;
+    color             : var(--accent-color);
+    text-transform    : uppercase;
+    width             : fit-content;
+    min-width         : 120px;
+    margin            : auto;
+    left              : 30px;
+    right             : 30px;
+    bottom            : 10mm;
+
+    &::before {
+      content           : "";
+      display           : block;
+      color             : var(--light-color);
+      font-size         : 1.2em;
+      min-width         : 120px;
+      height            : 30px;
+      background-image  :
+        url("data:image/svg+xml;utf8,<svg height='30' width='120' xmlns='http://www.w3.org/2000/svg'><path d='M0 30  Q8 23, 10 17 Q10 20, 20 20 L40 20 Q56 20, 60 15 Q64 20, 80 20 L100 20  Q110 20, 110 17 Q112 23, 120 30 L100 30Z' fill='RGB(0, 96, 77)'/></svg>");
+      background-size   : 120px 30px;
+      background-repeat : no-repeat;
+      background-position: center;
+    }
+    &::after {
+      content           : "" attr(number);
+      display           : block;
+      color             : var(--light-color);
+      font-size         : 1.2em;
+      min-width         : 120px;
+      height            : 30px;
+      padding           : 4px 0;
+      background-image  :
+        url("data:image/svg+xml;utf8,<svg height='30' width='120' xmlns='http://www.w3.org/2000/svg'><path d='M20 0 L0 0  Q8 8, 10 13 Q10 10, 20 10 Q40 10, 60 30 Q80 10, 100 10 Q110 10, 110 13  Q112 8, 120 0 L100 0 Z' fill='RGB(0, 96, 77)'/></svg>");
+      background-size   : 120px 30px;
+      background-repeat : no-repeat;
+      background-position: center;
+    }
+    /*&:not(.auto) {
+      color             : var(--light-color);
+      font-size         : 1.2em;
+      &::after {
+        margin-top: -20px;
+        z-index: -1;
+      }
+    }*/
+  }
+  span.chapterNumber {
+    &.auto::before {
+      display: inline; 
+      content: "Chapter "  counter(chapter-numbers) " ";
+    }
+    &::before {
+      display: inline; 
+      content: " " counter(chapter-numbers) " ";
+    }
+  }
+  .footer-left {
+    position: absolute;
+    width: 6cm;
+    height: 1.6cm;
+    inset: auto auto 5mm 2cm;
+  }
+  .footer-right {
+    display:block;
+    position: absolute;
+    width: 10.5cm;
+    inset: auto 2cm 5mm auto;
+    font-size: 8pt;
+  }
+}
+
+/* ==== TABLES ==== */
+.page{
+  table {
+    width           : 100%;
+    margin-top      : .5em;
+    padding-bottom  : .5em;
+    
+    strong {
+      font-family: "Colus";
+      font-size: 8pt;
+    }
+    th {
+      font-family: "Colus";
+      font-size: 8pt;
+      padding: 4px 6px;
+      vertical-align : bottom;
+    }
+    thead {
+      border-bottom  : 2pt solid var(--brown); 
+    }
+    td {
+      padding: 4px 6px;
+      border-top    : 1pt solid var(--brown); 
+      vertical-align: top;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: var(--table-dark);
+    }
+    &.stats th {
+      font-size: 11pt;
+      text-align: center;
+    }
+    
+    &.dense {
+      th, td {
+        padding  : 2px;
+      }
+    }
+    &.hwlist {
+      margin-top  : 0;
+        td:not(:first-child) {
+          font-family         : "Caveat";
+      }
+    } 
+  }
+  
+  .spell {
+    position: relative;
+    font-family: Colus;
+    font-size: 8pt;
+    margin: 10px auto;
+    padding: .2em .5em 0;
+    background-image: url(https://sibling-dex.github.io/homebrewery-templates/img/banner-n.png);
+    background-position: center;
+    background-size: calc(100% + 32px) calc(100% + 16px);
+    filter: drop-shadow(0px 0px 4px #00000066);
+    border-style: solid;
+    border-width: 8px 8px;
+    border-image: url("data:image/svg+xml;utf8,<svg height='30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M10 5 Q7 3, 5 0 Q3 3,0 5 Q3 7, 5 10 Q7 7, 10 5   M20 5 Q23 7, 25 10 Q27 7, 30 5 Q27 3, 25 0 Q23 3, 20 5   M10 25 Q7 23, 5 20 Q3 23, 0 25 Q3 27, 5 30 Q7 27, 10 25   M20 25 Q23 27, 25 30 Q27 27, 30 25 Q27 23, 25 20 Q23 23, 20 25 Z'/><path d='M3.5 5 L6.5 5 L6.5 25 L3.5 25 Z'/><path d='M23.5 5 L26.5 5 L26.5 25 L23.5 25 Z'/></svg>") 10 stretch;
+    border-image-outset: 4px 4px;
+    
+    &:is(.d,.l,.r)::before {
+      content: " ";
+      height: 30px;
+      width: 100%;
+      position: absolute;
+      inset: -37px 0;
+      margin: 0 auto;
+      background-size: 100% 100%;
+      background-image: url("data:image/svg+xml;utf8,<svg height='100' width='100' xmlns='http://www.w3.org/2000/svg'><path d='M50 0  L50 100' stroke='black' stroke-width='2pt'/></svg>");
+      background-repeat: no-repeat;
+    }
+    &.l::before {
+      background-image: url("data:image/svg+xml;utf8,<svg height='100' width='100' xmlns='http://www.w3.org/2000/svg'><path d='M100 0 Q100 40, 75 50 Q50 60, 50 100' fill='transparent' stroke='black' stroke-width='2pt'/></svg>");
+    }
+    &.r::before {
+      background-image: url("data:image/svg+xml;utf8,<svg height='100' width='100' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 Q0 40, 25 50 Q50 60, 50 100' fill='transparent' stroke='black' stroke-width='2pt'/></svg>");
+    }
+  }
+}
+
+
+/* ==== IMAGES ==== */
+.page {
+  .marker {
+    position            : absolute;
+    color               : var(--light-color);
+    font-family         : "Colus";
+    font-weight         : bold;
+    font-size           : 12pt;
+    text-align          : center;
+    text-shadow         : 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 2px #000, 0 0 2px #000, 0 0 4px #000;
+  }
+  
+  .attribution {
+    position: absolute;
+    display: block;
+    color: #ffffff;
+    text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 2px #000, 0 0 2px #000, 0 0 4px #000;
+    font-size: 8pt;
+    font-weight: bold;
+    bottom: .5em;
+    left: .5em;
+  }
+  
+  &:has(.fullpage) {
+    padding: 0;
+    column-count: 1;
+    
+    .columnWrapper,
+    .fullpage {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      
+      &::before,
+      &::after {
+        content: unset !important;
+      }
+      
+      p, img {
+        height: 297mm;
+      }
+    }
+  }
+}
+
+/*--------------BLACKWHITE----------------*/
+.page.blackwhite,
+.page:has(.blackwhite),
+.pages:has(.allblackwhite) .page {
+  /* DB Colors */
+  --accent-color            : black; 
+  --light-color             : #ffffffec;
+  --demongreen              : black;
+  --dragonred               : black;
+  --bloodred                : black;
+  --red                     : black;
+  --brown                   : grey;
+  --blue                    : black;
+  --table-dark              : #22222222;
+  --paperbox                : #66666622;
+  --root                    : white;
+
+  background: white;
+  
+  .dragonbaneLogo {
+    background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ENG_pos.png');
+    &.eng {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ENG_pos.png');
+    }
+    &.swe {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SWE_pos.png');
+    }
+    &.cze {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_CZE_pos.png');
+    }
+    &.dan {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_DAN_pos.png');
+    }
+    &.fre {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_FRE_pos.png');
+    }
+    &.ger {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_GER_pos.png');
+    }
+    &.hun {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_HUN_pos.png');
+    }
+    &.ita {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_ITA_pos.png');
+    }
+    &.nor {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_NOR_pos.png');
+    }
+    &.pol {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POL_pos.png');
+    }
+    &.por {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_POR_pos.png');
+    }
+    &.spa {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_SPA_pos.png');
+    }
+    &.ukr {
+      background-image: url('https://sibling-dex.github.io/homebrewery-templates/img/logo/DB_3P_UKR_pos.png');
+    }
+  }
+  
+  img {
+    filter: grayscale(1);
+  }
+  
+  hr {
+    background-image  : 
+      url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 4 L0 8 L2 12 L4 8 Z' fill='RGB(0, 0, 0)'/></svg>"),
+      url("data:image/svg+xml;utf8,<svg height='16' width='4' xmlns='http://www.w3.org/2000/svg'><path d='M2 4 L0 8 L2 12 L4 8 Z' fill='RGB(0, 0, 0)'/></svg>"),
+      url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M2 6 L2 10 L168 10 L168 6 Z' fill='RGB(0, 0, 0)'/></svg>"),
+      url("data:image/svg+xml;utf8,<svg height='16' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 0 Q3 6, 1 6 L1 10 Q3 10, 5 16 Q7 10, 9 10 L9 6 Q7 6, 5 0 Z' fill='RGB(0, 0, 0)'/></svg>");
+  }
+  
+  h1 {
+    background-image    : 
+        url("data:image/svg+xml;utf8,<svg height='32' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(0, 0, 0)'><path d='M2 8 L0 16 L2 24 L4 16 Z'/><path d='M168 8 L170 16 L168 24 L166 16 Z'/><path d='M2 9 L2 23 L168 23 L168 9 Z'/><path d='M85 3 Q83 9, 81 9 L81 23 Q83 23, 85 30 Q87 23, 89 23 L89 9 Q87 9, 85 3 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(0, 0, 0)'><path d='M2 4 L0 8 L2 12 L4 8 Z'/><path d='M168 4 L170 8 L168 12 L166 8 Z'/><path d='M2 6 L2 10 L168 10 L168 6 Z'/><path d='M85 0 Q83 6, 81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z'/></svg>");
+    
+    &::before {
+      background-image  :  
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  L20 5 L20 15 L0 15 Z' fill='RGB(0, 0, 0)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 15  Q8 8, 10 2 Q10 5, 20 5 L20 15 Z' fill='RGB(0, 0, 0)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 10 L0 5 Q8 5, 10 0 Q12 5, 20 5 L20 10 Z' fill='RGB(0, 0, 0)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  Q10 5, 10 2 Q12 8, 20 15 L0 15 Z' fill='RGB(0, 0, 0)'/></svg>");
+    }
+    
+    &.title {
+      background-image  : 
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(0, 0, 0)'><path d='M2 4 L0 8 L2 12 L4 8 Z'/><path d='M168 4 L170 8 L168 12 L166 8 Z'/><path d='M2 6 L2 10 L168 10 L168 6 Z'/><path d='M85 0 Q83 6, 81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z'/></svg>");
+    }
+    
+    &.red {
+      background-image    : 
+        url("data:image/svg+xml;utf8,<svg height='32' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(0, 0, 0)'><path d='M2 8 L0 16 L2 24 L4 16 Z'/><path d='M168 8 L170 16 L168 24 L166 16 Z'/><path d='M2 9 L2 23 L168 23 L168 9 Z'/><path d='M85 3 Q83 9, 81 9 L81 23 Q83 23, 85 30 Q87 23, 89 23 L89 9 Q87 9, 85 3 Z'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(0, 0, 0)'><path d='M2 4 L0 8 L2 12 L4 8 Z'/><path d='M168 4 L170 8 L168 12 L166 8 Z'/><path d='M2 6 L2 10 L168 10 L168 6 Z'/><path d='M85 0 Q83 6, 81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z'/></svg>");
+        
+      &::before {
+        background-image  :  
+          url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  L20 5 L20 15 L0 15 Z' fill='RGB(0, 0, 0)'/></svg>"),
+          url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 15  Q8 8, 10 2 Q10 5, 20 5 L20 15 Z' fill='RGB(0, 0, 0)'/></svg>"),
+          url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 Q8 5, 10 0 Q12 5, 20 5 Z' fill='RGB(0, 0, 0)'/></svg>"),
+          url("data:image/svg+xml;utf8,<svg height='15' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 5  Q10 5, 10 2 Q12 8, 20 15 L0 15 Z' fill='RGB(0, 0, 0)'/></svg>");
+      }
+    }
+  }
+  
+  .dragonbox,
+  .paperbox {
+    filter: none;
+    background        : url(https://sibling-dex.github.io/homebrewery-templates/img/scroll-b.png) center / 100% no-repeat;
+    
+    &.wide {
+        background        : url(https://sibling-dex.github.io/homebrewery-templates/img/scroll-bw.png) center / 100% no-repeat;
+    }
+  }
+  .spell {
+    background-image: url(https://sibling-dex.github.io/homebrewery-templates/img/banner-b.png);
+    background-size: calc(100% + 32px) calc(100% + 16px);
+  }
+  
+  .spell,
+  .tablebox,
+  .emptybox,
+  .dragonbox,
+  .picturebox,
+  .paperbox {
+    filter: none;
+    h3:first-child {
+      background-image: 
+        url("data:image/svg+xml;utf8,<svg height='40' width='170' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 L0 35 L170 35 L170 5 Z' fill='RGB(0, 0, 0)'/></svg>"), 
+        url("data:image/svg+xml;utf8,<svg height='40' width='40' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 L0 35 Q16 35, 20 40 Q24 35, 40 35 L40 5 Q24 5, 20 0 Q16 5, 0 5 Z' fill='RGB(0, 0, 0)'/></svg>"), 
+        url("data:image/svg+xml;utf8,<svg height='40' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M30 5 Q20 5 ,20 2 Q13 13, 0 20 Q13 27, 20 38 Q20 35, 30 35 Z' fill='RGB(0, 0, 0)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg height='40' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M0 5 Q10 5 ,10 2 Q17 13, 30 20 Q17 27, 10 38 Q10 35, 0 35 Z' fill='RGB(0, 0, 0)'/></svg>");
+    }
+  }
+  
+  .demonbox {
+    color: black;
+    background: white;
+    background-clip: padding-box;
+    border-image: url("data:image/svg+xml;utf8,<svg height='80' width='80' xmlns='http://www.w3.org/2000/svg'><path d='M5 5 L10 20 L10 30 Q10 38, 0 40 Q10 42, 10 50 L10 60 L5 75 L20 70 L30 70 Q38 70, 40 80 Q42 70, 50 70 L60 70 L75 75 L70 60 L70 50 Q70 42, 80 40 Q70 38, 70 30 L70 20 L75 5 L60 10L 50 10 Q42 10, 40 0 Q38 010, 30 10 L20 10 Z' fill='white' stroke-width='0' stroke='white'/></svg>") 11 / 11px stretch;
+    filter:
+      drop-shadow(1pt 0 0 black)
+      drop-shadow(-1pt 0 0 black)
+      drop-shadow(0 1pt 0 black)
+      drop-shadow(0 -1pt 0 black);
+    
+    h3 {
+      color: black;
+    }
+    
+    table {
+      tr, th, td {
+        background-color: transparent !important;
+      }
+    }
+  }
+  
+  &:not(:has(h1,.title)) .columnWrapper::before {
+    background-image: url("data:image/svg+xml;utf8,<svg height='16' width='170' xmlns='http://www.w3.org/2000/svg' fill='RGB(0, 0, 0)'><path d='M2 4 L0 8 L2 12 L4 8 Z'/><path d='M168 4 L170 8 L168 12 L166 8 Z'/><path d='M2 6 L2 10 L168 10 L168 6 Z'/><path d='M85 0 Q83 6 ,81 6 L81 10 Q83 10, 85 16 Q87 10, 89 10 L89 6 Q87 6, 85 0 Z'/></svg>");
+  } 
+  .pageNumber {
+    &::before {
+      background-image  :  
+        url("data:image/svg+xml;utf8,<svg height='30' width='120' xmlns='http://www.w3.org/2000/svg'><path d='M0 30  Q8 23, 10 17 Q10 20, 20 20 L40 20 Q56 20, 60 15 Q64 20, 80 20 L100 20  Q110 20, 110 17 Q112 23, 120 30 L100 30Z' fill='0, 0, 0'/></svg>");
+
+    }
+    &::after {
+      background-image  :
+                url("data:image/svg+xml;utf8,<svg height='30' width='120' xmlns='http://www.w3.org/2000/svg'><path d='M20 0 L0 0  Q8 8, 10 13 Q10 10, 20 10 Q40 10, 60 30 Q80 10, 100 10 Q110 10, 110 13  Q112 8, 120 0 L100 0 Z' fill='RGB(0, 0, 0)'/></svg>");
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+![homebrewery_mug](http://i.imgur.com/hMna6G0.png) {height:300px,margin-top:-10mm}
+
+{{titlepage}}
+
+# DragonBrew
+{title,font-size:60pt}
+
+## A Homebrewery-Template for Dragonbane
+{subtitle}
+
+### AUTHOR:
+Sibling Dex
+
+### CREDITS:
+This game supplement was created using the [DragonBrew](https://homebrewery.naturalcrit.com/share/IOEuWz2v8FFi) template by Sibling Dex
+
+Background based on "[Parchment Paper Background](https://www.publicdomainpictures.net/en/view-image.php?image=488602&picture=parchment-paper-background-texture)" by Andrea Stöckel ([CC0](https://creativecommons.org/publicdomain/zero/1.0/))  
+<!--"[Old Scroll Texture](https://www.deviantart.com/esther-sanz/art/Old-Scroll-Texture-II-114214631)" by Esther Sanz ([CC BY 3.0](http://creativecommons.org/licenses/by/3.0/))-->
+
+This game is not affiliated with, sponsored, or endorsed by Fria Ligan AB.  
+This supplement was created under Fria Ligan AB’s
+[Dragonbane Third Party Supplement License](https://freeleaguepublishing.com/wp-content/uploads/2026/03/Dragonbane-License-Agreement-version-1.1.pdf).
+
+:
+
+### Made With:
+
+{{homebreweryIcon}}
+
+The Homebrewery  
+[Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
+{homebrewery}
+
+{{dragonbaneLogo,swe}}
+<!--
+LANGUAGE:
+change eng (default) → swe, cze, dan, fre, ger, hun, ita, nor, pol, por, spa, ukr
+
+COLOR:
+add red (default) → black or white
+(optional, does not automatically change when blackwhiteused)
+-->
+\page
+
+# About this Theme
+{title="Introduction"}
+
+{{toc,width:50%
+## Contents
+
+[Theme Features](#p3) {{number 3}}
+
+[Boxes](#p5) {{number 5}}
+
+[Black & White](#p6) {{number 6}}
+
+[One-Page Layout](#p7) {{number 7}}
+
+[Profession](#p8) {{number 8}}
+
+[Kin](#p9) {{number 9}}
+
+[Heroic Abilities](#p9) {{number 9}}
+
+[School of Magic](#p10) {{number 10}}
+
+[Spell Tables](#p11) {{number 11}}
+
+[Monster](#p12) {{number 12}}
+
+[Adventure Site](#p13) {{number 13}}
+
+}}
+
+
+--------------------------------------------------
+
+
+### Attributions
+
+The [DragonBrew](https://homebrewery.naturalcrit.com/share/IOEuWz2v8FFi) template was created by {{med Sibling Dex}}, originally inspired by [Unbane](https://homebrewery.naturalcrit.com/share/giOlHPKwqVA-) by {{med prof.tw}}. You can find both of us on the Dragonbane Discord. Message us there if you are interested in helping with this project.
+
+### Disclaimer
+THIS TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH OR THE USE OR OTHER DEALINGS IN THE TEMPLATE.
+{font-size:8pt}
+
+### Homebrewery Resources
+
+To learn the basics of working with homebrewery, or places to get help, visit the following pages:
+
+- [Getting Started with a Template](https://github.com/sibling-dex/homebrewery-templates/wiki/Getting-Started-with-a-Template)
+- https://homebrewery.naturalcrit.com/
+- https://www.reddit.com/r/homebrewery/wiki/index/
+- Or simply ask in the [Dragonbrew](https://discord.com/channels/1173874944430579733/1309451747709816922) thread on Discord.
+
+
+### Dragonbane Resources
+
+- Cătălin (CataZZ) Zima-Zegreanu's wonderful [Unofficial Style Guide for Dragonbane](https://neverwise.substack.com/p/an-unofficial-style-guide-for-dragonbane)
+- Absolutely join the amazing [Dragonbane Community Discord Server](https://discord.gg/xD7wEvxU)
+
+### Dragonbrew Cards
+
+There is now also a template for 
+[Dragonbre Cards](https://homebrewery.naturalcrit.com/edit/0S1qXTDPog0e) on homebrewery, that you can use to create treasure cards, improvised weapons, or whatever you can come up with.
+
+{{dragonbox
+### Active Upates
+
+- **This theme still receives updates!**
+
+If you like to contribute, request features, or need help, please join on the Dragonbane Discord.
+
+### Recent Changes
+- **14 Apr 2026:** New scroll textures
+- **2 Apr 2026:** Added language version logos
+- **12 Mar 2026:** Added `{{med }}` tags to emphasise skill, attribute and spell names
+- **8 Dec 2025:** Added spell tables ([page 11](#p11))
+- **28 Oct 2025:** Updated black & white feature
+- **23 May 2025:** Added some brew snippets
+- **13 May 2025:** Added some newer features 
+  - New chapter headings
+  - Option to add `{title=".."}` to `h1`
+  - Option for automatic chapter numbering
+  - ***Caution: box titles are now `h3`!***
+- **29 Mar. 2025:** Added a One-Page Layout ([p.7](#p7))
+- **21 Mar. 2025:** Updated PageNumber style
+- **20 Mar. 2025:** Added `{blackwhite}` and `{allblackwhite}` for greyscale options.
+}}
+
+
+{{pageNumber,auto Introduction}}
+\page
+
+
+# Theme Features
+{chapterNumber,title="Chapter"}
+
+### Headings
+This template includes modified `# h1` (full width, green, underlined), `## h2` (full width, green), `### h3` (black all caps), and `#### h4` (Run-in heading), headers.
+
+#### Paragraphs:
+The `#### h4` headings are meant as paragraph headings, and can also be used to write description lists.
+
+#### Paragraph Two:
+This is an example of a two-item description list using `#### h4` paragraph headings.
+
+### The Coverpage
+The `coverpage` block changes how headings `# h1`, `## h2` and `### h3` function and centeres all text. `# h1` becomes a big red title, `## h2` a smaller subtitle, and `### h3` become centered headings for subdivisions like "Author" and "Credits". 
+
+### Spacing
+Use any number of colons {{code &#58;&#58;&#58;&#58;}} to add vertical space anywhere on the page, between paragraphs, etc.
+
+
+\column
+
+
+### Fonts
+
+This template adds the following fonts that rely on the Unbane template:
+
+- {{font-family:"Homemade Apple" Homemade Apple}} -- can be used by adding the `{{handwritten }}` tag around a piece of text.
+- {{font-family:"Colus" **Colus**}} -- is used for headings and footers.
+- Use the `{{med }}` tag to mention skills, attributes or spells, like {{med Sneaking}}, {{med STR}}, or {{med Fireball}} 
+
+### Example Pages
+
+In the following, there are several pages that show certain types of homebrew, such as [professions](#p8), [kin, heroic abilities](#p9), spells and schools of magic, special items , locations, quests, etc. Feel free to follow the layouts proposed here or to break them in new and interesting ways.
+
+:
+
+{{demonbox
+### Warning: Use Chrome/ium
+
+Many of this template's features, including google font integration and correct column breaking, sadly don't work on browsers like Firefox, for the time being, please use Chrome or Chromium with Homebrewery!
+}}
+
+## Images
+
+### 1- or 2-columns
+You can include one-column-wide images as normal. To add an image that spans both columns, add `{wide}` tag after the image code or input it inside a `{{wide ...}}` environment.
+
+
+\column
+
+### Fullpage Images
+
+To add a fullpage image, add `{fullpage}` tag after the image code or input it inside a `{{fullpage ...}}` environment. You still need to add `\page` commands before and after the image manually!
+
+
+
+
+
+{{pageNumber,auto {{chapterNumber,auto -- Images}}}}
+\page
+
+![](https://i.imgur.com/GZfjDWV.png)
+{fullpage}
+
+\page
+
+## Boxes
+
+{{dropcap T}}here are three types of box provided by this style: the Demonbox, Dragonbox and Emptybox. These are special environments that can be used to highlight special rules or important information in a compact way. These boxes are not floats but are placed as part of the text. Therefore, they can be placed normally to produce a one-column wide box, or with the addition of the `wide` tag, to create a two-column spanning box.
+
+{{dragonbox
+### Dragonbox
+
+- **These Rules Are:** Obligatory
+
+This is a `dragonbox`, it can be used to highlight important information in a compact and noticeable way.
+
+
+It can be used, for example, to typeset a Heroic Ability. In that case, you can use an list (using `-` or `*`), as above, to note the Willpower cost for the ability.
+}}
+
+\column
+
+{{emptybox
+### Emptybox
+
+This is an `emptybox`, it features the same heading as a `dragonbox` but not the coloured background. It is used in the tablebox environment but can also be used by itself.
+
+}}
+
+
+{{demonbox
+### Demonbox
+
+- **These Rules Are:** Optional
+
+This is a `demonbox`, they are used to add information about optional rules.
+
+The `demonbox` is fully coloured in the current accent colour and can be a drain on printer toner or ink. It is generally a good approach to use these boxes sparingly. A restrained use of boxes in general also prevents the layout from looking cluttered.
+}}
+
+{{tablebox,wide
+### Tablebox
+
+
+| DIE | LABEL       | ALIGNMENT | DESCRIPTION |
+|:---:|:----------- |:--------- |:----------- |
+|  1  | Dice        | Center    | If you want a table to be rollable, use the first column as the die or dice column. Give it a header denoting the die/dice used, and number the rows. |
+|  2  | Label       | Left      | The first or second column of a table should be the label of the entry. This gives a short and meaningful name to the entry in the row. |
+|  3  | Score       | Center    | You can add several narrower columns for short, standardized scores, such as price, availability, durability, etc. |
+|  4  | Description | Left | The typically last column in a table is a longer description of the entry. Use a breaking alignment for this, so the description can be more than one line. |
+
+}}
+
+{{dragonbox,wide,column-count:2
+### Wide Boxes
+Both `dragonbox` and `demonbox` can be used with the `wide`tag to make it span the whole page width. When using text inside a wide box, it is good practice to also add a `column-count:2` tag to the box to get a two column layout in the box and prevent overly long lines. 
+
+### Subsection
+Lower level headings such as `### h3` and `### h4` can be used inside boxes.
+
+#### Paragraph:
+Using these headings can help make the text inside a box more ordered and provide a better overview.
+}}
+
+
+
+
+{{pageNumber,auto {{chapterNumber -- Boxes}}}}
+\page{blackwhite}
+
+## Black & White
+
+{{dropcap T}}o turn a page into a more printer friendly black and white version, use `\page{blackwhite}` before the page or add the `{blackwhite}` tag somewhere on the page. On this page, you can see the common box elements as examples for how this looks.
+
+If you want to turn the entire document to black and white, instead add the tag `{allblackwhite}` somewhere in the document (ideally where it does not change the layout otherwise). 
+
+{{dragonbox
+### Dragonbox
+
+- **These Rules Are:** Obligatory
+
+This is a `dragonbox`, it can be used to highlight important information in a compact and noticeable way.
+
+
+It can be used, for example, to typeset a Heroic Ability. In that case, you can use an list (using `-` or `*`), as above, to note the Willpower cost for the ability.
+}}
+
+\column
+
+{{emptybox
+### Emptybox
+
+This is an `emptybox`, it features the same heading as a `dragonbox` but not the coloured background. It is used in the tablebox environment but can also be used by itself.
+
+}}
+
+
+{{demonbox
+### Demonbox
+
+- **These Rules Are:** Optional
+
+This is a `demonbox`, they are used to add information about optional rules.
+
+The `demonbox` is fully coloured in the current accent colour and can be a drain on printer toner or ink. It is generally a good approach to use these boxes sparingly. A restrained use of boxes in general also prevents the layout from looking cluttered.
+}}
+
+{{tablebox,wide
+### Tablebox
+
+
+| DIE | LABEL       | ALIGNMENT | DESCRIPTION |
+|:---:|:----------- |:--------- |:----------- |
+|  1  | Dice        | Center    | If you want a table to be rollable, use the first column as the die or dice column. Give it a header denoting the die/dice used, and number the rows. |
+|  2  | Label       | Left      | The first or second column of a table should be the label of the entry. This gives a short and meaningful name to the entry in the row. |
+|  3  | Score       | Center    | You can add several narrower columns for short, standardized scores, such as price, availability, durability, etc. |
+|  4  | Description | Left | The typically last column in a table is a longer description of the entry. Use a breaking alignment for this, so the description can be more than one line. |
+
+}}
+
+{{dragonbox,wide,column-count:2
+### Wide Boxes
+Both `dragonbox` and `demonbox` can be used with the `wide`tag to make it span the whole page width. When using text inside a wide box, it is good practice to also add a `column-count:2` tag to the box to get a two column layout in the box and prevent overly long lines. 
+
+### Subsection
+Lower level headings such as `### h3` and `### h4` can be used inside boxes.
+
+#### Paragraph:
+Using these headings can help make the text inside a box more ordered and provide a better overview.
+}}
+
+
+{{pageNumber,auto {{chapterNumber -- Black & White}}}}
+\page
+
+
+# One-Page Layout
+{title}
+
+{{dropcap Y}}ou can use this one-page layout for short homebrew that are intended to fit on a single page, such as for the recent [DragonBurn Challenge](https://discord.com/channels/1173874944430579733/1350495860907184259) on the [Dragonbane Discord Server](https://discord.gg/9nz6qFJP).
+
+There is not much different from the normal DragonBrew Layout, you can use all other template features -- except for fullpage images perhaps, those wouldn't make much sense. 
+
+\column
+
+{{demonbox
+### Note To DragonBurners
+
+Sorry if this came a bit too late for this challenge. I just now realized that this might be useful. But most people managed anyways. 
+
+Now it is here for any future one-page homebrewing.
+}}
+
+
+
+
+---
+
+## New Elements
+
+### The Title-Heading
+To get a red heading, that resembles a normal DragonBrew Title, just add a `{title}` tag below the `h1` heading on the very top of the page -- that's all. If you want it to resemble the normal chapter heading, but in red, you can instead add a `[red}` tag below the `h1` heading, see next page.
+
+You are, of course, free to not add this and keep the heading a lovely demonic green color.
+
+\column
+
+### The Footer
+To add a footer including the dragonbane logo, credits, and attributions, add the following two elements:
+
+- `{{footer-left,dragonbaneLogo}}` for the logo
+- `{{footer-right [...] }}` to add lines for credits and attributions
+
+You can see an example of this on the bottom of this page, look at the editor to see how to do it.
+
+
+
+{{footer-left,dragonbaneLogo,eng}}
+<!--CHANGE LANGUAGE AND COLOR AS DESIRED-->
+{{footer-right
+- **Author:** [YOUR NAME HERE]
+- This game supplement was created using the [DragonBrew](https://homebrewery.naturalcrit.com/share/IOEuWz2v8FFi) homebrewery template.
+- This game is not affiliated with, sponsored, or endorsed by Fria Ligan AB. This supplement was created under Fria Ligan AB’s
+[Dragonbane Third Party Supplement License](https://freeleaguepublishing.com/wp-content/uploads/2026/03/Dragonbane-License-Agreement-version-1.1.pdf).
+}}
+\page
+
+# Profession
+{red,title="Example Page"}
+
+> "A quote from a real or fictional person that sets the mood or gives a glimpse into the type of profession you want to describe."
+> 
+> {{author -- The Author}}
+
+
+{{wide
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {height:450px,mix-blend-mode:multiply,margin-left:2cm}
+}}
+
+
+A longer text that describes who the people of your profession are, how they might think, what they typically do, how they are seen by others or how they see themselves, where they typically live or work, or whether they travel a lot, whether they earn a steady income or rely on a patron or the charity of others, are they religious or hold to a specific creed... etc.
+
+
+- **Key Attribute:** {{med STR}}, {{med AGI}}, {{med CON}}, {{med INT}}, {{med WIL}}, or {{med CHA}}
+- **Skills:** 8 skills to choose the initial 6 basic skills from, these should include at least one weapon skill.
+- **Heroic Ability:** A heroic ability or multiple to choose from, or a notice like "As a mage, you don’t get a starting heroic ability. Instead, you get your magic."
+
+\column
+
+
+| D6 | Starting Gear                                                |
+|:--:|:------------------------------------------------------------ |
+| 1  | Some gear, torch, flint & tinder, DX food rations, DY silver |
+| 2  | Some gear, torch, flint & tinder, DX food rations, DY silver |
+| 3  | Some gear, torch, flint & tinder, DX food rations, DY silver |
+
+{{columns:2
+| D6 | Nickname   |
+|:--:|:-----------|
+| 1  | Some       |
+| 2  | Rather     |
+| 3  | Silly      |
+{margin:0}
+\column
+| D6 | Nickname   |
+|:--:|:-----------|
+| 4  | Or badass  |
+| 5  | sounding   |
+| 6  | nicknames  |
+}}
+
+
+{{pageNumber,auto Example Pages -- Profession}}
+
+\page
+
+# Kin & Abilities
+{title="Example Page"}
+
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:100%,mix-blend-mode:multiply}
+
+### Kin Name
+
+A description of the kin's origins, appearance, special features, their typical outlook on life, history, relation to others, how they are viewed by others or by themselves, their place in the cosmology of the setting, 
+
+
+{{twocols
+| D6 | First Name  |
+|:--:|:----------- |
+| 1  | Some        |
+| 2  | Names       |
+| 3  | That are    |
+{margin:0}
+\column
+| D6 | First Name  |
+|:--:|:----------- |
+| 4  | Typical for |
+| 5  | People of   |
+| 6  | This Kin    |
+}}
+
+
+{{dragonbox
+### Ability: Memorable Gift
+
+- **Willpower Points:** 3 or Varies
+
+A kin ability that can be activated at will. The ability will typically provide a boon in a common situation or lets you circumvent a rule. 
+
+}}
+
+{{dragonbox
+### Ability: Passive Ability
+
+- **Willpower Points:** ---
+
+You can also add a second, passive ability that provides a boon in very specific situations.
+
+}}
+
+\column
+
+### Some Heroic Abilities
+{dragonhead}
+
+### Basic Ability
+- **Requirement:** ---
+- **Willpower Points:** 2
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Typical Ability
+- **Requirement:** A Skill at 12
+- **Willpower Points:** 3
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Variable Ability
+- **Requirement:** A Skill at 12
+- **Willpower Points:** Varies
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Passive Ability
+- **Requirement:** A Skill at 12
+- **Willpower Points:** ---
+
+A short description of what the ability does, in what circumstances it can be activated, whether it requires your action and how long it takes, if relevant.
+
+
+### Crafting Ability
+- **Requirement:** A Skill at 12
+- **Willpower Points:** Varies
+
+A short description of what kind of items can be created with this sbility, what kinds of tools and resources are required, and what quick things you can do during a stretch.
+
+Then, something along the lines of: In one shift of time you can craft a (type of) item of your choice, such (examples, from the lists
+on pages XX–XX). It requires (a specified resource, of a certain weight or typical cost), and costs a number of WP equal to the item’s price in gold (rounded up). You can spread the work across multiple shifts if you do not have enough WP.
+
+
+
+{{pageNumber,auto Example Pages -- Kin & Abilities}}
+
+\page
+
+{{imageMaskEdge5,--offset:0%,--rotation:180,z-index:0
+  ![](https://i.imgur.com/GZfjDWV.png){height:100%}
+}}
+<!-- Use --offset to shift the mask away from page center (can use cm instead of %)
+     Use --rotation to set rotation angle in degrees. -->
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## School of Magic
+
+
+### Magic Tricks
+
+#### Card Trick:
+You get an audience member to draw a card out of a fresh deck of cards and replace it. After a good shuffle, you produce the audience member's card from the deck.
+
+
+#### Coin Pull: 
+You can pull a silver coin out from behind the ear of an unsuspecting onlooker. It is up to you to decide who gets to keep it.
+
+#### Magic Rings:
+You can connect or separate two seemingly closed and solid rings. The real trick is to find a good use for this feat.
+
+\column
+
+### Rabbit out of a Hat
+- **Rank:** 1
+- **Prerequisite:** Your school of magic
+- **Requirement:** Word, gesture, focus (a hat)
+- **Casting time:** Action
+- **Range:** Personal
+- **Duration:** Stretch
+
+You instantly summon a small rabbit out of your hat. The animal has the stats of a cat (p. 99 of the Core Rulebook) and vanishes with a "Poof!" after a stretch. It follows its creator’s commands (free action) and acts independently, but must stay within sight of the mage.
+
+
+{{pageNumber,auto Example Pages -- School of Magic}}
+\page
+
+## Spell Tables
+
+### Spell tables by Rank
+
+You can make a table into a spell table simply by adding spell tags inside its cells, see the example below. 
+
+#### Spanning:
+Lower-rank spells are often prerequisites for higher-rank spells, to account for this, you can place the lower-rank spell in a cell that spans the rows of the higher-ranked spells. To do this, add multiple vertical bars after the lower-rank spell: `||`, see below.
+
+#### Limitations: 
+So far, you can only do this for spells that have two or more direct prerequisite relations. You cannot add any connections that go across the table.
+
+\column
+
+### Spell tags
+
+You can add the `{{spell TITLE }}` tag to make a spell card, best used inside a  normal table. This will make the table expand a lot, so be aware that spacing issues might occur.
+
+#### Prerequisite Connections:
+To add a connection line to a spell, you can add a tag to the spell, use te following:
+
+- **d:** Adds a straight line from the spell above
+- **l:** Adds a curved line from the spell above to the left
+- **r:** Adds a curved line from the spell above to the right
+
+::
+
+{{tablebox,wide 
+### Spells by Rank
+|              |                       |                       |                      |                     |                      |
+|:----10%------|:---------------------:|:---------------------:|:--------------------:|:-------------------:|:--------------------:|
+| **Rank I**   |              {{spell Fireball}}              ||              {{spell Frost}}              || {{spell Lightning Flash}} |
+| **Rank II**  |            {{spell,d Fire Blast}}            || {{spell,l Tidal Wave}} | {{spell,r Whirlwind}} | {{spell,d Lightning Bolt}} |
+| **Rank III** | {{spell,l Firestorm}} | {{spell,r Fire Bird}} |            |           | {{spell,d Thunderbolt}} |
+}}
+
+
+{{demonbox
+### WARNING: EXPERIMENTAL!!!
+
+The following feature is still in an experimental stage, use as you see fit, but be aware that it can easily break.
+}}
+
+{{pageNumber,auto Example Pages -- Spell Tables}}
+\page
+
+# Monster
+{title="Example Pages"}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+{{tablebox
+### Monster Attacks
+
+| D6 | Attack                                 |
+|:--:|:---------------------------------------|
+| 1  | **Single Attack!** This attack targets one adversary, the one standing closest or with the lowest {{med CON}}, or who attacked the monster last. It deals the standard damage, which is typically a claw, teeth or beak attack. |
+| 2  | **Mass Attack!**  The monster uses some feature or skill that targets multiple enemies in a certain area, for example within 4 meters, or in a cone up to 10 meters long. It typically deals less damage than the single target attack. |
+| 3  | **Fear Attack!** This attack highlights an especially frightening aspect of the monster. Every enemy withing a certain area, typically 10 meters of the monster, must make a {{med WIL}} roll against a fear attack. |
+| 4  | **Debuff Attack** Typically, a monster can grab, topple, ram, ensnare or otherwise incapacitate an enemy for a round or two. This attack should not deal much damage, or none at all. Some attacks, like throwing back enemies for, say 2D6 meters typically also deal the same amount of damage. |
+| 5  | **Flavourful Attack!** Add another attack that highlights a monster feature that is unique to this monster. This can be lifting up an enemy in the air to drop them, drowning them under water, or even enthralling them to turn on their allies. |
+| 6  | **Powerful Attack!** There should be at least one attack that deals a massive amount of damage. This attack can either target one enemy or multiple, depending on what the attack is. A prime example is a dragons fire breath. |
+}}
+
+\column
+
+{{paperbox
+|                                              |
+|:---------------------------------------------|
+| **Ferocity:** 2   **Size:** Large            |
+| **Movement:** 16   **Armor:** —   **HP:** 32 |
+{stats}
+
+#### Typical Gear:
+A weapon or other gear the monster usually carries.
+
+#### Ability:
+A special ability or feature that applies to the monster.
+
+#### Weakness:
+If the monster has a weakness or weak spot, highlight it here.
+}}
+
+
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:15cm,mix-blend-mode:multiply,margin-left:-4cm}
+
+
+
+{{pageNumber,auto Example Pages -- Monster}}
+
+\page
+
+# Adventure Site
+{title="Example Pages"}
+
+
+{{dropcap H}}ere, you should present a brief atmospheric description of the adventure site. It can feature some historical background information, a description of its surroundings, terrain type, plant-life or the type of settlement it is. 
+
+Keep more up-to-date information of what is happening here at the moment for the next section. Here, you should primarily set the tone for the site. you can also include a quote from some fictional traveler or scholar on the importance or their impression of the area.
+
+
+## The Situation
+
+Give a description of what has been going on immediately before the adventurers enter the site and what is happening at the moment. Also include what they are likely to encounter in this adventure site, keeping the desciption in broad strokes. Go into detail in the description of the individual locations below. 
+
+You can also introduce the most important locations, NPCs or monsters here, but also go into more detail in in the location desciptions an in the NPC and moster boxes.
+You can provide a map of the adventure site, like below, and number the locations on it. Provide more detailed descriptions of each location as seen on the next page.
+
+
+
+{{picturebox,wide
+### Map of the Adventure Site
+
+![Greybanner City](https://i0.wp.com/2minutetabletop.com/wp-content/uploads/2017/04/Greybanner-color.jpg) {width:100%,mix-blend-mode:multiply}
+
+{{marker 1}}{top:75mm,left:80mm}
+{{marker 2}}{top:90mm,left:30mm}
+
+**Map credit:** ["Greybanner City", by 2minutetabletop.com](https://2minutetabletop.com/product/greybanner-city/) (CC BY-NC 4.0)
+{attribution}
+}}
+
+
+
+
+{{pageNumber,auto Example Pages -- Adventure Site}}
+
+\page
+
+## Locations
+
+### 1. The Arena of Glory
+
+> A short atmospheric description of the location that can be read out aloud to the players and summarizes how it looks at first glance, or one's first entrance.
+
+- **The Main Feature:** First of all, describe the main feature of this location. Provide the most imporant aspeccts in a brief, digestible paragraph.
+- **An NPC or Monster:** Describe a character or monster that inhabits the location.
+- ***A Secret:*** {color:red} Describe a hidden treasure or trap that can be discovered by a {{med SPOT HIDDEN}} roll or has to be avoided by an {{med ACROBATICS}} roll.
+
+
+### 2. Training Grouds
+
+> A short atmospheric description of the location that can be read out aloud to the players and summarizes how it looks at first glance, or one's first entrance.
+
+- **The Main Feature:** First of all, describe the main feature of this location. Provide the most imporant aspeccts in a brief, digestible paragraph.
+- **An NPC or Monster:** Describe a character or monster that inhabits the location.
+- ***A Secret:*** {color:red} Describe a hidden treasure or trap that can be discovered by a {{med SPOT HIDDEN}} roll or has to be avoided by an {{med ACROBATICS}} roll.
+
+
+\column
+
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:100%,mix-blend-mode:multiply}
+
+{{dragonbox
+### Important NPC
+
+Give a short description of an NPC that the adventurers will encounter in this location. Provide their appearance, motivations, maybe a short history and what they will want from the adventurers. Provide their stats in the following short format:
+
+|                                                              |
+|:-------------------------------------------------------------|
+| **Movement:** 10 &emsp; **Damage Bonus:** Str +D4            |
+| **Armor:** Leather (1) &emsp; **HP:** 20 &emsp; (**WP:** 8)  |
+| **Skills:** Awareness 10, Brawling: 12, Evade: 10            |
+| **Abilities:** Robust x 2                                    |
+| **Weapons:** Short sword (skill level 12, damage D10), short bow (skill level 12, damage D10) |
+}}
+
+
+
+
+{{pageNumber,auto Example Pages -- Adventure Site}}
