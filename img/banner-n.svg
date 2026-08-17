@@ -125,7 +125,7 @@
        width="1.1679585"
        height="1.509529"><feTurbulence
          id="feTurbulence1"
-         baseFrequency="0.001"
+         baseFrequency="0.002"
          numOctaves="10"
          result="result1" /><feDisplacementMap
          id="feDisplacementMap1"
@@ -137,7 +137,7 @@
          id="feDiffuseLighting1"
          in="result1"
          lighting-color="#e9e6d7"
-         surfaceScale="2"
+         surfaceScale="1"
          result="result2"><feDistantLight
            id="feDistantLight1"
            azimuth="235"
@@ -187,9 +187,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.31583202"
-     inkscape:cx="42.744242"
-     inkscape:cy="-468.60354"
+     inkscape:zoom="1.2633281"
+     inkscape:cx="497.09969"
+     inkscape:cy="198.68157"
      inkscape:window-width="2560"
      inkscape:window-height="1371"
      inkscape:window-x="0"
