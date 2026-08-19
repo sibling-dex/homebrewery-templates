@@ -1,0 +1,42 @@
+name: Update today.css
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # daily at 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate CSS with today’s date (UTC)
+        run: |
+          set -e
+          TODAY=$(date -u +"%Y-%m-%d")
+          mkdir -p assets/css
+          cat > assets/css/today.css <<EOF
+/* assets/css/today.css - auto-updated daily */
+:root {
+  --date-today: "${TODAY}";
+}
+EOF
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add today.css
+          git commit -m "Update today.css to $(date -u +"%Y-%m-%d")"
+          git push
