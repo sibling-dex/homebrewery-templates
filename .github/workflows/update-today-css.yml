@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate CSS with today’s date (UTC)
+      - name: Generate CSS with today's date (UTC)
         run: |
           set -e
           TODAY=$(date -u +"%Y-%m-%d")
@@ -37,6 +37,6 @@ EOF
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add today.css
+          git add assets/css/today.css
           git commit -m "Update today.css to $(date -u +"%Y-%m-%d")"
           git push
