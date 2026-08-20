@@ -23,12 +23,11 @@ jobs:
           TODAY=$(date -u +"%Y-%m-%d")
           mkdir -p assets/css
           cat > assets/css/today.css <<EOF
-/* assets/css/today.css - auto-updated daily */
-:root {
-  --date-today: "${TODAY}";
-}
-EOF
-
+          /* assets/css/today.css - auto-updated daily */
+          :root {
+            --date-today: "${TODAY}";
+          }
+          EOF
       - name: Commit and push if changed
         run: |
           if git diff --quiet; then
